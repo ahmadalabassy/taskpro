@@ -1,4 +1,5 @@
 import './App.css'
+import 'bootstrap/dist/css/bootstrap.min.css';
 import Header from './components/Header/index.tsx'
 import Aside from './components/Aside.tsx'
 import { Route, Routes } from 'react-router'
@@ -14,7 +15,7 @@ export default function App() {
   return (
     <div style={{ display: 'flex', flexDirection: 'row' }}>
       <Aside />
-      <div>
+      <div className='w-100'>
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />
