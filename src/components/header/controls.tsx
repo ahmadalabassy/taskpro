@@ -1,3 +1,4 @@
+import React from 'react';
 import lightmode from './assets/light-mode-icon.svg'
 import darkmode from './assets/dark-mode-icon.svg'
 import notifications from './assets/notifications.svg'
