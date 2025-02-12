@@ -21,19 +21,23 @@ const Toggle = styled(ToggleButton)`
   &:focus {
     outline: none;
   }
+  @media screen and (max-width: 991px) {
+    display: none;
+  }
   `
 const Time = styled.span`
   font-size: 24px;
-  font-weight: bold;
+  font-weight: 600;
   color: var(--text-header-color);
   margin-right: 16px;
+  font-family: "Space Mono", serif;
 `
 const AmOrPm = styled.span`
   font-size: 10px;
-  font-weight: bold;
+  font-weight: bolder;
   color: var(--text-header-color);
   position: absolute;
-  left: 64px;
+  left: 74px;
   top: 6px;
 `
 const Section = styled.section`
@@ -44,8 +48,14 @@ const Section = styled.section`
   justify-content: space-between;
   align-items: center;
   position: relative;
-  min-width: 240px
-`;
+  min-width: 240px;
+  @media screen and (max-width: 991px) {
+    padding: 10px 0;
+    background-color: #fff;
+    min-width: auto !important;
+  }
+`
+  ;
 const DivSection = styled.div`
   display: flex;
   flex-direction: row;
@@ -60,9 +70,14 @@ export default function Timer() {
   const [clockIn, setClockIn] = useState('CLOCK IN');
   const [Isplay, setPlay] = useState(play);
   const [timeNow, setTimeNow] = useState('');
-  
+
   const handleToggle = (e) => {
     setChecked(e.target.checked)
+    setClockIn(checked ? 'CLOCK OUT' : 'CLOCK IN');
+    setPlay(checked ? stop : play);
+  };
+  const handleToggleClick = () => {
+    setChecked(!checked)
     setClockIn(checked ? 'CLOCK OUT' : 'CLOCK IN');
     setPlay(checked ? stop : play);
   };
@@ -72,7 +87,7 @@ export default function Timer() {
   const minutes = dateNow.getMinutes();
   const amPm = dateNow.getHours() >= 12 ? 'PM' : 'AM';
   // convert to 12-hour format
-  const time= `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}`;
+  const time = `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}`;
   useEffect(() => {
     setInterval(() => {
       setTimeNow(new Date(Date.now()).toLocaleTimeString('en-US', { hour12: true }));
@@ -81,12 +96,12 @@ export default function Timer() {
 
   return (
     <Section>
-      <div className="position-relative">
+      <div className="position-relative d-none d-lg-flex">
         <Time>{time}</Time>
         <AmOrPm>{amPm}</AmOrPm>
       </div>
       <DivSection>
-        <img src={Isplay} alt="icon" />
+        <img className="playButton" src={Isplay} alt="icon" onClick={handleToggleClick} />
         <Toggle
           id="toggle-check"
           type="checkbox"
