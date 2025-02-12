@@ -32,7 +32,7 @@ const Profile = () => {
                         <p className='user-data-heading'><i className="bi bi-person-gear"></i><strong className='me-1'>@Ahmed Abassey</strong>Supervisor</p>
                         <p className='user-data-heading'><i className="bi bi-door-open"></i>Planned Leaves:<strong className='ms-1'>12-1-2025</strong></p>
                     </div>
-                    <div className='d-flex flex-column justify-content-center align-align-items-center'>
+                    <div className='d-flex flex-column justify-content-center align-align-items-center mt-1'>
                         <p className='footer-heading text-center'>Joined in :<strong className='ms-1'>1-1-2025</strong></p>
                         <div className="d-flex flex-row align-items-center justify-content-evenly">
                             <span className='footer-heading'>Status</span>

@@ -35,7 +35,7 @@ header {
 .heading {
     font-size: 24px;
     text-align: center;
-    margin-bottom: 8px;
+    margin-bottom: 5px;
     font-weight: bold;
     margin-top: 142px;
     text-transform: capitalize;
@@ -53,11 +53,12 @@ header {
     color: var(--bg-color);
     font-weight: 900;
     text-transform: capitalize;
+    margin-bottom: 4px;
 }
 
 .user-data-heading {
     margin-left: 1.2rem;
-    margin-bottom: 8px;
+    margin-bottom: 3px;
     font-size: 1rem;
     font-weight: 500;
     display: flex;
@@ -67,10 +68,10 @@ header {
 }
 
 .modal-content {
-    margin-top: 6rem;
+    margin-top: 3.3rem;
     width: 341px;
     border-radius: 24px;
-    padding-bottom: 18px;
+    padding-bottom: 8px;
     position: relative;
 }
 
