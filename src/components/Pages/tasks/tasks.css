@@ -1,0 +1,39 @@
+*{
+    --text-primary: #676F77;
+    --bg-hover: #dddddd
+}
+.card {
+  padding: 0.5em 1em;
+}
+.primary-text{
+    color: var(--text-primary);
+}
+.user {
+  margin-left: -0.5rem;
+}
+.add-user{
+  width: 25px;
+  height: 25px;
+}
+.btn-primary {
+  --bs-btn-bg: #f4f4f4 !important;
+  background-color: var(--bs-btn-bg);
+  padding: 0.3em 0.6em;
+  border: none !important;
+}
+.btn-primary:hover {
+  background-color: var(--bg-hover) !important;
+}
+.comments, .attached-files{
+  transition: all 0.250s ease-in-out ;
+}
+.comments:hover , .attached-files:hover{
+    cursor: pointer;
+    scale:0.95;
+}
+.comment, .file{
+  font-size: 0.8rem;
+}
+.comment:hover, .file:hover{
+    border: 0;
+}
