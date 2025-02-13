@@ -1,17 +1,32 @@
-*{
-    --text-primary: #676F77;
-    --bg-hover: #dddddd
+* {
+  --page-bg: #efefef;
+  --text-primary: #676f77;
+  --bg-hover: #dddddd;
+  --component-bg: #ffffff;
+}
+.tasks-bg {
+  background-color: var(--page-bg);
+  
+}
+main{
+  background-color: var(--component-bg);
+}
+#rectangle {
+  width: 19px;
+  height: 37px;
 }
 .card {
   padding: 0.5em 1em;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
-.primary-text{
-    color: var(--text-primary);
+
+.primary-text {
+  color: var(--text-primary);
 }
 .user {
   margin-left: -0.5rem;
 }
-.add-user{
+.add-user {
   width: 25px;
   height: 25px;
 }
@@ -24,16 +39,20 @@
 .btn-primary:hover {
   background-color: var(--bg-hover) !important;
 }
-.comments, .attached-files{
-  transition: all 0.250s ease-in-out ;
+.comments,
+.attached-files {
+  transition: all 0.25s ease-in-out;
 }
-.comments:hover , .attached-files:hover{
-    cursor: pointer;
-    scale:0.95;
+.comments:hover,
+.attached-files:hover {
+  cursor: pointer;
+  scale: 0.95;
 }
-.comment, .file{
+.comment,
+.file {
   font-size: 0.8rem;
 }
-.comment:hover, .file:hover{
-    border: 0;
+.comment:hover,
+.file:hover {
+  border: 0;
 }
