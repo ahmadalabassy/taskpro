@@ -1,12 +1,14 @@
 import React from "react";
-import styled from "styled-components"
-import search_icon from "./assets/search.svg"
+import styled from "styled-components";
+import search_icon from "./assets/search.svg";
+
 const SvgSearchIcon = styled.img`
     position: absolute;
     top: 14px;
     left: 14px;
     transition: all 0.3s ease;
 `;
+
 const Input = styled.input`
     width: 400px;
     padding: 10px 0 10px 38px;

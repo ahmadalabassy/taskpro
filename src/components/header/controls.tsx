@@ -1,10 +1,16 @@
 import React from 'react';
+
 import help from './assets/help.svg';
 import lightmode from './assets/light-mode-icon.svg';
+import darkmode from './assets/dark-mode-icon.svg';
+import notifications from './assets/notifications.svg';
+import messages from './assets/messages.svg';
+import profile from './assets/default-profile.svg';
+
+import Profile from './Profile';
 import Messages from './MessagesHeader';
 import Profile from './Profile';
 import Notification from './Notification';
-
 
 export default function Controls() {
   return (
