@@ -7,13 +7,10 @@ const Notification = () => {
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
     return (
-        <div>
+        <div >
             <img className='iconHeader' src={NotificationIcon} alt="Notification" onClick={handleShow} />
             <Modal show={show} onHide={handleClose}   >
                 <Modal.Body>
-                    <div className='heading-profile'>
-                        <img src={NotificationIcon} alt="messages" />
-                    </div>
                     <i className="bi bi-x exit-button-profile" onClick={handleClose}></i>
                     <div className='d-flex flex-column justify-content-center align-items-center '>
                         <p className='heading'>Fares Elabasery</p>

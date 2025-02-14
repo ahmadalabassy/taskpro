@@ -32,7 +32,8 @@ header {
     transition: all 0.3s;
     padding: 5px;
 }
-.iconHeader:hover{
+
+.iconHeader:hover {
     padding: 5px;
     background-color: #e4e4e4;
     border-radius: 100px;
@@ -135,7 +136,8 @@ header {
     -moz-box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
-.exit-button-profile{
+
+.exit-button-profile {
     position: absolute;
     top: 5px;
     right: 10px;
@@ -154,4 +156,9 @@ header {
         height: 180px;
     }
 
+}
+
+/* Notification Modal */
+#notificaition .modal-backdrop.show {
+    opacity: 0;
 }
