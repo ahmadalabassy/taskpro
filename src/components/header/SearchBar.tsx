@@ -37,7 +37,7 @@ const Input = styled.input`
       box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2);
     }
     @media screen and (max-width: 1024px) {
-      width: 200px;
+      width: 164px;
     }
   `;
 
