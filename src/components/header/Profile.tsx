@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import ProfilePic from './assets/default-profile.svg';
-import { Modal } from 'react-bootstrap';
+import { Button, Modal } from 'react-bootstrap';
 import './css/header.css'
 import 'bootstrap-icons/font/bootstrap-icons.css';
 
@@ -14,18 +14,18 @@ const Profile = () => {
     return (
         <div>
             <img className='profileImage' src={ProfilePic} alt="messages" onClick={handleShow} />
-            <Modal  show={show} onHide={handleClose}   >
+            <Modal show={show} onHide={handleClose}   >
                 <Modal.Body>
                     <div className='heading-profile'>
                         <img src={ProfilePic} alt="messages" />
                     </div>
-                    <i className="bi bi-x"></i>
+                    <i className="bi bi-x exit-button-profile" onClick={handleClose}></i>
                     <div className='d-flex flex-column justify-content-center align-items-center '>
                         <p className='heading'>Fares Elabasery</p>
                         <p className='id-heading'>#Id-003240</p>
                         <p className='job-heading'>Web App Developer</p>
                     </div>
-                    <div className='d-flex flex-column justify-content-center align-items-start ps-md-5 ms-md-4 pe-md-3 p-lg-1'>
+                    <div className='d-flex flex-column justify-content-center align-items-start ps-md-5 ms-md-4 pe-md-3 ms-lg-0 p-lg-1'>
                         <p className='user-data-heading'><i className="bi bi-envelope"></i>fareselebasery@outlook.com</p>
                         <p className='user-data-heading'><i className="bi bi-telephone"></i>+20 1207286573</p>
                         <p className='user-data-heading'><i className="bi bi-geo-alt"></i>Egypt</p>
