@@ -4,7 +4,7 @@ header {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    padding: 1rem 2rem;
+    padding: 0.5rem 2rem;
     margin: 0 auto;
     width: 100%;
     /* position: sticky; */
@@ -27,8 +27,15 @@ header {
 
 /* Profile image */
 
-.profileImage {
+.iconHeader {
     cursor: pointer;
+    transition: all 0.3s;
+    padding: 5px;
+}
+.iconHeader:hover{
+    padding: 5px;
+    background-color: #e4e4e4;
+    border-radius: 100px;
 }
 
 /* modal Custom style */

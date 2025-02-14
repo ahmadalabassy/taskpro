@@ -1,23 +1,18 @@
 import React, { useState } from 'react'
-import ProfilePic from './assets/default-profile.svg';
-import { Button, Modal } from 'react-bootstrap';
-import './css/header.css'
-import 'bootstrap-icons/font/bootstrap-icons.css';
+import { Modal } from 'react-bootstrap';
+import NotificationIcon from './assets/notifications.svg'
 
-
-
-const Profile = () => {
+const Notification = () => {
     const [show, setShow] = useState(false);
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
-
     return (
         <div>
-            <img className='iconHeader' src={ProfilePic} alt="messages" onClick={handleShow} />
+            <img className='iconHeader' src={NotificationIcon} alt="Notification" onClick={handleShow} />
             <Modal show={show} onHide={handleClose}   >
                 <Modal.Body>
                     <div className='heading-profile'>
-                        <img src={ProfilePic} alt="messages" />
+                        <img src={NotificationIcon} alt="messages" />
                     </div>
                     <i className="bi bi-x exit-button-profile" onClick={handleClose}></i>
                     <div className='d-flex flex-column justify-content-center align-items-center '>
@@ -47,4 +42,4 @@ const Profile = () => {
     )
 }
 
-export default Profile
+export default Notification
