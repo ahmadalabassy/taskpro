@@ -19,12 +19,13 @@ const Profile = () => {
                     <div className='heading-profile'>
                         <img src={ProfilePic} alt="messages" />
                     </div>
+                    <i className="bi bi-x"></i>
                     <div className='d-flex flex-column justify-content-center align-items-center '>
                         <p className='heading'>Fares Elabasery</p>
                         <p className='id-heading'>#Id-003240</p>
                         <p className='job-heading'>Web App Developer</p>
                     </div>
-                    <div className='d-flex flex-column justify-content-center align-items-start p-1'>
+                    <div className='d-flex flex-column justify-content-center align-items-start ps-md-5 ms-md-4 pe-md-3 p-lg-1'>
                         <p className='user-data-heading'><i className="bi bi-envelope"></i>fareselebasery@outlook.com</p>
                         <p className='user-data-heading'><i className="bi bi-telephone"></i>+20 1207286573</p>
                         <p className='user-data-heading'><i className="bi bi-geo-alt"></i>Egypt</p>
