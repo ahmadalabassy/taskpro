@@ -16,7 +16,7 @@ export default function Controls() {
       <img src={notifications} alt="notifications" />
       <img className='ms-1' src={help} alt="help" />
      <span className='d-none d-lg-flex'><Messages /></span>
-     <span className='d-lg-flex'><Profile /></span> 
+     <span className='d-none d-lg-flex'><Profile /></span> 
     </div>
   )
 }
