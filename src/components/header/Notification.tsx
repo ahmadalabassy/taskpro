@@ -1,5 +1,5 @@
 import React from 'react';
-import { Dropdown, Badge } from 'react-bootstrap';
+import {Dropdown} from 'react-bootstrap';
 import './css/header.css'; 
 import NotificationIcon from './assets/notifications.svg';
 
