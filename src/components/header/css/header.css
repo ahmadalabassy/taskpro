@@ -1,0 +1,215 @@
+header {
+    display: flex;
+    border-bottom: 1px solid #F4F4F4;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 2rem;
+    margin: 0 auto;
+    width: 100%;
+    /* position: sticky; */
+}
+
+@media screen and (max-width:991px) {
+    header {
+        padding: 1rem;
+    }
+}
+
+/* img click */
+
+.playButton {
+    cursor: pointer;
+    width: 24px;
+    margin: auto;
+    transition: transform 0.3s;
+}
+
+/* Profile image */
+
+.iconHeader {
+    cursor: pointer;
+    transition: all 0.3s;
+    padding: 5px;
+    background-color: #FFFFFF;
+    border: none;
+}
+
+.iconHeader:hover,
+.iconHeader:focus{
+    padding: 5px;
+    background-color: #e4e4e4;
+    border-radius: 100px;
+}
+
+/* modal Custom style */
+.heading {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 5px;
+    font-weight: bold;
+    margin-top: 142px;
+    text-transform: capitalize;
+}
+
+.id-heading {
+    font-size: 16px;
+    color: var(--bg-color);
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.job-heading {
+    font-size: 16px;
+    color: var(--bg-color);
+    font-weight: 900;
+    text-transform: capitalize;
+    margin-bottom: 4px;
+}
+
+.user-data-heading {
+    margin-left: 1.2rem;
+    margin-bottom: 3px;
+    font-size: 1rem;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: capitalize;
+}
+
+.modal-content {
+    width: 341px;
+    border-radius: 24px;
+    padding-bottom: 8px;
+    position: relative;
+    top: 30px;
+    left: 60px;
+}
+
+@media screen and (max-width: 991px) {
+    .modal-content {
+        left: 0;
+        padding-bottom: 0;
+        width: 100%;
+    }
+
+}
+
+.user-data-heading i {
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+.footer-heading {
+    color: var(--bg-color);
+    font-weight: 500;
+}
+
+.heading-status {
+    font-size: 16px;
+    font-weight: 500;
+    color: #F4F4F4;
+    padding: 0.4rem 1.5rem;
+    border-radius: 8px;
+}
+
+.active-status {
+    background-color: #44BB79;
+}
+
+.in-active-status {
+    background-color: #FF6B56;
+}
+
+.heading-profile {
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.heading-profile img {
+    width: 192px;
+    height: 192px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #FFFFFF;
+    -webkit-box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    -moz-box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.exit-button-profile {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 30px;
+    color: var(--bg-color);
+}
+
+@media screen and (max-width: 991px) {
+    .heading-profile {
+        top: -32px;
+    }
+
+    .heading-profile img {
+        width: 180px;
+        height: 180px;
+    }
+
+}
+
+/* Notification Modal */
+.DropDown-heading .dropdown-toggle::after {
+    display: none;
+}
+
+/* NotificationMenu.css */
+
+.notification-dropdown {
+    width: 300px;
+    /* Adjust the width as needed */
+    padding: 0;
+}
+
+
+.notification-item {
+    padding: 10px 15px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.notification-item:hover {
+    background-color: #f8f9fa;
+}
+
+.notification-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.notification-title {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.notification-time {
+    font-size: 12px;
+    color: #6c757d;
+}
+
+.view-all {
+    text-align: center;
+    font-weight: bold;
+    color: #007bff;
+}
+
+.view-all:hover {
+    background-color: #f8f9fa;
+}
+
+/* Customize the badge */
+.badge {
+    margin-left: 5px;
+}
