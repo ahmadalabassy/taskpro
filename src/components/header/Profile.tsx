@@ -1,8 +1,8 @@
-import React, { useState } from 'react'
-import ProfilePic from './assets/default-profile.svg';
-import { Button, Modal } from 'react-bootstrap';
-import './css/header.css'
 import 'bootstrap-icons/font/bootstrap-icons.css';
+import React, { useState } from 'react';
+import { Modal } from 'react-bootstrap';
+import ProfilePic from './assets/default-profile.svg';
+import './css/header.css';
 
 
 
@@ -14,7 +14,7 @@ const Profile = () => {
     return (
         <div>
             <img className='iconHeader' src={ProfilePic} alt="messages" onClick={handleShow} />
-            <Modal show={show} onHide={handleClose}   >
+            <Modal className='custom-modal' show={show} onHide={handleClose}   >
                 <Modal.Body>
                     <div className='heading-profile'>
                         <img src={ProfilePic} alt="messages" />
