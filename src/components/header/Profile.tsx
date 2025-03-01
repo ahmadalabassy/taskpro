@@ -1,8 +1,8 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
+import { Modal } from 'react-bootstrap';
 import ProfilePic from './assets/default-profile.svg';
-import { Button, Modal } from 'react-bootstrap';
-import './css/header.css'
 import 'bootstrap-icons/font/bootstrap-icons.css';
+import './css/header.css';
 
 
 

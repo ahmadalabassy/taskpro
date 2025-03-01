@@ -15,7 +15,7 @@ export default function Controls() {
       <img className='ms-1 iconHeader' src={help} alt="help" />
       <span className=''><Notification /></span>
       <span className='d-none d-lg-flex iconHeader p-2'><Messages /></span>
-      <span className='d-none d-lg-flex'><Profile /></span>
+      <span className=' d-lg-flex'><Profile /></span>
     </div>
   )
 }

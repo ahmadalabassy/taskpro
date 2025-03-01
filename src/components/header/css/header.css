@@ -30,16 +30,16 @@ header {
 .iconHeader {
     cursor: pointer;
     transition: all 0.3s;
-    padding: 5px;
-    background-color: #FFFFFF;
-    border: none;
+    padding: 5px !important;
+    background-color: #FFFFFF !important;
+    border: none !important;
 }
 
 .iconHeader:hover,
 .iconHeader:focus {
     padding: 5px;
-    background-color: #e4e4e4;
-    border-radius: 100px;
+    background-color: #e4e4e4 !important;
+    border-radius: 100px !important;
 }
 
 /* modal Custom style */
@@ -91,9 +91,8 @@ header {
 
 @media screen and (max-width: 991px) {
     .custom-modal {
-        left: 0;
-        padding-bottom: 0;
-        width: 100%;
+        width: 100% !important;
+        padding: 1.5rem !important;
     }
 
 }
