@@ -36,7 +36,7 @@ header {
 }
 
 .iconHeader:hover,
-.iconHeader:focus{
+.iconHeader:focus {
     padding: 5px;
     background-color: #e4e4e4;
     border-radius: 100px;
@@ -78,17 +78,19 @@ header {
     text-transform: capitalize;
 }
 
-.modal-content {
-    width: 341px;
-    border-radius: 24px;
-    padding-bottom: 8px;
-    position: relative;
-    top: 30px;
-    left: 60px;
+.custom-modal {
+    overflow: visible !important;;
+    width: 341px !important;
+    border-radius: 24px !important;
+    padding-bottom: 8px !important;
+    position: relative !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    margin-top: -38rem;
 }
 
 @media screen and (max-width: 991px) {
-    .modal-content {
+    .custom-modal {
         left: 0;
         padding-bottom: 0;
         width: 100%;

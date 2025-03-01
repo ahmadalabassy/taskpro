@@ -14,7 +14,7 @@ const Profile = () => {
     return (
         <div>
             <img className='iconHeader' src={ProfilePic} alt="messages" onClick={handleShow} />
-            <Modal show={show} onHide={handleClose}   >
+            <Modal className='custom-modal' show={show} onHide={handleClose}   >
                 <Modal.Body>
                     <div className='heading-profile'>
                         <img src={ProfilePic} alt="messages" />
