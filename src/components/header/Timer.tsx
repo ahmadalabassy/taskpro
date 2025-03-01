@@ -17,6 +17,7 @@ const Toggle = styled(ToggleButton)`
   &:hover {
     color: #0b72f9 !important;
     transform: scale(1.05);
+    background-color:transparent !important;
   }
   &:focus {
     outline: none;
