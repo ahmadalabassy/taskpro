@@ -2,10 +2,7 @@
   "compilerOptions": {
     "target": "ESNext",
     "strict": true,
-    "typeRoots": [
-      "../node_modules/@types",
-      "src/typings"
-    ],
+    "typeRoots": ["../node_modules/@types", "src/typings"]
   },
   "files": [],
   "references": [
