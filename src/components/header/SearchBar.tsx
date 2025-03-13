@@ -1,6 +1,5 @@
 import React from "react";
-import styled from "styled-components";
-import search_icon from "./assets/search.svg";
+import styles from "./header.module.css";
 
 const SvgSearchIcon = styled.img`
     position: absolute;
@@ -45,7 +44,9 @@ export default function SearchBar() {
   return (
     <div className="position-relative">
       <Input placeholder="Search Tasks ..." type="text" />
-      <SvgSearchIcon src={search_icon} alt="Search Icon" />
+      <img className={styles.searchIcon} alt="Search Icon">
+        <i className="bi bi-search"></i>
+      </img>
     </div>
 
   )

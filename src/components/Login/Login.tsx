@@ -1,6 +1,7 @@
 import React from "react";
+
 import styles from "./Login.module.css";
-import logo from "../../components/header/assets/logo.png";
+import loginImg from "./assets/login-image.png"
 
 export default function Login() {
   return (
@@ -11,7 +12,7 @@ export default function Login() {
       >
         <div className={styles.formContainer}>
           <div className={styles.logo}>
-            <img src={logo} />
+            <img src="/logo.png" />
           </div>
           <h3>Create an account</h3>
           <p>Let’s get started with your 30 day free trial</p>
@@ -62,7 +63,7 @@ export default function Login() {
 
       {/* Right side (Image) */}
       <div className={styles.rightSide}>
-        <img src="/login-image.png" alt="Illustration" />
+        <img src={loginImg} alt="Illustration" />
       </div>
     </div>
   );
