@@ -10,6 +10,13 @@ header {
     /* position: sticky; */
 }
 
+.searchIcon {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    transition: all 0.3s ease;
+}
+
 @media screen and (max-width:991px) {
     header {
         padding: 1rem;
