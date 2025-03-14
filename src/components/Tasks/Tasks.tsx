@@ -5,9 +5,10 @@ import "bootstrap/dist/js/bootstrap.bundle.min";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
-import UserProfile from "../../modals/UserProfile";
-import ReusableModal from "../../modals/ReusableModal";
+import UserProfile from "../UserProfile/UserProfile.tsx";
+import ReusableModal from "../ReusableModal/ReusableModal.tsx";
 import Card from "react-bootstrap/Card";
+// import ReusableModal from "./../../../ReusableModal/ReusableModal";
 
 const Tasks = () => {
   const [activeModal, setActiveModal] = useState<string | null>(null);
