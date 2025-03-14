@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import ProfilePic from "../../../public/default-profile.svg";
+import ProfilePic from "../../../public/default-profile-img.svg";
 import { Button, Modal } from "react-bootstrap";
 // import './css/header.css'
 import "bootstrap-icons/font/bootstrap-icons.css";

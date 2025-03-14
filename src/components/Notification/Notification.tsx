@@ -1,7 +1,5 @@
 import React from "react";
-import { Dropdown, Badge } from "react-bootstrap";
-// import './css/header.css';
-import NotificationIcon from "../../assets/notifications.svg";
+import { Dropdown } from "react-bootstrap";
 
 const Notification = () => {
   return (
@@ -11,7 +9,7 @@ const Notification = () => {
         variant="light"
         id="NotificationDropdown-btn"
       >
-        <img src={NotificationIcon} alt="NotificationIcon" />
+        <i className="bi bi-bell"></i>
       </Dropdown.Toggle>
       <Dropdown.Menu className="notification-dropdown">
         <Dropdown.Header>Recent Notifications</Dropdown.Header>

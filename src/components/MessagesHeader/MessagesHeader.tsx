@@ -1,10 +1,9 @@
 import React from "react";
-import MessagesPic from "../../assets/messages.svg";
 
 const Messages = () => {
   return (
     <div>
-      <img src={MessagesPic} alt="messages" />
+      <i className="bi bi-chat-right-text"></i>
     </div>
   );
 };
