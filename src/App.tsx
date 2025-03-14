@@ -4,7 +4,7 @@ import Layout from "./components/Layout/Layout.tsx";
 import Login from "./components/Login/Login";
 import "./App.css";
 import Home from "./components/Home/Home.tsx";
-import Drive from "./components/Drive.tsx/Drive.tsx";
+import Drive from "./components/Drive/Drive.tsx";
 import Progress from "./components/Progress/Progress.tsx";
 import TeamMemebers from "./components/TeamMembers/TeamMembers.tsx";
 import Messages from "./components/Messages/Messages.tsx";
