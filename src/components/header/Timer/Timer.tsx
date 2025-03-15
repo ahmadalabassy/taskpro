@@ -41,8 +41,9 @@ export default function Timer() {
       </div>
       <div className="clocking">
         <span
+          className={styles.playButton}
           onClick={handleToggleClick}
-        >{checked ? <i className="bi bi-stop-circle"></i> : <i className="bi bi-play-circle"></i>}</span>
+        >{checked ? <i className="bi bi-play-circle"></i> : <i className="bi bi-stop-circle"></i>}</span>
         <ToggleButton
           id="toggle-check"
           type="checkbox"
