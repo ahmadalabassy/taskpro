@@ -20,10 +20,18 @@
   transition: all 0.3s ease;
 }
 
+.playButton {
+  cursor: pointer;
+  width: 24px;
+  margin: auto;
+  transition: transform 0.3s;
+}
+
 .timeToggle:hover {
   color: #0b72f9 !important;
   transform: scale(1.05);
 }
+
 .timeToggle:focus {
   outline: none;
 }

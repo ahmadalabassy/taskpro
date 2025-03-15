@@ -1,15 +1,17 @@
-import React from "react";
-// import Controls from "./Controls";
-import SearchBar from "../SearchBar/SearchBar";
-import Timer from "../Timer/Timer";
-import Controls from "../Controls/Controls";
+import React from 'react';
+
+import Controls from "./Controls/Controls.tsx";
+import SearchBar from "./SearchBar/SearchBar.tsx";
+import Timer from "./Timer/Timer.tsx";
+
+import styles from "./Header.module.css";
 
 export default function Header() {
   return (
-    <header>
+    <header className={styles.header}>
       <SearchBar />
       <Timer />
-      <Controls />
+      <Controls />    
     </header>
-  );
+  )
 }
