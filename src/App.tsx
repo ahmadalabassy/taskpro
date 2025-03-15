@@ -8,7 +8,7 @@ import Progress from "./components/Progress/Progress.tsx";
 import TeamMemebers from "./components/TeamMembers/TeamMembers.tsx";
 import Messages from "./components/Messages/Messages.tsx";
 import Tasks from "./components/Tasks/Tasks";
-import Register from "./components/Login/Register.tsx";
+import Register from "./components/Register/Register.tsx";
 
 export default function App() {
   return (
