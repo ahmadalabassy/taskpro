@@ -9,6 +9,7 @@ import TeamMemebers from "./components/TeamMembers/TeamMembers.tsx";
 import Messages from "./components/Messages/Messages.tsx";
 import Tasks from "./components/Tasks/Tasks";
 import Register from "./components/Register/Register.tsx";
+import Login from "./components/Login/Login.tsx";
 
 export default function App() {
   return (
@@ -22,6 +23,7 @@ export default function App() {
         <Route path="/messages" element={<Messages />} />
       </Route>
       <Route path="/register" element={<Register />} />
+      <Route path="/login" element={<Login />} />
     </Routes>
   );
 }
