@@ -1,38 +1,68 @@
 import React from "react";
 import { useFormik } from "formik";
-import styles from "./Login.module.css";
-import { Link } from "react-router";
+import * as Yup from "yup";
+import styles from "./Register.module.css";
 
-export default function Login() {
+export default function Register() {
+  const validationSchema = Yup.object({
+    name: Yup.string()
+      .min(3, "Name must be at least 3 characters")
+      .required("Name is required"),
+    email: Yup.string()
+      .email("Invalid email address")
+      .required("Email is required"),
+    password: Yup.string()
+      .min(6, "Password must be at least 6 characters")
+      .required("Password is required"),
+  });
+
   const formik = useFormik({
     initialValues: {
+      name: "",
       email: "",
       password: "",
-      rememberDevice: false,
     },
-
+    validationSchema: validationSchema,
     onSubmit: function (values) {
-      console.log("Login Data:", values);
+      console.log("Form Data:", values);
     },
   });
 
   return (
     <div className={styles.container}>
-      {/* Right Side (Image) */}
-      <div className={styles.rightSide}>
-        <img src="/login-image.png" alt="Illustration" />
-      </div>
-
-      {/* Left Side (Form) */}
-      <div className={styles.leftSide}>
+      {/* Left side (Form) */}
+      <div
+        className={`${styles.leftSide} d-flex flex-column justify-content-center align-items-center`}
+      >
         <div className={styles.formContainer}>
           <div className={styles.logo}>
             <img src="/logo.png" alt="Logo" />
           </div>
-          <h3>Welcome Back!</h3>
-          <p>Please login to continue.</p>
+          <h3>Create an account</h3>
+          <p>Let’s get started with your 30 day free trial</p>
 
           <form onSubmit={formik.handleSubmit} className={styles.formStyle}>
+            {/* Name Input */}
+            <div className={styles.inputContainer}>
+              <input
+                type="text"
+                id="name"
+                placeholder=" "
+                value={formik.values.name}
+                onChange={formik.handleChange}
+                onBlur={formik.handleBlur}
+                className={
+                  formik.touched.name && formik.errors.name
+                    ? styles.inputError
+                    : ""
+                }
+              />
+              <label htmlFor="name">Name</label>
+              {formik.touched.name && formik.errors.name ? (
+                <div className={styles.errorMessage}>{formik.errors.name}</div>
+              ) : null}
+            </div>
+
             {/* Email Input */}
             <div className={styles.inputContainer}>
               <input
@@ -77,47 +107,19 @@ export default function Login() {
               ) : null}
             </div>
 
-            {/* Remember this device and Forgot Password */}
-            <div className={styles.optionsContainer}>
-              <div className={styles.rememberDevice}>
-                <input
-                  type="checkbox"
-                  id="rememberDevice"
-                  checked={formik.values.rememberDevice}
-                  onChange={formik.handleChange}
-                  className={styles.checkbox}
-                />
-                <label
-                  htmlFor="rememberDevice"
-                  className={styles.checkboxLabel}
-                >
-                  Remember this device
-                </label>
-              </div>
-              <div className={styles.forgotPassword}>
-                <Link to="/forgot-password">Forgot Password?</Link>
-              </div>
-            </div>
-
             {/* Buttons */}
             <div className={styles.groupBtn}>
               <button type="submit" className={styles.submitBtn}>
-                Login
+                Create account
               </button>
 
-              {/* Divider with "Or Sign in with" */}
-              <div className={styles.dividerContainer}>
-                <div className={styles.dividerLine}></div>
-                <span className={styles.dividerText}>Or Sign in with</span>
-                <div className={styles.dividerLine}></div>
-              </div>
-
-              {/* Google Sign In Button */}
               <button type="button" className={styles.googleBtn}>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
+                  x="0px"
+                  y="0px"
+                  width="100"
+                  height="100"
                   viewBox="0 0 48 48"
                 >
                   <path
@@ -137,14 +139,16 @@ export default function Login() {
                     d="M43.611,20.083L43.595,20L42,20H24v8h11.303c-0.792,2.237-2.231,4.166-4.087,5.571	c0.001-0.001,0.002-0.001,0.003-0.002l6.19,5.238C36.971,39.205,44,34,44,24C44,22.659,43.862,21.35,43.611,20.083z"
                   ></path>
                 </svg>
-                Google
+                Sign up with Google
               </button>
-              <p className={styles.createAccount}>
-                New here? <Link to="/register">Create a new account</Link>
-              </p>
             </div>
           </form>
         </div>
+      </div>
+
+      {/* Right side (Image) */}
+      <div className={styles.rightSide}>
+        <img src="/login-image.png" alt="Illustration" />
       </div>
     </div>
   );

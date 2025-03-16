@@ -6,9 +6,6 @@
 .leftSide {
   width: 50%;
   background-color: #d6d6d6;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .rightSide {
@@ -20,7 +17,7 @@
 }
 
 .rightSide img {
-  max-height: 100%;
+  max-width: 80%;
 }
 
 .formContainer {
@@ -28,15 +25,12 @@
   background-color: #ffffff;
   padding: 30px;
   border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .formContainer h3 {
   margin-bottom: 0;
-  font-weight: bold;
   font-size: 1.3rem;
 }
-
 .formContainer p {
   font-size: 1rem;
 }
@@ -95,52 +89,6 @@
   padding: 0 5px;
 }
 
-.optionsContainer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 1rem;
-}
-
-.rememberDevice {
-  display: flex;
-  align-items: center;
-}
-
-.checkbox {
-  margin-right: 0.5rem;
-  width: 16px;
-  height: 16px;
-  cursor: pointer;
-}
-
-.checkboxLabel {
-  font-size: 0.9rem;
-  color: #333;
-  cursor: pointer;
-}
-
-.forgotPassword a {
-  color: #3b82f6;
-  text-decoration: none;
-  font-size: 0.9rem;
-}
-.forgotPassword a:hover {
-  text-decoration: underline;
-}
-
-.createAccount {
-  text-align: center;
-  margin-top: 0.5rem;
-}
-.createAccount a {
-  color: #3b82f6;
-  text-decoration: none;
-}
-.createAccount a:hover {
-  text-decoration: underline;
-}
-
 .submitBtn {
   margin-top: 1.2rem;
   width: 100%;
@@ -158,25 +106,6 @@
   background-color: transparent;
   border: 2px solid #000;
   color: #000;
-}
-
-.dividerContainer {
-  display: flex;
-  align-items: center;
-  width: 100%;
-  margin: 0.5rem 0;
-}
-
-.dividerLine {
-  flex: 1;
-  height: 1px;
-  background-color: #ccc;
-}
-
-.dividerText {
-  margin: 0 0.5rem;
-  font-size: 0.9rem;
-  color: #666;
 }
 
 .googleBtn {
@@ -206,6 +135,11 @@
   margin-top: 0.2rem;
 }
 
+.googleBtn img {
+  width: 20px;
+  margin-right: 10px;
+}
+
 .groupBtn {
   display: flex;
   flex-direction: column;
@@ -231,11 +165,9 @@
   .leftSide {
     width: 100%;
   }
-
   .formContainer {
     width: 97%;
   }
-
   .formContainer h3 {
     font-size: 1rem;
   }
@@ -275,5 +207,9 @@
   .googleBtn svg {
     width: 20px;
     height: 20px;
+  }
+
+  .googleBtn img {
+    width: 18px;
   }
 }
