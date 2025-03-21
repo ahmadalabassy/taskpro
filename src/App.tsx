@@ -1,32 +1,29 @@
-import './App.css'
-import 'bootstrap/dist/css/bootstrap.min.css';
-import Header from './components/Header/index.tsx'
-import Aside from './components/Aside.tsx'
-import { Route, Routes } from 'react-router'
-import Home from './components/Pages/Home.tsx'
-import Messages from './components/Pages/Messages.tsx'
-import Tasks from './components/Pages/Tasks.tsx'
-import Progress from './components/Pages/Progress.tsx'
-import TeamMemebers from './components/Pages/TeamMembers.tsx'
-import Drive from './components/Pages/Drive.tsx'
+import React from "react";
+import { Routes, Route } from "react-router-dom";
+import Layout from "./components/Layout/Layout.tsx";
+import "./App.css";
+import Home from "./components/Home/Home.tsx";
+import Drive from "./components/Drive/Drive.tsx";
+import Progress from "./components/Progress/Progress.tsx";
+import TeamMemebers from "./components/TeamMembers/TeamMembers.tsx";
+import Messages from "./components/Messages/Messages.tsx";
+import Tasks from "./components/Tasks/Tasks";
+import Register from "./components/Register/Register.tsx";
+import Login from "./components/Login/Login.tsx";
 
 export default function App() {
-
   return (
-    <div style={{ display: 'flex', flexDirection: 'row' }}>
-      <Aside />
-      <div className='w-100'>
-        <Header />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/tasks" element={<Tasks />} />
-          <Route path="/drive" element={<Drive />} />
-          <Route path="/progress" element={<Progress />} />
-          <Route path="/team-members" element={<TeamMemebers />} />
-          <Route path="/messages" element={<Messages />} />
-        </Routes>
-      </div>
-    </div>
-  )
+    <Routes>
+      <Route element={<Layout />}>
+        <Route path="/" element={<Home />} />
+        <Route path="/tasks" element={<Tasks />} />
+        <Route path="/drive" element={<Drive />} />
+        <Route path="/progress" element={<Progress />} />
+        <Route path="/team-members" element={<TeamMemebers />} />
+        <Route path="/messages" element={<Messages />} />
+      </Route>
+      <Route path="/register" element={<Register />} />
+      <Route path="/login" element={<Login />} />
+    </Routes>
+  );
 }
-

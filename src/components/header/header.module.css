@@ -1,0 +1,114 @@
+.header {
+  display: flex;
+  border-bottom: 1px solid #f4f4f4;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 2rem;
+  margin: 0 auto;
+  width: 100%;
+  gap: 16px;
+  /* position: sticky; */
+}
+
+.iconHeader {
+  cursor: pointer !important;
+  font-size: 24px !important;
+  padding: 1px 7px !important;
+  border-radius: 100px;
+  background-color: white !important;
+  ;
+  transition: all 0.3s;
+}
+
+.profile {
+  cursor: pointer;
+  padding: 2px;
+  border-radius: 100px;
+  transition: all 0.3s;
+}
+
+.profile:hover,
+.profile:focus {
+  padding: 2px;
+  border-radius: 100px;
+  background-color: #e4e4e4 !important;
+  -webkit-box-shadow: 0px 0px 22px 1px rgba(228, 228, 228, 1);
+  -moz-box-shadow: 0px 0px 22px 1px rgba(228, 228, 228, 1);
+  box-shadow: 0px 0px 22px 1px rgba(228, 228, 228, 1);
+}
+
+.iconHeader:hover,
+.iconHeader:focus {
+  padding: 1px 7px !important;
+  margin: 0 !important;
+  background-color: #e4e4e4 !important;
+  border-radius: 100px;
+  -webkit-box-shadow: 0px 0px 22px 1px rgba(228, 228, 228, 1);
+  -moz-box-shadow: 0px 0px 22px 1px rgba(228, 228, 228, 1);
+  box-shadow: 0px 0px 22px 1px rgba(228, 228, 228, 1);
+}
+
+@media screen and (max-width: 991px) {
+  .header {
+    padding: 1rem;
+  }
+}
+
+/* search Bar */
+.searchIcon {
+  position: absolute;
+  top: 10px;
+  left: 14px;
+  transition: all 0.3s ease;
+}
+
+.searchInput {
+  width: 400px;
+  padding: 10px 0 10px 38px;
+  border-radius: 8px;
+  border: none;
+  font-size: 16px;
+  background-color: var(--secondary-color);
+  font-weight: bold;
+  transition: all 0.3s ease;
+  position: relative;
+  text-transform: capitalize;
+  caret-color: var(--primary-color);
+}
+
+.searchInput:is(:hover, :focus)~img {
+  transform: scale(1.2);
+}
+
+.searchInput::placeholder {
+  color: var(--text-header-color);
+}
+
+.searchInput:focus {
+  outline: none;
+  border: none;
+  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+@media screen and (max-width: 991px) {
+  .searchInput {
+    width: 164px;
+  }
+
+  .header {
+    gap: 0;
+  }
+}
+
+
+/* light icon */
+
+.lightIcon {
+  color: #FFBC99;
+  font-size: 24px;
+}
+.darkIcon {
+  color: #FFFFFF;
+  font-size: 24px;
+}
