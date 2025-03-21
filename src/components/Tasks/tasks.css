@@ -1,4 +1,4 @@
-* {
+/* * {
   --page-bg: #efefef;
   --text-primary: #676f77;
   --bg-hover: #dddddd;
@@ -55,4 +55,4 @@ main{
 .comment:hover,
 .file:hover {
   border: 0;
-}
+} */

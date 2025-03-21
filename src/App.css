@@ -1,15 +1,13 @@
-/* #root {
+ #root {
   --primary-color :#2A85FF;
   --secondary-color :#EFEFEF;
   --bg-color :#676F77;
   --text-header-color :rgb(103, 111, 119,70%);  
   --text-primary: #676F77;
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+  --orange : #FF6B56;
+  
 }
-
+/*
 .logo {
   height: 6em;
   padding: 1.5em;

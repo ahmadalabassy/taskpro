@@ -1,0 +1,107 @@
+.ClockSection {
+  padding: 4px 10px;
+  background-color: var(--secondary-color);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  min-width: 240px;
+}
+
+.timeToggle {
+  background-color: var(--secondary-color) !important;
+  padding: 0px !important;
+  border: none !important;
+  color: var(--primary-color) !important;
+  font-size: 16px;
+  font-weight: bold !important;
+  text-align: left !important;
+  transition: all 0.3s ease;
+}
+
+.timeTogglePause {
+  background-color: var(--secondary-color) !important;
+  padding: 0px !important;
+  border: none !important;
+  color: var(--orange) !important;
+  font-size: 16px;
+  font-weight: bold !important;
+  text-align: left !important;
+  transition: all 0.3s ease;
+}
+
+.timeToggle:hover {
+  color: #0b72f9 !important;
+  background-color: transparent;
+  transform: scale(1.01);
+}
+
+.timeTogglePause:hover {
+  color: #f54d37 !important;
+  background-color: transparent;
+  transform: scale(1.01);
+}
+
+.playButton {
+  cursor: pointer;
+  font-size: 16px;
+  color: var(--primary-color);
+  margin: auto;
+  transition: all 0.3s;
+}
+
+.pauseButton {
+  cursor: pointer;
+  font-size: 16px;
+  color: var(--orange);
+  /* padding-right: 2px; */
+  transition: all 0.3s;
+}
+
+
+.time {
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--text-header-color);
+  font-family: "Space Mono", serif;
+  padding-right: 16px;
+  margin: 0 !important;
+}
+
+.amPm {
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--text-header-color);
+  position: absolute;
+  left: 74px;
+  top: 6px;
+}
+
+.clocking {
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  margin-left: 16px;
+  justify-content: left;
+  gap: 5px;
+}
+
+@media screen and (max-width: 991px) {
+  .ClockSection {
+    padding: 10px 0;
+    background-color: #fff !important;
+    min-width: auto !important;
+  }
+
+  .playButton {
+    font-size: 24px !important;
+  }
+
+  .pauseButton {
+    font-size: 24px !important;
+  }
+
+  .timeToggle {
+    display: none;
+  }
+}

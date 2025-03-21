@@ -2,19 +2,21 @@ import React from "react";
 import { Dropdown } from "react-bootstrap";
 
 import styles from "./Notifications.module.css";
-import headerStyles from "../../Header.module.css";
+import headerStyles from "../header/Header.module.css";
 
 const Notification = () => {
   return (
-    <Dropdown className={styles.dropDownHeading}>
+    <Dropdown>
       <Dropdown.Toggle
-        className={headerStyles.iconHeader}
+      
         variant="light"
         id="NotificationDropdown-btn"
+        className={`${headerStyles.iconHeader} ${styles.dropdownToggle}`}
+
       >
-        <i className="bi bi-bell"></i>
+        <i className={`bi bi-bell`}></i>
       </Dropdown.Toggle>
-      <Dropdown.Menu className={styles.notificationDropdown}>
+      <Dropdown.Menu className={`${styles.notificationDropdown} `}>
         <Dropdown.Header>Recent Notifications</Dropdown.Header>
         <Dropdown.Item href="#/action-1" className="notificationItem">
           <div className={styles.notificationContent}>

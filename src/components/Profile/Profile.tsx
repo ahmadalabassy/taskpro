@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import { Modal } from "react-bootstrap";
-
-import headerStyles from "../../Header.module.css"
 import styles from "./Profile.module.css"
+
 
 const Profile = () => {
   const [show, setShow] = useState(false);
@@ -12,14 +11,14 @@ const Profile = () => {
   return (
     <div>
       <img
-        className={headerStyles.iconHeader}
+        className={styles.iconHeader}
         src="./default-profile-img.svg"
         alt="messages"
         onClick={handleShow}
       />
-      <Modal show={show} onHide={handleClose}>
+      <Modal show={show} onHide={handleClose} centered dialogClassName={styles.modalContent}>
         <Modal.Body>
-          <div className={styles.headingProfile}>
+          <div className={`${styles.headingProfile}`}>
             <img src="./default-profile-img.svg" alt="messages" />
           </div>
           <i className={`bi bi-x ${styles.exitButtonProfile}`} onClick={handleClose}></i>
@@ -28,7 +27,7 @@ const Profile = () => {
             <p className={styles.idHeading}>#Id-003240</p>
             <p className={styles.jobHeading}>Web App Developer</p>
           </div>
-          <div className="d-flex flex-column justify-content-center align-items-start ps-md-5 ms-md-4 pe-md-3 ms-lg-0 p-lg-1">
+          <div className="d-flex flex-column justify-content-center align-items-start ms-lg-0 p-lg-1">
             <p className={styles.userDataHeading}>
               <i className="bi bi-envelope"></i>fareselebasery@outlook.com
             </p>
