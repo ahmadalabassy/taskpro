@@ -17,7 +17,7 @@ export default function Login() {
   });
 
   return (
-    <div className={styles.container}>
+    <div className={`${styles.container} `}>
       {/* Right Side (Image) */}
       <div className={styles.rightSide}>
         <img src="/login-image.png" alt="Illustration" />

@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 import Controls from "./Controls/Controls.tsx";
 import SearchBar from "./SearchBar/SearchBar.tsx";
@@ -11,7 +11,7 @@ export default function Header() {
     <header className={styles.header}>
       <SearchBar />
       <Timer />
-      <Controls />    
+      <Controls />
     </header>
-  )
+  );
 }

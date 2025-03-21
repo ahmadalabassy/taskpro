@@ -5,7 +5,6 @@ import "bootstrap-icons/font/bootstrap-icons.css";
 import TaskCard from "../TaskCard/TaskCard";
 import styles from "./Tasks.module.css";
 
-
 const Tasks = () => {
   const task = {
     name: "UX Research",
@@ -13,10 +12,9 @@ const Tasks = () => {
     files: [{ name: "research.pdf" }, { name: "design.png" }],
   }; // This is a dummy task object. Replace it with the actual task object.
   return (
-      <div className={`container ${styles.tasksBG } ${styles.bgHeight}`}>
-        <main className={`row align-items-center`} >
-
-        <div className="p-lg-4 p-2 bg-white rounded-3 col-md-3">
+    <div className={`container px-4 ${styles.tasksBG} ${styles.bgHeight}`}>
+      <main className={`row `}>
+        <div className="p-lg-4 px-3 bg-white rounded-3 col-md-3">
           <div className="d-flex flex-row justify-content-between align-items-center py-3 headingw-100">
             <div className="d-flex flex-row justify-content-start align-items-center">
               <span
@@ -56,7 +54,7 @@ const Tasks = () => {
           </div>
           <TaskCard task={task} />
         </div>
-        
+
         <div className="p-lg-4 p-2 bg-white rounded-3 col-md-3">
           <div className="d-flex flex-row justify-content-between align-items-center py-3 heading w-100">
             <div className="d-flex flex-row justify-content-start align-items-center">
@@ -178,8 +176,8 @@ const Tasks = () => {
           </div>
           <TaskCard task={task} />
         </div>
-        </main>
-      </div>
+      </main>
+    </div>
   );
 };
 export default Tasks;

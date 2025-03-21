@@ -25,7 +25,7 @@ const TaskCard: React.FC<TaskCardProps> = ({ task }) => {
   return (
     <div>
       <Card className="mb-4">
-        <Card.Body className="text-start lh-sm">
+        <Card.Body className="text-start lh-sm px-4 py-2">
           <div className="d-flex flex-row justify-content-between align-items-center">
             <Card.Title className="mb-0 fw-bold">UX Research</Card.Title>
             <Button
@@ -40,8 +40,12 @@ const TaskCard: React.FC<TaskCardProps> = ({ task }) => {
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem
             consequuntur consequatur praesentium culpa.
           </Card.Text>
-          <div className={`d-flex flex-row ${styles.primaryText} justify-content-between`}>
-            <div className= {`${styles.users} d-flex flex-row align-items-center`}>
+          <div
+            className={`d-flex flex-row ${styles.primaryText} justify-content-between`}
+          >
+            <div
+              className={`${styles.users} d-flex flex-row align-items-center`}
+            >
               <button
                 className={`${styles.user} bg-transparent rounded-circle btn-sm p-0 border-0`}
                 onClick={() => setShowUserProfileModal(true)}
@@ -52,7 +56,9 @@ const TaskCard: React.FC<TaskCardProps> = ({ task }) => {
                   alt=""
                 />
               </button>
-              <Button className={ `rounded-circle ${styles.addUser} ${styles.btnPrimary } ms-1 d-flex justify-content-center align-items-center`}>
+              <Button
+                className={`rounded-circle ${styles.addUser} ${styles.btnPrimary} ms-1 d-flex justify-content-center align-items-center`}
+              >
                 <i className="bi bi-plus text-primary"></i>
               </Button>
             </div>
@@ -60,7 +66,9 @@ const TaskCard: React.FC<TaskCardProps> = ({ task }) => {
               className={`${styles.comments}  d-flex flex-row align-items-center gap-1`}
               onClick={() => setShowCommentsModal(true)}
             >
-              <button className={`${styles.comment} bg-transparent rounded-circle btn-sm p-0 border-0`}>
+              <button
+                className={`${styles.comment} bg-transparent rounded-circle btn-sm p-0 border-0`}
+              >
                 <i className="bi bi-chat-dots primary-text"></i>
               </button>
               <span>{comments.length} comments</span>
@@ -69,7 +77,9 @@ const TaskCard: React.FC<TaskCardProps> = ({ task }) => {
               className={`${styles.attachedFiles} d-flex flex-row  align-items-center gap-1`}
               onClick={() => setShowFilesModal(true)}
             >
-              <button className={`${styles.file}  bg-transparent rounded-circle btn-sm p-0 border-0`}>
+              <button
+                className={`${styles.file}  bg-transparent rounded-circle btn-sm p-0 border-0`}
+              >
                 <i className={`bi bi-paperclip ${styles.primaryText}`}></i>
               </button>
               <span>{files.length} files</span>
