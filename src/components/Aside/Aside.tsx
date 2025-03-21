@@ -2,7 +2,7 @@ import { Link } from "react-router"
 import React from "react"
 export default function Aside() {
   return (
-    <aside>
+    <aside className="d-none d-lg-block">
       <Link to="/"><p>TASKPRO</p></Link>
       <section>
         <Link to="/"><p>Home</p></Link>

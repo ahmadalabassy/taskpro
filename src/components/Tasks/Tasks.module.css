@@ -1,0 +1,22 @@
+* {
+    --page-bg: #efefef;
+    --text-primary: #676f77;
+    --bg-hover: #dddddd;
+    --component-bg: #ffffff;
+  }
+  .bgHeight {
+    height: calc(100vh - 6rem);
+  }
+.tasksBG {
+    background-color: var(--page-bg);
+    
+  }
+  /* .main{
+    background-color: var(--component-bg);
+  } */
+  .rectangle {
+    width: 19px;
+    height: 37px;
+  }
+  
+  
