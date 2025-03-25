@@ -1,0 +1,44 @@
+.aside {
+  width: 310px;
+  height: 100vh;
+}
+
+.logo {
+  width: 44px;
+}
+
+* {
+  --bs-nav-pills-link-active-color: black ;
+  --bs-nav-pills-link-active-bg: var(--btn-bg-color);
+  --btn-bg-color: #F4F4F4;
+}
+
+.asideBtnActive {
+  -webkit-box-shadow: 0px 1px 4px 0px rgba(12,12,13,0.1);
+  -moz-box-shadow: 0px 1px 4px 0px rgba(12,12,13,0.1);
+  box-shadow: 0px 1px 4px 0px rgba(12,12,13,0.1);
+  color: black !important;
+  background-color: #F4F4F4 !important;
+  font-weight: 500 !important;
+}
+.asideBtnActive:hover {
+  font-weight: 500 !important;
+  -webkit-box-shadow: 0px 1px 4px 0px rgba(12,12,13,0.2);
+  -moz-box-shadow: 0px 1px 4px 0px rgba(12,12,13,0.2);
+  box-shadow: 0px 1px 4px 0px rgba(12,12,13,0.2);
+}
+
+.asideBtnNormal{
+  color: black !important;
+  background-color: transparent !important;
+}
+
+.asideBtnNormal:hover {
+  background-color: #F4F4F4 !important;
+  -webkit-box-shadow: 0px 1px 4px 0px rgba(12,12,13,0.2);
+  -moz-box-shadow: 0px 1px 4px 0px rgba(12,12,13,0.2);
+  box-shadow: 0px 1px 4px 0px rgba(12,12,13,0.2);
+}
+.asideBtnNormal span{
+  font-weight: normal;
+}
