@@ -5,7 +5,11 @@
   --text-header-color :rgb(103, 111, 119,70%);  
   --text-primary: #676F77;
   --orange : #FF6B56;
+  --btn-bg-color:#F4F4F4;
   
+}
+*{
+  font-family: "Inter", sans-serif;
 }
 /*
 .logo {
