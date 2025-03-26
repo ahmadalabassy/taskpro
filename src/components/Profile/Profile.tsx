@@ -9,7 +9,7 @@ const Profile = () => {
   const handleShow = () => setShow(true);
 
   return (
-    <div>
+    <>
       <img
         className={styles.iconHeader}
         src="./default-profile-img.svg"
@@ -61,7 +61,7 @@ const Profile = () => {
           </div>
         </Modal.Body>
       </Modal>
-    </div>
+    </>
   );
 };
 

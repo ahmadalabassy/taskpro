@@ -1,79 +1,90 @@
 import { Link } from "react-router"
 import styles from "./Aside.module.css"
 import React, { useState } from "react"
+import { Badge } from "react-bootstrap";
+import Profile from './../Profile/Profile';
 export default function Aside() {
   const [activeBtn, setActiveBtn] = useState(1);
+  const [activeDropdownBtn, setActiveDrobpownBtn] = useState(2);
   const handleClick = (index) => {
     setActiveBtn(index);
   };
-  
+  const handleClickDropdown = (index) => {
+    setActiveDrobpownBtn(index);
+  };
+
 
 
 
   return (
-    // <aside>
-    //   <Link to="/"><img src="./../../../public/logo.png" alt="" srcset="" /></Link>
-    //   <section>
-    //     <Link to="/"><p>Home</p></Link>
-    //     <Link to="/tasks"><p>Tasks</p></Link>
-    //     <Link to="/drive"><p>Drive</p></Link>
-    //     <Link to="/progress"><p>Progress</p></Link>
-    //     <Link to="/team-members"><p>Team Memebers</p></Link>
-    //     <Link to="/messages"><p>Messages</p></Link>
-    //   </section>
-
-    //   <section>
-    //     <p>Workspace</p>
-    //     <ul>
-    //       <li>Product Design</li>
-    //       <li>UI/UX Design</li>
-    //       <li>Web App Development</li>
-    //       <li>Mobile App Development</li>
-    //     </ul>
-    //   </section>
-    //   <button>+ Create Task</button>
-    // </aside>
-    <div className={`d-flex flex-column flex-shrink-0 p-3 bg-body-light justify-content-center asideBtn ${styles.aside}`}>
-      <a href="/" className={`d-flex align-items-end justify-content-center mb-3 me-5 gap-2 link-body-emphasis text-decoration-none `}>
-        <img className={` `} src="./../../../public/logo-no-text.svg" alt="Logo" />
+    <aside className={` d-flex flex-row flex-md-column flex-lg-shrink-0 flex-md-shrink-1 p-md-3 p-0 bg-body-light ${styles.aside}`}>
+      <Link to="/" className={`d-flex align-items-end justify-content-center mb-4 me-5 gap-2 link-body-emphasis d-md-flex d-none text-decoration-none `}>
+        <img  src="./../../../public/logo-no-text.svg" alt="Logo" />
         <span className="fs-4 fw-bold">TASKPRO</span>
-      </a>
+      </Link>
 
-      <ul className="nav nav-pills gap-2 flex-column mb-auto">
-        <li className="nav-item">
-        <a href="#" className={`nav-link d-flex align-items-center ${activeBtn === 1 ? styles.asideBtnActive : styles.asideBtnNormal}`} onClick={() => handleClick(1)}>
-        <i className="bi me-2 fs-5 bi-grid"></i>
-            <span >Home</span> 
-          </a>
+      <ul className="nav nav-pills flex-row flex-md-column mb-md-1 mb-0 gap-3 ps-1">
+        <li className="nav-item d-md-block d-none">
+          <Link to="/" className={`nav-link d-flex align-items-center ${activeBtn === 1 ? styles.asideBtnActive : styles.asideBtnNormal}`} onClick={() => handleClick(1)}>
+            <i className="bi me-md-2 fs-5 bi-grid"></i>
+            <span className="d-md-flex d-none">Home</span>
+          </Link>
+        </li>
+        <li className="nav-item d-md-none d-flex ">
+            <Profile />
         </li>
         <li>
-        <a href="#" className={`nav-link d-flex align-items-center ${activeBtn === 2 ? styles.asideBtnActive : styles.asideBtnNormal}`} onClick={() => handleClick(2)}>
-            <i className="bi me-2 fs-5 bi-clipboard-check"></i>
-            Task
-          </a>
+          <Link to="/tasks" className={`nav-link d-flex align-items-center ${activeBtn === 2 ? styles.asideBtnActive : styles.asideBtnNormal}`} onClick={() => handleClick(2)}>
+            <i className="bi me-md-2 fs-5  bi-clipboard-check"></i>
+            <span className="d-md-flex d-none">Task</span>
+          </Link>
         </li>
         <li>
-        <a href="#" className={`nav-link d-flex align-items-center ${activeBtn === 3 ? styles.asideBtnActive : styles.asideBtnNormal}`} onClick={() => handleClick(3)}>
-            <i className="bi me-2 fs-5 bi-folder"></i>
-            Drive
-          </a>
+          <Link to="/drive" className={`nav-link d-flex align-items-center ${activeBtn === 3 ? styles.asideBtnActive : styles.asideBtnNormal}`} onClick={() => handleClick(3)}>
+            <i className="bi me-md-2 fs-5 bi-folder"></i>
+            <span className="d-md-flex d-none">Drive</span>
+          </Link>
         </li>
         <li>
-        <a href="#" className={`nav-link d-flex align-items-center ${activeBtn === 4 ? styles.asideBtnActive : styles.asideBtnNormal}`} onClick={() => handleClick(4)}>
-          <i className="bi me-2 fs-5 bi-bar-chart"></i>            Progress
-          </a>
+          <Link to="/progress" className={`nav-link d-flex align-items-center ${activeBtn === 4 ? styles.asideBtnActive : styles.asideBtnNormal}`} onClick={() => handleClick(4)}>
+            <i className="bi me-md-2 fs-5 bi-bar-chart"></i>     <span className="d-md-flex d-none">Progress</span>
+          </Link>
         </li>
         <li>
-        <a href="#" className={`nav-link d-flex align-items-center ${activeBtn === 5 ? styles.asideBtnActive : styles.asideBtnNormal}`} onClick={() => handleClick(5)}>
-          <i className="bi me-2 fs-5 bi-people"></i>            Team Members
-          </a>
+          <Link to="/team-members" className={`nav-link d-flex align-items-center ${activeBtn === 5 ? styles.asideBtnActive : styles.asideBtnNormal}`} onClick={() => handleClick(5)}>
+            <i className="bi me-md-2 fs-5 bi-people"></i>     <span className="d-md-flex d-none">  Team Members</span>
+          </Link>
         </li>
         <li>
-        <a href="#" className={`nav-link d-flex align-items-center ${activeBtn === 6 ? styles.asideBtnActive : styles.asideBtnNormal}`} onClick={() => handleClick(6)}>
-          <i className="bi me-2 fs-5 bi-chat-left-text"></i>         Messages
-          </a>
+          <Link to="/messages" className={`nav-link d-flex align-items-center ${activeBtn === 6 ? styles.asideBtnActive : styles.asideBtnNormal}`} onClick={() => handleClick(6)}>
+            <i className="bi me-md-2 fs-5 bi-chat-left-text"></i> <span className="d-md-flex d-none">Messages</span>        <Badge bg="danger ms-auto rounded-3 p-1 d-md-flex d-none">10</Badge>
+          </Link>
         </li>
       </ul>
-    </div>
+      <hr className="d-md-block d-none" />
+      {/* dropdown bootstrap */}
+      <ul className=" d-md-block d-none list-unstyled ps-0">
+        <li className="mb-1">
+          <div className="d-flex justify-content-between align-items-center">
+            <button className={`btn btn-toggle d-inline-flex ps-4 border-0 fw-bold ${styles.CustomTextColor}`} data-bs-toggle="collapse" data-bs-target="#dashboard-collapse" aria-expanded="true">
+              <i className={`bi bi-chevron-down me-2 ${styles.btnToggle}`}></i> WorkSpace
+            </button>
+            <span className="btn-light btn p-0 text-light bg-primary rounded-2 ps-1 pe-1 me-3"><i className="bi bi-plus-lg fw-bold"></i></span>
+          </div>
+          <div className="collapse show ps-4 ms-4 ms-2" id="dashboard-collapse">
+            <ul className={`btn-toggle-nav fw-normal pt-1 pb-1 small list-group ${styles.listCircle}`}>
+              <li><a href="#" className={`${activeDropdownBtn !== 1 ? styles.listCategoryBtn : ''} pt-2 d-inline-flex text-decoration-none `} onClick={() => handleClickDropdown(1)}>Product Design</a></li>
+              <li><a href="#" className={`${activeDropdownBtn !== 2 ? styles.listCategoryBtn : ''} pt-2 d-inline-flex text-decoration-none `} onClick={() => handleClickDropdown(2)}>UI/UX Design</a></li>
+              <li><a href="#" className={`${activeDropdownBtn !== 3 ? styles.listCategoryBtn : ''} pt-2 d-inline-flex text-decoration-none `} onClick={() => handleClickDropdown(3)}>Web App Development</a></li>
+              <li><a href="#" className={`${activeDropdownBtn !== 4 ? styles.listCategoryBtn : ''} pt-2 d-inline-flex text-decoration-none `} onClick={() => handleClickDropdown(4)}>Mobile App Development</a></li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+      <button className="btn btn-primary m-auto pt-2 pb-2 m-5 ps-4 pe-4 rounded-3 align-items-center d-flex fw-medium d-md-flex d-none"><i className="bi bi-plus fs-4 me-1"></i> Create Task</button>
+      {/* </aside> */}
+    </aside>
+
+
   )
 }

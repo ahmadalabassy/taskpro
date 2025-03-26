@@ -44,6 +44,12 @@
     margin: 10px auto !important;
   }
 }
+@media screen and (max-width:991px) {
+  .iconHeader{
+    width: 30px;
+  }
+}
+
 
 .userDataHeading i {
   font-size: 24px;

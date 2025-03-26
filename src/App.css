@@ -8,6 +8,9 @@
   --btn-bg-color:#F4F4F4;
   
 }
+*{
+  font-family: "Inter", sans-serif;
+}
 /*
 .logo {
   height: 6em;

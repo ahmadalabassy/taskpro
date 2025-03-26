@@ -27,7 +27,7 @@ export default function Header() {
         <span ><Notification /></span>
         <span className={`d-none d-lg-flex ${styles.iconHeader}`}> <i className="bi bi-chat-right-text"></i></span>
         <i className={`bi bi-question-circle ${styles.iconHeader}`}></i>
-        <span className={`d-lg-flex  ${styles.profile}`}><Profile /></span>
+        <span className={`d-lg-flex d-none  ${styles.profile}`}><Profile /></span>
       </div>
     </header>
   )
