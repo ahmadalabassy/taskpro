@@ -30,5 +30,5 @@ export default function Header() {
         <span className={`d-lg-flex d-none  ${styles.profile}`}><Profile /></span>
       </div>
     </header>
-  )
+  );
 }

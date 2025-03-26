@@ -1,8 +1,11 @@
-import { Link } from "react-router"
-import styles from "./Aside.module.css"
 import React, { useState } from "react"
-import { Badge } from "react-bootstrap";
+import { Link } from "react-router"
+
 import Profile from './../Profile/Profile';
+
+import { Badge } from "react-bootstrap";
+import styles from "./Aside.module.css"
+
 export default function Aside() {
   const [activeBtn, setActiveBtn] = useState(1);
   const [activeDropdownBtn, setActiveDrobpownBtn] = useState(2);
