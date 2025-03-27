@@ -82,6 +82,7 @@
     height: 4.5rem ;
     align-items: center;
     justify-content: space-around;
+    z-index: 999;
   }
   .aside ul{
     position: fixed;
