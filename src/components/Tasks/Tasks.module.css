@@ -17,3 +17,6 @@
   width: 19px;
   height: 37px;
 }
+.heightFit {
+  height: fit-content;
+}
