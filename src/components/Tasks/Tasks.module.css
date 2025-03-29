@@ -20,3 +20,10 @@
 .heightFit {
   height: fit-content;
 }
+.btn:hover{
+cursor: pointer;
+  scale: 0.95;
+  transition: 0.2s;
+  color: var(--component-bg) !important;
+  background-color:#0D6EFD !important;
+}

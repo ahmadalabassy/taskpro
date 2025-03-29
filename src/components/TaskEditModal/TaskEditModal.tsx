@@ -151,7 +151,7 @@ const EditTaskModal = () => {
             ))}
           </div>
         </div>
-        <div className={`col-12`} autoFocus>
+        <div className={`col-12`}>
           <label className="form-label">Upload Document</label>
           <div
             className={`border p-4 text-center rounded bg-light`}

@@ -1,9 +1,7 @@
 import React, { useState } from "react";
-import Modal from "react-bootstrap/Modal";
 import styles from "./TaskCard.module.css";
 import ReusableModal from "../ReusableModal/ReusableModal.tsx";
 import { Button, Card } from "react-bootstrap";
-import UserProfile from "../UserProfile/UserProfile.tsx";
 import Profile from "../Profile/Profile.tsx";
 import EditTaskModal from "../TaskEditModal/TaskEditModal.tsx";
 
@@ -20,12 +18,11 @@ const TaskCard: React.FC<TaskCardProps> = ({ task }) => {
   const [showCommentsModal, setShowCommentsModal] = useState(false);
   const [showFilesModal, setShowFilesModal] = useState(false);
   const [showEditTaskModal, setShowEditTaskModal] = useState(false);
-  const [taskName, setTaskName] = useState(task.name);
   const [comments, setComments] = useState(task.comments);
   const [files, setFiles] = useState(task.files);
   return (
     <div>
-      <Card className="mb-4">
+      <Card className={`${styles.card} mb-4 border-0`}>
         <Card.Body className="text-start lh-sm px-4 py-2">
           <div className="d-flex flex-row justify-content-between align-items-center">
             <Card.Title className="mb-0 fw-bold">UX Research</Card.Title>
