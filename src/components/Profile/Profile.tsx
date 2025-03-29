@@ -2,8 +2,10 @@ import React, { useState } from "react";
 import { Modal } from "react-bootstrap";
 import styles from "./Profile.module.css"
 
-
-const Profile = () => {
+interface ProfileProps {
+  className?: string; 
+}
+const Profile: React.FC<ProfileProps> = ({className}) => {
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
@@ -11,15 +13,15 @@ const Profile = () => {
   return (
     <>
       <img
-        className={styles.iconHeader}
+        className={`${styles.iconHeader} ${className || ""}`}
         src="./default-profile-img.svg"
-        alt="messages"
+        alt="userImage"
         onClick={handleShow}
       />
       <Modal show={show} onHide={handleClose} centered dialogClassName={styles.modalContent}>
         <Modal.Body>
           <div className={`${styles.headingProfile}`}>
-            <img src="./default-profile-img.svg" alt="messages" />
+            <img src="./default-profile-img.svg" alt="userImage" />
           </div>
           <i className={`bi bi-x ${styles.exitButtonProfile}`} onClick={handleClose}></i>
           <div className="d-flex flex-column justify-content-center align-items-center ">

@@ -4,6 +4,7 @@ import "bootstrap/dist/js/bootstrap.bundle.min";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import TaskCard from "../TaskCard/TaskCard";
 import styles from "./Tasks.module.css";
+import ButtonGroup from "../ButtonGroup/ButtonGroup";
 
 const Tasks = () => {
   const task = {
@@ -13,6 +14,7 @@ const Tasks = () => {
   }; // This is a dummy task object. Replace it with the actual task object.
   return (
     <div className={`container p-4 ${styles.tasksBG} ${styles.bgHeight}`}>
+      <ButtonGroup />
       <main className={`row `}>
         <div className={`${styles.heightFit} p-lg-4 bg-white rounded-3 col-md-5 mb-4 me-md-3 col-lg-3`}>
           <div className="d-flex flex-row justify-content-between align-items-center py-3 headingw-100">

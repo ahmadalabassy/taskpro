@@ -1,6 +1,5 @@
 import React from "react";
-import { Modal, Button } from "react-bootstrap";
-
+import { Modal } from "react-bootstrap";
 interface ModalProps {
   show: boolean;
   title: string;
@@ -22,10 +21,6 @@ const ReusableModal = ({
   title,
   children,
   onClose,
-  onConfirm,
-  confirmText = "Confirm",
-  closeText = "Close",
-  disableConfirm = false,
 }: ModalProps) => {
   return (
     <Modal show={show} onHide={onClose} centered>
@@ -33,20 +28,6 @@ const ReusableModal = ({
         <Modal.Title>{title}</Modal.Title>
       </Modal.Header>
       <Modal.Body>{children}</Modal.Body>
-      <Modal.Footer>
-        <Button variant="secondary" onClick={onClose}>
-          {closeText}
-        </Button>
-        {onConfirm && (
-          <Button
-            variant="primary"
-            onClick={onConfirm}
-            disabled={disableConfirm}
-          >
-            {confirmText}
-          </Button>
-        )}
-      </Modal.Footer>
     </Modal>
   );
 };
