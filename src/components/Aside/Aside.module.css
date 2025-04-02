@@ -97,4 +97,7 @@
   .aside ul i{
   font-size: 24px !important;
   }
+  [alt="UserProfile"]{
+    width: 35px;
+  }
 }

@@ -1,0 +1,53 @@
+.TeamMember {
+    padding: 1rem;
+    background-color: var(--page-bg);
+    scrollbar-width: none;
+    height: calc(100vh - 88px);
+    overflow-y: auto;
+    transition: all 0.3s ease-in-out;
+}
+
+.AddBtn:hover i {
+    transform: rotate(90deg) scale(1.2);
+    transition: all 0.5s ease-in-out;
+}
+
+.AddBtn:hover p {
+    transform: scale(1.05);
+    transition: all 0.5s ease-in-out;
+}
+.imgContainer{
+    position: relative;
+    width: 125px;
+    height: 125px;
+    margin: 0 auto;
+    border-radius: 50%;
+    border: 2px solid var(--page-bg);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.modalImg {
+    width: 125px;
+    height: 125px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid var(--page-bg);
+}
+
+.editImg {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    border: 3px solid white !important;
+
+}
+
+@media screen and (max-width: 768px) {
+
+    .TeamMember {
+        padding: 0.4rem;
+        display: flex;
+        justify-content: center;
+        height: calc(100vh - 160px);
+    }
+}

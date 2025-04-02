@@ -10,21 +10,21 @@
 
 .idHeading {
   font-size: 16px;
-  color: var(--bg-color);
+  color: var(--text-primary) !important;
   margin-bottom: 10px;
   font-weight: 500;
 }
 
 .jobHeading {
   font-size: 16px;
-  color: var(--bg-color);
+  color: var(--text-primary) !important;
   font-weight: 900;
   text-transform: capitalize;
   margin-bottom: 4px;
 }
 
 .userDataHeading {
-  margin-left: 1.2rem;
+  margin-right: auto;
   margin-bottom: 3px;
   font-size: 1rem;
   font-weight: 500;
@@ -32,11 +32,17 @@
   justify-content: center;
   align-items: center;
   text-transform: capitalize;
+  max-width: 351px;
+  text-wrap: wrap;
+  word-wrap: break-word;
 }
 
+
 .modalContent {
-  max-width: 341px !important;
+  max-width: 361px !important;
+  min-width: fit-content !important;
   border-radius: 24px;
+  padding: 0.5rem;
 }
 
 @media screen and (max-width: 991px) {
@@ -44,20 +50,22 @@
     margin: 10px auto !important;
   }
 }
+
 @media screen and (max-width:991px) {
-  .iconHeader{
+  .iconHeader {
     width: 30px;
   }
 }
 
 
+
 .userDataHeading i {
-  font-size: 24px;
+  font-size: 20px;
   margin-right: 10px;
 }
 
 .footerHeading {
-  color: var(--bg-color);
+  color: var(--text-primary) !important;
   font-weight: 500;
 }
 
@@ -74,7 +82,7 @@
 }
 
 .inActiveStatus {
-  background-color: #ff6b56;
+  background-color: #808080;
 }
 
 .headingProfile {
@@ -101,7 +109,7 @@
   right: 10px;
   cursor: pointer;
   font-size: 30px;
-  color: var(--bg-color);
+  color: var(--text-primary) !important;
 }
 
 @media screen and (max-width: 991px) {
