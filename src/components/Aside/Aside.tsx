@@ -9,6 +9,7 @@ import styles from "./Aside.module.css"
 export default function Aside() {
   const [activeBtn, setActiveBtn] = useState(1);
   const [activeDropdownBtn, setActiveDrobpownBtn] = useState(2);
+  const [showModal, setShowModal] = useState(false);
   const handleClick = (index) => {
     setActiveBtn(index);
   };
@@ -16,17 +17,24 @@ export default function Aside() {
     setActiveDrobpownBtn(index);
   };
 
+  const handleShowModal = () => {
+    setShowModal(true);
+  }
+
+  const handleCloseModal = () => {
+    setShowModal(false);
+  }
 
 
 
   return (
-    <aside className={` d-flex flex-row flex-md-column flex-lg-shrink-0 flex-md-shrink-1 p-md-3 p-0 bg-body-light ${styles.aside}`}>
+    <aside className={` d-flex flex-row flex-md-column flex-lg-shrink-0 flex-md-shrink-1 p-md-3 p-0 bg-body-light  ${styles.aside}`}>
       <Link to="/" className={`d-flex align-items-end justify-content-center mb-4 me-5 gap-2 link-body-emphasis d-md-flex d-none text-decoration-none `}>
         <img  src="./../../../public/logo-no-text.svg" alt="Logo" />
         <span className="fs-4 fw-bold">TASKPRO</span>
       </Link>
 
-      <ul className="nav nav-pills flex-row flex-md-column mb-md-1 mb-0 gap-3 ps-1">
+      <ul className="nav nav-pills flex-row flex-md-column mb-md-1 mb-0 gap-2 ps-1">
         <li className="nav-item d-md-block d-none">
           <Link to="/" className={`nav-link d-flex align-items-center ${activeBtn === 1 ? styles.asideBtnActive : styles.asideBtnNormal}`} onClick={() => handleClick(1)}>
             <i className="bi me-md-2 fs-5 bi-grid"></i>
@@ -34,7 +42,8 @@ export default function Aside() {
           </Link>
         </li>
         <li className="nav-item d-md-none d-flex ">
-            <Profile />
+            <img src="../../../public/default-profile-img.svg" alt="UserProfile" onClick={handleShowModal} />
+            <Profile Show={showModal} onHide={handleCloseModal}/>
         </li>
         <li>
           <Link to="/tasks" className={`nav-link d-flex align-items-center ${activeBtn === 2 ? styles.asideBtnActive : styles.asideBtnNormal}`} onClick={() => handleClick(2)}>
@@ -66,7 +75,7 @@ export default function Aside() {
       </ul>
       <hr className="d-md-block d-none" />
       {/* dropdown bootstrap */}
-      <ul className=" d-md-block d-none list-unstyled ps-0">
+      <ul className=" d-md-block d-none list-unstyled ps-0 overflow-y-auto overflow-y-scroll scroll" style={{ scrollbarWidth:"none" }}>
         <li className="mb-1">
           <div className="d-flex justify-content-between align-items-center">
             <button className={`btn btn-toggle d-inline-flex ps-4 border-0 fw-bold ${styles.CustomTextColor}`} data-bs-toggle="collapse" data-bs-target="#dashboard-collapse" aria-expanded="true">
@@ -85,7 +94,6 @@ export default function Aside() {
         </li>
       </ul>
       <button className="btn btn-primary m-auto pt-2 pb-2 m-5 ps-4 pe-4 rounded-3 align-items-center d-flex fw-medium d-md-flex d-none"><i className="bi bi-plus fs-4 me-1"></i> Create Task</button>
-      {/* </aside> */}
     </aside>
 
 

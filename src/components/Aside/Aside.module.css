@@ -82,6 +82,7 @@
     height: 4.5rem ;
     align-items: center;
     justify-content: space-around;
+    z-index: 999;
   }
   .aside ul{
     position: fixed;
@@ -95,5 +96,8 @@
   }
   .aside ul i{
   font-size: 24px !important;
+  }
+  [alt="UserProfile"]{
+    width: 35px;
   }
 }

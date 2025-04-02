@@ -6,11 +6,20 @@ import styles from "./Header.module.css";
 
 export default function Header() {
   const [lightDarkMode,setLightDarkMode]=useState('bi-brightness-high');
+  const [showModal, setShowModal] = useState(false);
   const toggleMode=()=>{
     setLightDarkMode(()=>{
       return lightDarkMode==='bi-brightness-high'? 'bi-moon-fill' : 'bi-brightness-high';
     })
   }
+  
+    const handleClick = () => {
+      setShowModal(true);
+    }
+  
+    const handleCloseModal = () => {
+      setShowModal(false);
+    }
 
   return (
     <header className={styles.header}>
@@ -27,7 +36,8 @@ export default function Header() {
         <span ><Notification /></span>
         <span className={`d-none d-lg-flex ${styles.iconHeader}`}> <i className="bi bi-chat-right-text"></i></span>
         <i className={`bi bi-question-circle ${styles.iconHeader}`}></i>
-        <span className={`d-lg-flex d-none  ${styles.profile}`}><Profile /></span>
+        <span className={`d-lg-flex d-none  ${styles.profile}`}><Profile Show={showModal} onHide={handleCloseModal} />
+        <img src="./../../../public/default-profile-img.svg" alt="profile user" onClick={handleClick} /></span>
       </div>
     </header>
   );

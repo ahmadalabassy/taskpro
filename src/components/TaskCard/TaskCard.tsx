@@ -20,6 +20,9 @@ const TaskCard: React.FC<TaskCardProps> = ({ task }) => {
   const [showEditTaskModal, setShowEditTaskModal] = useState(false);
   const [comments, setComments] = useState(task.comments);
   const [files, setFiles] = useState(task.files);
+  const [show, setShow] = useState(false);
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
   return (
     <div>
       <Card className={`${styles.card} mb-4 border-0`}>
@@ -47,7 +50,13 @@ const TaskCard: React.FC<TaskCardProps> = ({ task }) => {
               <button
                 className={`${styles.user} bg-transparent rounded-circle btn-sm p-0 border-0`}
               >
-                 <Profile className={`${styles.userImage}`} />
+                <img
+                  className={styles.userImage}
+                  src="./default-profile-img.svg"
+                  alt="userImage"
+                  onClick={handleShow}
+                />
+                <Profile Show={show} onHide={handleClose} />
               </button>
               <Button
                 className={`rounded-circle ${styles.addUser} ${styles.btnPrimary} ms-1 d-flex justify-content-center align-items-center`}
@@ -106,8 +115,8 @@ const TaskCard: React.FC<TaskCardProps> = ({ task }) => {
           title="Edit Task"
           onClose={() => setShowEditTaskModal(false)}
           confirmText="OK"
->
-        <EditTaskModal/>
+        >
+          <EditTaskModal />
         </ReusableModal>
       </Card>
     </div>
