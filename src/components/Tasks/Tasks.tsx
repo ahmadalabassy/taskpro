@@ -29,7 +29,7 @@ const Tasks = () => {
       <ButtonGroup data={data} setData={setData} />
       <main className={`row `}>
         <div
-          className={`${styles.heightFit} p-lg-4 bg-white rounded-3 col-md-5 mb-4 me-md-3 col-lg-4`}
+          className={`${styles.heightFit} p-lg-4 bg-white rounded-3 col-md-5 mb-4 pb-sm-4 me-md-3 col-lg-4`}
         >
           <div className="d-flex flex-row justify-content-between align-items-center py-3 headingw-100">
             <div className="d-flex flex-row justify-content-start align-items-center">
