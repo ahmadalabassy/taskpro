@@ -38,7 +38,7 @@ const Profile = ({ Show, onHide,
         onClick={onHide}
       /> */}
       <Modal show={Show} onHide={onHide} centered dialogClassName={styles.modalContent}>
-        <Modal.Body>
+        <Modal.Body className={styles.modalBody}>
           <div className={`${styles.headingProfile}`}>
             <img src={image?image:'./default-profile-img.svg'} alt="userImage" />
           </div>

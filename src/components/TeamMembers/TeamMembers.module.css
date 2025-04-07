@@ -2,10 +2,11 @@
     padding: 1rem;
     background-color: var(--page-bg);
     scrollbar-width: none;
-    height: calc(100vh - 88px);
+    height: calc(100dvh - 86px);
     overflow-y: auto;
     transition: all 0.3s ease-in-out;
 }
+
 
 .AddBtn:hover i {
     transform: rotate(90deg) scale(1.2);
@@ -22,8 +23,23 @@
     height: 125px;
     margin: 0 auto;
     border-radius: 50%;
-    border: 2px solid var(--page-bg);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    background-color: rgb(255, 255, 255) !important;
+}
+.form input{
+    background-color: var(--page-bg);
+    color: var(--text-primary-Aside);
+    border: 1px solid var(--bg-icon-header-hover) !important;
+}
+.form input:focus{
+    background-color: var( --page-bg);
+    color: var(--text-primary-Aside);
+}
+.form label{
+    color: var(--text-primary-Aside) !important;
+}
+.form label::after{
+    background-color: var(--page-bg) !important;
 }
 
 .modalImg {
@@ -31,7 +47,8 @@
     height: 125px;
     object-fit: cover;
     border-radius: 50%;
-    border: 2px solid var(--page-bg);
+    background-color: var(--page-bg);
+    border: 1px solid var(--page-bg);
 }
 
 .editImg {

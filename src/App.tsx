@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
 import Layout from "./components/Layout/Layout.tsx";
 import "./App.css";
@@ -10,8 +10,17 @@ import Messages from "./components/Messages/Messages.tsx";
 import Tasks from "./components/Tasks/Tasks";
 import Register from "./components/Register/Register.tsx";
 import Login from "./components/Login/Login.tsx";
+import { useSelector } from "react-redux";
+import { RootState } from "@reduxjs/toolkit/query";
+import { applyTheme } from "./utils/theme.ts";
 
 export default function App() {
+  const theme = useSelector((state: RootState) => state.theme.mode);
+
+  useEffect(() => {
+    applyTheme(theme);
+  }, [theme]);
+
   return (
     <Routes>
       <Route element={<Layout />}>
