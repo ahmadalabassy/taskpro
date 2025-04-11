@@ -1,0 +1,17 @@
+.bgHeight {
+  min-height: calc(100vh - 6rem);
+}
+.home {
+  background-color: var(--page-bg);
+}
+.accordionButton {
+  background-color: var(--page-bg) !important; /* Button background */
+  color: var(--text-primary) !important;
+  font-weight: bold;
+  box-shadow: none !important;
+}
+
+.accordionBody {
+  background-color: var(--page-bg);
+  color: var(--text-secondary); 
+}

@@ -17,8 +17,8 @@ const Tasks = () => {
     { id: 1, name: "Task 1" },
     { id: 2, name: "Task 2" },
   ]); // Define state for data
-    const [showEditTaskModal, setShowEditTaskModal] = useState(false);
-  
+  const [showEditTaskModal, setShowEditTaskModal] = useState(false);
+
   const task = {
     name: "UX Research",
     comments: ["Great work!", "Needs improvement."],
@@ -34,9 +34,7 @@ const Tasks = () => {
           <div className="d-flex flex-row justify-content-between align-items-center py-3 headingw-100">
             <div className="d-flex flex-row justify-content-start align-items-center">
               <span
-                className={`${styles.rectangle} rounded-2`}
-                style={{ backgroundColor: "#e493d8ab" }}
-              ></span>
+                className={`${styles.rectangle} rounded-2`}></span>
               <h2 className="ms-3 fw-bold mb-0">Planned</h2>
             </div>
             <div className="dropdown">
@@ -67,21 +65,29 @@ const Tasks = () => {
               </ul>
             </div>
           </div>
-          <TaskCard task={task} />
+          <TaskCard task={task} focusOnComments={false} focusOnFiles={false} />
           <div className="d-grid">
-          <button className={`btn ${styles.btn} py-2 text-uppercase fw-bold btn-outline-secondary text-primary`} onClick={() => setShowEditTaskModal(true)}>add task</button>
+            <button
+              className={`btn ${styles.btn} py-2 text-uppercase fw-bold btn-outline-secondary text-primary`}
+              onClick={() => setShowEditTaskModal(true)}
+            >
+              add task
+            </button>
           </div>
         </div>
       </main>
       {/* Edit Task Modal */}
-              <ReusableModal
-                show={showEditTaskModal}
-                title="Edit Task"
-                onClose={() => setShowEditTaskModal(false)}
-                confirmText="OK"
+      <ReusableModal
+        show={showEditTaskModal}
+        title="Edit Task"
+        onClose={() => setShowEditTaskModal(false)}
+        confirmText="OK"
       >
-              <EditTaskModal/>
-              </ReusableModal>
+        <EditTaskModal
+          focusOnComments={false} // Pass focusOnComments
+          focusOnFiles={false} // Pass focusOnFiles
+        />
+      </ReusableModal>
     </div>
   );
 };
