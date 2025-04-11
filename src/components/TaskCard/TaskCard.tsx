@@ -18,10 +18,14 @@ interface User {
   image: string;
 }
 
-interface TaskCardProps {
+export interface TaskCardProps {
   task: Task;
+  focusOnComments?: boolean;
+  focusOnFiles?: boolean;
 }
-const TaskCard: React.FC<TaskCardProps> = ({ task }) => {
+const TaskCard: React.FC<TaskCardProps> = ({
+  task
+}) => {
   const [showEditTaskModal, setShowEditTaskModal] = useState(false);
   const [showAddUserModal, setShowAddUserModal] = useState(false); // State for showing the "Add User" modal
   const [users, setUsers] = useState<User[]>([]); // State to store users fetched from the database
@@ -129,7 +133,6 @@ const TaskCard: React.FC<TaskCardProps> = ({ task }) => {
                   className={styles.userImage}
                   src="./default-profile-img.svg"
                   alt="User"
-                  style={{ marginRight: "0.4rem" }}
                   onClick={handleShow}
                 />
                 <Profile Show={show} onHide={handleClose} />

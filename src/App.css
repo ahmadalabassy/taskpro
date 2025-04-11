@@ -5,30 +5,10 @@
   --text-primary: #676F77;
   --orange : #FF6B56;
   --btn-bg-color:#F4F4F4;
+  --page-bg: #efefef;
+
   
 } */
 * {
   font-family: "Inter", sans-serif;
 }
-/*
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  *{
-    font-family: "Inter", serif;
-  }
-}   */

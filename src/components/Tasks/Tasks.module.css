@@ -16,6 +16,7 @@
 .rectangle {
   width: 19px;
   height: 37px;
+  background: #e493d8ab;
 }
 .heightFit {
   height: fit-content;
