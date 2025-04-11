@@ -1,0 +1,215 @@
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+.leftSide {
+  width: 50%;
+  background-color: #d6d6d6;
+}
+
+.rightSide {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #eef2ff;
+}
+
+.rightSide img {
+  max-width: 80%;
+}
+
+.formContainer {
+  width: 90%;
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 10px;
+}
+
+.formContainer h3 {
+  margin-bottom: 0;
+  font-size: 1.3rem;
+}
+.formContainer p {
+  font-size: 1rem;
+}
+
+.logo {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.logo img {
+  height: 30px;
+}
+
+.inputContainer {
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.inputContainer input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 0.8rem;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.inputContainer input::placeholder {
+  font-size: 0.7rem;
+  color: #aaa;
+  opacity: 1;
+}
+
+.inputContainer label {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  color: #aaa;
+  font-size: 0.9rem;
+  pointer-events: none;
+  transition: all 0.2s ease;
+}
+
+.inputContainer input:focus {
+  border-color: #3b82f6;
+}
+
+.inputContainer input:focus + label,
+.inputContainer input:not(:placeholder-shown) + label {
+  top: -10px;
+  left: 10px;
+  font-size: 0.8rem;
+  color: #3b82f6;
+  background-color: #fff;
+  padding: 0 5px;
+}
+
+.submitBtn {
+  margin-top: 1.2rem;
+  width: 100%;
+  padding: 10px;
+  background-color: #000;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.submitBtn:hover {
+  background-color: transparent;
+  border: 2px solid #000;
+  color: #000;
+}
+
+.googleBtn {
+  width: 100%;
+  padding: 10px;
+  background-color: transparent;
+  color: #000;
+  border: 2px solid #000;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.googleBtn:hover {
+  background-color: #000;
+  color: #fff;
+  border-color: #ddd;
+}
+
+.googleBtn svg {
+  width: 25px;
+  height: 25px;
+  margin-right: 0.2rem;
+  margin-top: 0.2rem;
+}
+
+.googleBtn img {
+  width: 20px;
+  margin-right: 10px;
+}
+
+.groupBtn {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  align-items: stretch;
+}
+
+.inputError {
+  border-color: red !important;
+}
+
+.errorMessage {
+  color: red;
+  font-size: 0.75rem;
+  margin-top: 5px;
+}
+
+@media screen and (max-width: 800px) {
+  .rightSide {
+    display: none;
+  }
+
+  .leftSide {
+    width: 100%;
+  }
+  .formContainer {
+    width: 97%;
+  }
+  .formContainer h3 {
+    font-size: 1rem;
+  }
+
+  .formContainer p {
+    font-size: 0.9rem;
+  }
+
+  .inputContainer input {
+    font-size: 0.7rem;
+    padding: 10px;
+  }
+
+  .inputContainer input::placeholder {
+    font-size: 0.6rem;
+  }
+
+  .inputContainer label {
+    font-size: 0.7rem;
+    top: 10px;
+    left: 10px;
+  }
+
+  .inputContainer input:focus + label,
+  .inputContainer input:not(:placeholder-shown) + label {
+    top: -8px;
+    left: 8px;
+    font-size: 0.7rem;
+  }
+
+  .submitBtn,
+  .googleBtn {
+    padding: 8px;
+    font-size: 0.8rem;
+  }
+
+  .googleBtn svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .googleBtn img {
+    width: 18px;
+  }
+}

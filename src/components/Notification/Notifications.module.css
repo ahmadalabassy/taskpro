@@ -1,0 +1,64 @@
+
+.dropdownToggle{
+  border-radius: 100px !important;
+  border: none !important;
+  
+}
+.dropdownToggle:hover,
+.dropdownToggle:focus{
+  border-radius: 100px !important;
+  border: none !important;
+  padding: 1px 7px;
+}
+
+.dropdownToggle::after{
+  display: none !important;
+}
+.notificationDropdown {
+  width: 300px;
+  /* Adjust the width as needed */
+  padding: 0;
+}
+
+
+
+.notificationItem {
+  padding: 10px 15px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.notificationItem:hover {
+  background-color: #f8f9fa;
+}
+
+.notificationContent {
+  display: flex;
+  flex-direction: column;
+}
+
+.notificationTitle {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.notificationTime {
+  font-size: 12px;
+  color: #6c757d;
+}
+
+.viewAll {
+  text-align: center;
+  font-weight: bold;
+  color: #007bff;
+}
+
+.viewAll:hover {
+  background-color: #f8f9fa;
+}
+@media (max-width: 767.98px) {
+  .notificationDropdown {
+    position: fixed;
+    max-width: 250px !important;
+    min-width: 200px !important;
+  }
+}

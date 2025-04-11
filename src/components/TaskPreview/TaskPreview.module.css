@@ -1,0 +1,50 @@
+.taskPreview {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  min-width: 300px;
+  font-family: Arial, sans-serif;
+  margin-bottom: 2rem;
+}
+
+.icon {
+  width: 19px;
+  height: 37px;
+  background-color: #d4f3e9;
+}
+
+.title {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.category {
+  font-size: 14px;
+  color: #888888;
+}
+
+.tasks {
+  margin-bottom: 16px;
+}
+
+.taskRow {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  margin-bottom: 0.2rem;
+  font-weight: 500;
+}
+
+.users {
+  display: flex;
+}
+
+.userImage {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 2px solid #ffffff;
+  object-fit: cover;
+}

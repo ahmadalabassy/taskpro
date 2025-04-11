@@ -1,0 +1,30 @@
+* {
+  --page-bg: #efefef;
+  --text-primary: #676f77;
+  --bg-hover: #dddddd;
+  --component-bg: #ffffff;
+}
+.bgHeight {
+  min-height: calc(100vh - 6rem);
+}
+.tasksBG {
+  background-color: var(--page-bg);
+}
+/* .main{
+    background-color: var(--component-bg);
+  } */
+.rectangle {
+  width: 19px;
+  height: 37px;
+  background: #e493d8ab;
+}
+.heightFit {
+  height: fit-content;
+}
+.btn:hover{
+cursor: pointer;
+  scale: 0.95;
+  transition: 0.2s;
+  color: var(--component-bg) !important;
+  background-color:#0D6EFD !important;
+}
