@@ -339,7 +339,7 @@ export default function Progress() {
   const inProgressTasks = 45
   const completedTasks = 182
   return (
-    <Container className={styles.progressPage}>
+    <div className={styles.progressPage}>
       <Row className={styles.statsSection}>
         <Col md={4}>
           <ProgressStateCard
@@ -379,6 +379,6 @@ export default function Progress() {
           ))}
         </Row>
       </div>
-    </Container>
+    </div>
   )
 }
