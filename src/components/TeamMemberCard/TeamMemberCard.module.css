@@ -1,5 +1,6 @@
 .CustomCard {
     display: flex;
+    background-color: var(--bg-color) !important;
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -78,7 +79,7 @@
 
 .title {
     font-size: 16px;
-    color: var(--text-primary);
+    color: var( --text-color) !important;
     margin: auto;
     margin-bottom: -2px !important;
     overflow-x: hidden;
@@ -88,7 +89,7 @@
 }
 
 .email {
-    color: var(--text-primary);
+    color: var(  --text-icon-header);
     font-size: 16px;
     margin: auto;
     margin-top: 2px;
@@ -99,7 +100,7 @@
 }
 
 .JobTitle {
-    color: var(--text-primary);
+    color: var(  --text-icon-header);
     font-size: 14px;
     overflow-x: hidden;
     text-overflow: ellipsis;

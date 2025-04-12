@@ -1,4 +1,4 @@
- #root {
+ /* #root {
   --primary-color :#2A85FF;
   --secondary-color :#EFEFEF;
   --text-header-color :rgb(103, 111, 119,70%);  
@@ -8,7 +8,7 @@
   --page-bg: #efefef;
 
   
-}
+} */
 * {
   font-family: "Inter", sans-serif;
 }

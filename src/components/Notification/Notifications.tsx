@@ -7,9 +7,7 @@ import headerStyles from "../Header/Header.module.css";
 const Notification = () => {
   return (
     <Dropdown>
-      <Dropdown.Toggle
-      
-        variant="light"
+      <Dropdown.Toggle   
         id="NotificationDropdown-btn"
         className={`${headerStyles.iconHeader} ${styles.dropdownToggle}`}
 

@@ -27,7 +27,7 @@ export default function TeamMemberCard({
   updatedAt,
 }: TeamMemberCardProps) {
   const [showModal, setShowModal] = useState(false);
-  const status = active ? 'bg-success' : 'bg-danger';
+
 
   const handleClick = () => setShowModal(true);
   const handleCloseModal = () => setShowModal(false);

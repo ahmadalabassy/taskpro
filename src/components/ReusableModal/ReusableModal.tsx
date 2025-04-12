@@ -1,5 +1,6 @@
 import React from "react";
 import { Modal } from "react-bootstrap";
+import styles from "./ReusableModal.module.css";
 interface ModalProps {
   show: boolean;
   title: string;
@@ -23,11 +24,11 @@ const ReusableModal = ({
   onClose,
 }: ModalProps) => {
   return (
-    <Modal show={show} onHide={onClose} centered>
-      <Modal.Header closeButton>
-        <Modal.Title>{title}</Modal.Title>
+    <Modal  show={show} onHide={onClose} centered>
+      <Modal.Header className={styles.container} closeButton>
+        <Modal.Title className={styles.title}>{title}</Modal.Title>
       </Modal.Header>
-      <Modal.Body>{children}</Modal.Body>
+      <Modal.Body className={styles.container}>{children}</Modal.Body>
     </Modal>
   );
 };

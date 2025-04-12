@@ -1,6 +1,6 @@
 .ClockSection {
   padding: 4px 10px;
-  background-color: var(--secondary-color);
+  background-color: var(--page-bg);
   border-radius: 8px;
   display: flex;
   align-items: center;
@@ -9,7 +9,7 @@
 }
 
 .timeToggle {
-  background-color: var(--secondary-color) !important;
+  background-color: var(--page-bg) !important;
   padding: 0px !important;
   border: none !important;
   color: var(--primary-color) !important;
@@ -20,7 +20,7 @@
 }
 
 .timeTogglePause {
-  background-color: var(--secondary-color) !important;
+  background-color: var(--page-bg) !important;
   padding: 0px !important;
   border: none !important;
   color: var(--orange) !important;
@@ -31,13 +31,13 @@
 }
 
 .timeToggle:hover {
-  color: #0b72f9 !important;
+  color: var(--primary-color) !important;
   background-color: transparent;
   transform: scale(1.01);
 }
 
 .timeTogglePause:hover {
-  color: #f54d37 !important;
+  color: var(--orange) !important;
   background-color: transparent;
   transform: scale(1.01);
 }
@@ -62,7 +62,7 @@
 .time {
   font-size: 24px;
   font-weight: 600;
-  color: var(--text-header-color);
+  color: var( --text-icon-header);
   font-family: "Space Mono", serif;
   padding-right: 16px;
   margin: 0 !important;
@@ -71,7 +71,7 @@
 .amPm {
   font-size: 10px;
   font-weight: 700;
-  color: var(--text-header-color);
+  color: var( --text-icon-header);
   position: absolute;
   left: 74px;
   top: 6px;
@@ -89,7 +89,7 @@
 @media screen and (max-width: 991px) {
   .ClockSection {
     padding: 10px 0;
-    background-color: #fff !important;
+    background-color:var(--bg-color)!important;
     min-width: auto !important;
   }
 

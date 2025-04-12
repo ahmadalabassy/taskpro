@@ -10,6 +10,9 @@ type Tasks = {
     files: File[];
     createdAt: string;
     updatedAt: string;
+    progress: number;
+    members: TeamMemberCardProps[];
+    completedDate : string;
   };
   type TeamMemberCardProps = {
     id?: number;

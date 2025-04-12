@@ -52,7 +52,7 @@ export default function TeamMembers() {
       const timer = setTimeout(() => {
         setShowAlert(false);
         setAlertMessage('');
-      }, 3000); // 2 seconds
+      }, 3000); 
 
       return () => clearTimeout(timer);
     }
@@ -69,7 +69,17 @@ export default function TeamMembers() {
       supervisor: Yup.string().lowercase().trim().required().max(20, "Supervisor must be at most 20 characters"),
     }
   );
-
+//local storage
+  useEffect(() => {
+    const storedTeamMembers = localStorage.getItem("teamMembers");
+    if (storedTeamMembers) {
+      setTeamMembers(JSON.parse(storedTeamMembers));
+    }
+  }, []);
+  useEffect(() => {
+    localStorage.setItem("teamMembers", JSON.stringify(teamMembers));
+  }, [teamMembers]);
+  
   const handleFileChange = (e) => {
     const file = e.target.files?.[0];
     if (!file) return;
@@ -81,8 +91,8 @@ export default function TeamMembers() {
 
       image.onload = () => {
         // Check image dimensions
-        const maxWidth = 1000; // Maximum width in pixels
-        const maxHeight = 1000; // Maximum height in pixels
+        const maxWidth = 1500; // Maximum width in pixels
+        const maxHeight = 1500; // Maximum height in pixels
         if (image.width > maxWidth || image.height > maxHeight) {
           setAlertMessage(
             "Image dimensions exceed the maximum allowed size. Please choose an image with dimensions no larger than 1500x1500 pixels."
@@ -173,9 +183,9 @@ export default function TeamMembers() {
               <i className="bi bi-pencil fs-6" onClick={() => document.getElementById("fileInput")?.click()}></i>
             </span>
           </div>
-          <Form onSubmit={formik.handleSubmit}>
+          <Form className={styles.form} onSubmit={formik.handleSubmit}>
             <Form.Control type="file" id="fileInput" name="image" className="d-none" onChange={handleFileChange} accept="image/jpeg, image/png, image/gif" />
-            <div className="row g-1 container-fluid ">
+            <div className={`row g-1 container-fluid `}>
               <FloatingLabel controlId="AddTeamMember" label="Name" className="mb-3 col-6">
                 <Form.Control type="text" name="name" onChange={formik.handleChange} onBlur={formik.handleBlur} />
                 {formik.errors.name && formik.touched.name && <p className="fs-6 m-0 text-danger">{formik.errors.name}</p>}
