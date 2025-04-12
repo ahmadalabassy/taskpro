@@ -1,14 +1,15 @@
 import React from "react";
 import { Modal } from "react-bootstrap";
 import styles from "./Profile.module.css";
-
-
+import { TeamMemberCardProps } from "../../typings/types";
 
 interface ProfileModalProps extends TeamMemberCardProps {
   Show: boolean;
   onHide: () => void;
 }
-const Profile = ({ Show, onHide,
+const Profile = ({
+  Show,
+  onHide,
   id,
   name,
   role,
@@ -16,18 +17,15 @@ const Profile = ({ Show, onHide,
   image,
   supervisor,
   phone,
-  department,
   address,
-  active = true,
-  tasks,
+  department,
   plannedLeavesDate,
+  active,
   joinDate,
-
 }: ProfileModalProps) => {
   // const [show, setShow] = useState(false);
   // const handleClose = () => setShow(false);
   // const handleShow = () => setShow(true);
-
 
   return (
     <>
@@ -37,12 +35,23 @@ const Profile = ({ Show, onHide,
         alt="messages"
         onClick={onHide}
       /> */}
-      <Modal show={Show} onHide={onHide} centered dialogClassName={styles.modalContent}>
+      <Modal
+        show={Show}
+        onHide={onHide}
+        centered
+        dialogClassName={styles.modalContent}
+      >
         <Modal.Body className={styles.modalBody}>
           <div className={`${styles.headingProfile}`}>
-            <img src={image?image:'./default-profile-img.svg'} alt="userImage" />
+            <img
+              src={image ? image : "./default-profile-img.svg"}
+              alt="userImage"
+            />
           </div>
-          <i className={`bi bi-x ${styles.exitButtonProfile}`} onClick={onHide}></i>
+          <i
+            className={`bi bi-x ${styles.exitButtonProfile}`}
+            onClick={onHide}
+          ></i>
           <div className="d-flex flex-column justify-content-center align-items-center ">
             <p className={styles.heading}>{name}</p>
             <p className={styles.idHeading}>#Id-{id}</p>
@@ -50,13 +59,16 @@ const Profile = ({ Show, onHide,
           </div>
           <div className="d-flex flex-column justify-content-center align-items-start ms-lg-0 p-lg-1">
             <p className={styles.userDataHeading}>
-              <i className="bi bi-envelope"></i>{email}
+              <i className="bi bi-envelope"></i>
+              {email}
             </p>
             <p className={styles.userDataHeading}>
-              <i className="bi bi-telephone"></i>{phone}
+              <i className="bi bi-telephone"></i>
+              {phone}
             </p>
             <p className={styles.userDataHeading}>
-              <i className="bi bi-geo-alt"></i>{address}
+              <i className="bi bi-geo-alt"></i>
+              {address}
             </p>
             <p className={styles.userDataHeading}>
               <i className="bi bi-people"></i>
@@ -77,7 +89,11 @@ const Profile = ({ Show, onHide,
             </p>
             <div className="d-flex flex-row align-items-center justify-content-evenly">
               <span className={styles.footerHeading}>Status</span>
-              <span className={`${styles.headingStatus} ${active ? styles.activeStatus : styles.inActiveStatus}`}>
+              <span
+                className={`${styles.headingStatus} ${
+                  active ? styles.activeStatus : styles.inActiveStatus
+                }`}
+              >
                 {active ? "Active" : "Inactive"}
               </span>
             </div>

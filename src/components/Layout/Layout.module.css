@@ -1,1 +1,3 @@
-.Layout {}
+.mainBG{
+    background-color: var(--page-bg);
+}
