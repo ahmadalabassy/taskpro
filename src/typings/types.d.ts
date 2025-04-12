@@ -25,7 +25,7 @@ export type TaskData = {
     department: string;
     address: string;
     active?: boolean;
-    tasks?: Tasks[];
+    tasks?: TaskData[];
     plannedLeavesDate: string;
     joinDate?: string;
     comments?: string[];

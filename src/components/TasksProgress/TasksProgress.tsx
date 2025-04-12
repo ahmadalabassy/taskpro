@@ -102,9 +102,9 @@ export default function TasksProgress({ task }: TaskCardProps) {
                 </div>
                 <div className={styles.dateInfo}>
                     {status === "completed" ? (
-                        <span>Completed: {completedDate && formatDate(completedDate)}</span>
+                        <span>Completed: {completedDate && formatDate(new Date(completedDate))}</span>
                     ) : (
-                        <span>Due: {dueDate && formatDate(dueDate)}</span>
+                        <span>Due: {dueDate && formatDate(new Date(dueDate))}</span>
                     )}
                 </div>
             </div>
