@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
 import "bootstrap-icons/font/bootstrap-icons.css";
@@ -33,8 +33,7 @@ const Tasks = () => {
         >
           <div className="d-flex flex-row justify-content-between align-items-center py-3 headingw-100">
             <div className="d-flex flex-row justify-content-start align-items-center">
-              <span
-                className={`${styles.rectangle} rounded-2`}></span>
+              <span className={`${styles.rectangle} rounded-2`}></span>
               <h2 className="ms-3 fw-bold mb-0">Planned</h2>
             </div>
             <div className="dropdown">

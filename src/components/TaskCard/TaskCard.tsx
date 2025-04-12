@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import styles from "./TaskCard.module.css";
 import ReusableModal from "../ReusableModal/ReusableModal.tsx";
 import { Button, Card } from "react-bootstrap";
@@ -23,9 +23,7 @@ export interface TaskCardProps {
   focusOnComments?: boolean;
   focusOnFiles?: boolean;
 }
-const TaskCard: React.FC<TaskCardProps> = ({
-  task
-}) => {
+const TaskCard: React.FC<TaskCardProps> = ({ task }) => {
   const [showEditTaskModal, setShowEditTaskModal] = useState(false);
   const [showAddUserModal, setShowAddUserModal] = useState(false); // State for showing the "Add User" modal
   const [users, setUsers] = useState<User[]>([]); // State to store users fetched from the database

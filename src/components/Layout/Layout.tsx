@@ -1,4 +1,3 @@
-import React from "react";
 import { Outlet } from "react-router-dom";
 import Aside from "../Aside/Aside";
 import Header from "../Header/Header.tsx";
