@@ -42,7 +42,7 @@ export default function Header() {
         <span className={`d-none d-lg-flex ${styles.iconHeader}`}> <i className="bi bi-chat-right-text"></i></span>
         <i className={`bi bi-question-circle ${styles.iconHeader}`}></i>
         <span className={`d-lg-flex d-none  ${styles.profile}`}><Profile Show={showModal} onHide={handleCloseModal} />
-          <img src="./../../../public/default-profile-img.svg" alt="profile user" onClick={handleClick} /></span>
+          <img src="./../../../default-profile-img.svg" alt="profile user" onClick={handleClick} /></span>
       </div>
     </header>
   );

@@ -19,7 +19,7 @@ const initialTeamMembers = [
     department: "IT",
     address: "123 Main Stsdasdasdsadad",
     supervisor: "Jane Smith",
-    image: "../../../public/default-profile-img.svg",
+    image: "../../../default-profile-img.svg",
     plannedLeavesDate: "2023-12-01",
     joinDate: "2023-01-15",
   },
@@ -33,7 +33,7 @@ const initialTeamMembers = [
     department: "Project Management",
     address: "456 Elm St",
     supervisor: "Jane Smith",
-    image: "../../../public/default-profile-img.svg",
+    image: "../../../default-profile-img.svg",
     plannedLeavesDate: "2023-11-15",
     joinDate: "2023-02-20",
   },
@@ -42,7 +42,7 @@ const initialTeamMembers = [
 export default function TeamMembers() {
   const [showModal, setShowModal] = useState(false);
   const [teamMembers, setTeamMembers] = useState(initialTeamMembers);
-  const [imageURL, setImageURL] = useState("./../../../public/default-profile-img.svg");
+  const [imageURL, setImageURL] = useState("./../../../default-profile-img.svg");
   const [alertMessage, setAlertMessage] = useState('');
   const [showAlert, setShowAlert] = useState(false);
 

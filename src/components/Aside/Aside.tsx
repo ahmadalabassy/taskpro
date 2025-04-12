@@ -42,7 +42,7 @@ export default function Aside() {
           </Link>
         </li>
         <li className="nav-item d-md-none d-flex ">
-            <img src="../../../public/default-profile-img.svg" alt="UserProfile" onClick={handleShowModal} />
+            <img src="../../../default-profile-img.svg" alt="UserProfile" onClick={handleShowModal} />
             <Profile Show={showModal} onHide={handleCloseModal}/>
         </li>
         <li>
