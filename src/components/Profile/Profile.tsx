@@ -15,10 +15,10 @@ const Profile = ({
   image,
   supervisor,
   phone,
-  department,
   address,
-  active = true,
+  department,
   plannedLeavesDate,
+  active,
   joinDate,
 }: ProfileModalProps) => {
   // const [show, setShow] = useState(false);

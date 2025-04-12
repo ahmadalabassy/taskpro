@@ -3,10 +3,7 @@ import { Card, OverlayTrigger, Tooltip } from "react-bootstrap";
 import { formatDate, getStatusLabel } from "../../utils/statusUtils";
 import styles from "./TasksProgress.module.css";
 import Profile from "./../Profile/Profile";
-
-interface TaskCardProps {
-  task: Tasks;
-}
+import { TaskCardProps } from "../TaskCard/TaskCard";
 
 export default function TasksProgress({ task }: TaskCardProps) {
   const [selectedMember, setSelectedMember] =
@@ -99,7 +96,6 @@ export default function TasksProgress({ task }: TaskCardProps) {
                 </div>
               )}
             </div>
-
             <div className={styles.memberCount}>
               {members.length} {members.length === 1 ? "member" : "members"}
             </div>
