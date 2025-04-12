@@ -6,6 +6,7 @@ import styles from "./Header.module.css";
 import { toggleTheme } from '../../store/themeSlice.ts';
 import { useSelector } from 'react-redux';
 import { useDispatch } from 'react-redux';
+import { RootState } from '../../store/index.ts';
 
 export default function Header() {
   const dispatch = useDispatch();
