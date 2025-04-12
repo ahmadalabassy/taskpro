@@ -7,7 +7,6 @@ import styles from "./Tasks.module.css";
 import ButtonGroup from "../ButtonGroup/ButtonGroup";
 import ReusableModal from "../ReusableModal/ReusableModal";
 import EditTaskModal from "../TaskEditModal/TaskEditModal";
-import { TaskData } from "../../typings/types";
 import { faker } from "@faker-js/faker";
 
 type DataItem = {
@@ -24,18 +23,22 @@ const Tasks = () => {
 
   const task: TaskData = {
     id: faker.number.int({ min: 1, max: 1000 }),
-    title: faker.lorem.words(3), 
-    description: faker.lorem.sentence(), 
+    title: faker.lorem.words(3),
+    description: faker.lorem.sentence(),
     dueDate: faker.date.future().toISOString().split("T")[0], // Generate a future date
     priority: faker.helpers.arrayElement(["Low", "Medium", "High"]), // Random priority
     status: faker.helpers.arrayElement(["Planned", "In Progress", "Completed"]), // Random status
-    assignedTo: faker.person.fullName(), 
+    assignedTo: faker.person.fullName(),
     comments: Array.from({ length: 3 }, () => faker.lorem.sentence()), // Generate random comments
-    files: Array.from({ length: 2 }, () => ({
-      name: faker.system.fileName(),
-      type: faker.system.mimeType(),
-      size: faker.number.int({ min: 1000, max: 10000 }), // Use faker.number.int
-    }) as File),
+    files: Array.from(
+      { length: 2 },
+      () =>
+        ({
+          name: faker.system.fileName(),
+          type: faker.system.mimeType(),
+          size: faker.number.int({ min: 1000, max: 10000 }), // Use faker.number.int
+        }) as File
+    ),
     createdAt: faker.date.past().toISOString(), // Generate a past date
     updatedAt: faker.date.recent().toISOString(), // Generate a recent date
     progress: faker.number.int({ min: 0, max: 100 }), // Use faker.number.int
@@ -53,7 +56,7 @@ const Tasks = () => {
     completedDate: faker.helpers.arrayElement([
       "",
       faker.date.future().toISOString().split("T")[0],
-    ]), 
+    ]),
   };
   return (
     <div className={`container p-4 ${styles.tasksBG} ${styles.bgHeight}`}>

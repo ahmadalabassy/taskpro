@@ -264,7 +264,6 @@ export default TaskCard;
 // import { Button, Card } from "react-bootstrap";
 // import Profile from "../Profile/Profile.tsx";
 // import EditTaskModal from "../TaskEditModal/TaskEditModal.tsx";
-// import { Tasks } from "../../typings/types";
 
 // export interface Task {
 //   name: string;
