@@ -30,7 +30,7 @@ export default function Aside() {
   return (
     <aside className={` d-flex flex-row flex-md-column flex-lg-shrink-0 flex-md-shrink-1 p-md-3 p-0 bg-body-light  ${styles.aside}`}>
       <Link to="/" className={`d-flex align-items-end justify-content-center mb-4 me-5 gap-2 link-body-emphasis d-md-flex d-none text-decoration-none `}>
-        <img  src={`./../../../public/logo-no-text.svg`} alt="Logo" />
+        <img  src={`/logo-no-text.svg`} alt="Logo" />
         <span className="fs-4 fw-bold">TASKPRO</span>
       </Link>
 
