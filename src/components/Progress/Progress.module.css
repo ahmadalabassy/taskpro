@@ -1,0 +1,123 @@
+.progressPage {
+    padding: 1rem;
+    background-color: var(--page-bg);
+    scrollbar-width: none;
+    height: calc(100dvh - 86px);
+    overflow-y: auto;
+}
+
+.statsSection {
+    margin-bottom: 1rem;
+}
+
+.tasksSection {
+    margin-top: 2rem;
+}
+
+.sectionHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.25rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid var(--bg-icon-header-hover-shadow);
+}
+
+.sectionHeader h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin: 0;
+    color: var(--text-icon-header);
+}
+
+.moreButton {
+    background: none;
+    border: none;
+    font-size: 1.25rem;
+    color: var(--text-primary-Aside);
+    cursor: pointer;
+    padding: 0.25rem 0.5rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.moreButton:hover {
+    background-color: #f8f9fa;
+    color: #495057;
+}
+
+.listIcon {
+    color: #4285f4;
+}
+
+.progressIcon {
+    color: #f4a742;
+}
+
+.checkIcon {
+    color: #34a853;
+}
+
+/* Task Grid Styles (from TasksGridView component) */
+.taskGrid {
+    margin-right: -0.75rem;
+    margin-left: -0.75rem;
+}
+
+.taskColumn {
+    padding-right: 0.75rem;
+    padding-left: 0.75rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Desktop layout */
+@media (min-width: 1200px) {
+    .taskColumn {
+        margin-bottom: 1.5rem;
+    }
+}
+
+/* Small desktop/large tablet layout */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .taskColumn {
+        margin-bottom: 1.5rem;
+    }
+}
+
+/* Tablet layout */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .taskColumn {
+        flex: 0 0 100%;
+        max-width: 100%;
+        margin-bottom: 1.25rem;
+    }
+
+    .statsSection {
+        margin-bottom: 2rem;
+    }
+
+    .statsSection>div {
+        margin-bottom: 1rem;
+    }
+}
+
+/* Mobile layout */
+@media (max-width: 767.98px) {
+    .progressPage {
+        padding-bottom: 4rem;
+    }
+
+    .taskColumn {
+        flex: 0 0 100%;
+        max-width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    .statsSection {
+        margin-bottom: 2rem;
+    }
+
+    .statsSection>div {
+        margin-bottom: 1rem;
+    }
+}
