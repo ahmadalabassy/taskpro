@@ -15,6 +15,26 @@ type Tasks = {
   completedDate: string;
 };
 
+type TeamMemberCardProps = {
+  id?: number;
+  name?: string;
+  role?: string;
+  email?: string;
+  image?: string;
+  supervisor?: string;
+  phone?: string;
+  department: string;
+  address: string;
+  active?: boolean;
+  tasks?: Tasks[];
+  plannedLeavesDate: string;
+  joinDate?: string;
+  comments?: string[];
+  files?: File[];
+  createdAt?: string;
+  updatedAt?: string;
+};
+
 type TaskData = {
   id: number;
   title: string;
