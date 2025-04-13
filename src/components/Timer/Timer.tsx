@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { ToggleButton } from "react-bootstrap";
 
 import styles from "./Timer.module.css";
@@ -28,7 +28,7 @@ export default function Timer() {
   useEffect(() => {
     setInterval(() => {
       setTimeNow(
-        new Date(Date.now()).toLocaleTimeString("en-US", { hour12: true })
+        new Date(Date.now()).toLocaleTimeString("en-US", { hour12: true }),
       );
     }, 1000);
   }, [time, minutes, amPm]);
@@ -40,10 +40,12 @@ export default function Timer() {
         <p className={styles.amPm}>{amPm}</p>
       </div>
       <div className={styles.clocking}>
-        <span
-          className={styles.playButton}
-          onClick={handleToggleClick}
-        >{checked ? <i className={`bi bi-play-circle ${styles.playButton}`}></i> : <i className={`bi bi-pause-circle ${styles.pauseButton}`}></i>}
+        <span className={styles.playButton} onClick={handleToggleClick}>
+          {checked ? (
+            <i className={`bi bi-play-circle ${styles.playButton}`}></i>
+          ) : (
+            <i className={`bi bi-pause-circle ${styles.pauseButton}`}></i>
+          )}
         </span>
         <ToggleButton
           id="toggle-check"

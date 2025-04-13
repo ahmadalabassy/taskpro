@@ -1,9 +1,7 @@
-import React from "react"
-import { Col, Container, Row } from "react-bootstrap"
-import ProgressStateCard from "../ProgressStateCard/ProgressStateCard"
-import styles from "./Progress.module.css"
-import TasksProgress from './../TasksProgress/TasksProgress';
-
+import { Col, Container, Row } from "react-bootstrap";
+import ProgressStateCard from "../ProgressStateCard/ProgressStateCard";
+import styles from "./Progress.module.css";
+import TasksProgress from "./../TasksProgress/TasksProgress";
 
 const mockTasks: Tasks[] = [
   {
@@ -17,7 +15,11 @@ const mockTasks: Tasks[] = [
         name: "John Doe",
         role: "Senior Designer",
         email: "john.doe@example.com",
+<<<<<<< HEAD
         image: "../../../default-profile-img.svg",
+=======
+        image: "/default-profile-img.svg",
+>>>>>>> 06c79d9c9bfaa5e066725191afb141de579b2061
         supervisor: "Jane Smith",
         phone: "555-123-4567",
         department: "UI/UX",
@@ -27,14 +29,18 @@ const mockTasks: Tasks[] = [
         joinDate: "2022-01-10",
         comments: ["Great work on the homepage redesign"],
         createdAt: "2022-01-10T09:00:00Z",
-        updatedAt: "2025-02-15T14:30:00Z"
+        updatedAt: "2025-02-15T14:30:00Z",
       },
       {
         id: 2321312,
         name: "Aya Khan",
         role: "Project Manager",
         email: "jane.smith@example.com",
+<<<<<<< HEAD
         image: "../../../default-profile-img.svg",
+=======
+        image: "/default-profile-img.svg",
+>>>>>>> 06c79d9c9bfaa5e066725191afb141de579b2061
         supervisor: "Michael Johnson",
         phone: "555-987-6543",
         department: "Project Management",
@@ -44,8 +50,9 @@ const mockTasks: Tasks[] = [
         joinDate: "2021-11-05",
         comments: ["Excellent leadership on the website project"],
         createdAt: "2021-11-05T10:15:00Z",
-        updatedAt: "2025-02-10T11:45:00Z"
-      }],
+        updatedAt: "2025-02-10T11:45:00Z",
+      },
+    ],
     dueDate: new Date("2025-03-08"),
   },
   {
@@ -59,7 +66,11 @@ const mockTasks: Tasks[] = [
         name: "Jane Smith",
         role: "Project Manager",
         email: "jane.smith@example.com",
+<<<<<<< HEAD
         image: "../../../default-profile-img.svg",
+=======
+        image: "/default-profile-img.svg",
+>>>>>>> 06c79d9c9bfaa5e066725191afb141de579b2061
         supervisor: "Michael Johnson",
         phone: "555-987-6543",
         department: "Project Management",
@@ -69,14 +80,18 @@ const mockTasks: Tasks[] = [
         joinDate: "2021-11-05",
         comments: ["Excellent leadership on the website project"],
         createdAt: "2021-11-05T10:15:00Z",
-        updatedAt: "2025-02-10T11:45:00Z"
+        updatedAt: "2025-02-10T11:45:00Z",
       },
       {
         id: 4,
         name: "doe john",
         role: "Project Manager",
         email: "jane.smith@example.com",
+<<<<<<< HEAD
         image: "../../../default-profile-img.svg",
+=======
+        image: "/default-profile-img.svg",
+>>>>>>> 06c79d9c9bfaa5e066725191afb141de579b2061
         supervisor: "Michael Johnson",
         phone: "555-987-6543",
         department: "Project Management",
@@ -86,7 +101,7 @@ const mockTasks: Tasks[] = [
         joinDate: "2021-11-05",
         comments: ["Excellent leadership on the website project"],
         createdAt: "2021-11-05T10:15:00Z",
-        updatedAt: "2025-02-10T11:45:00Z"
+        updatedAt: "2025-02-10T11:45:00Z",
       },
     ],
     dueDate: new Date("2025-03-15"),
@@ -102,7 +117,11 @@ const mockTasks: Tasks[] = [
         name: "mohameed ",
         role: "Project Manager",
         email: "jane.smith@example.com",
+<<<<<<< HEAD
         image: "../../../default-profile-img.svg",
+=======
+        image: "/default-profile-img.svg",
+>>>>>>> 06c79d9c9bfaa5e066725191afb141de579b2061
         supervisor: "Michael Johnson",
         phone: "555-987-6543",
         department: "Project Management",
@@ -112,14 +131,18 @@ const mockTasks: Tasks[] = [
         joinDate: "2021-11-05",
         comments: ["Excellent leadership on the website project"],
         createdAt: "2021-11-05T10:15:00Z",
-        updatedAt: "2025-02-10T11:45:00Z"
+        updatedAt: "2025-02-10T11:45:00Z",
       },
       {
         id: 4,
         name: "Ahmed Ali",
         role: "Project Manager",
         email: "jane.smith@example.com",
+<<<<<<< HEAD
         image: "../../../default-profile-img.svg",
+=======
+        image: "/default-profile-img.svg",
+>>>>>>> 06c79d9c9bfaa5e066725191afb141de579b2061
         supervisor: "Michael Johnson",
         phone: "555-987-6543",
         department: "Project Management",
@@ -129,7 +152,7 @@ const mockTasks: Tasks[] = [
         joinDate: "2021-11-05",
         comments: ["Excellent leadership on the website project"],
         createdAt: "2021-11-05T10:15:00Z",
-        updatedAt: "2025-02-10T11:45:00Z"
+        updatedAt: "2025-02-10T11:45:00Z",
       },
     ],
     completedDate: new Date("2025-03-01"),
@@ -145,7 +168,11 @@ const mockTasks: Tasks[] = [
         name: "Alaa Mohamed",
         role: "Project Manager",
         email: "jane.smith@example.com",
+<<<<<<< HEAD
         image: "../../../default-profile-img.svg",
+=======
+        image: "/default-profile-img.svg",
+>>>>>>> 06c79d9c9bfaa5e066725191afb141de579b2061
         supervisor: "Michael Johnson",
         phone: "555-987-6543",
         department: "Project Management",
@@ -155,14 +182,18 @@ const mockTasks: Tasks[] = [
         joinDate: "2021-11-05",
         comments: ["Excellent leadership on the website project"],
         createdAt: "2021-11-05T10:15:00Z",
-        updatedAt: "2025-02-10T11:45:00Z"
+        updatedAt: "2025-02-10T11:45:00Z",
       },
       {
         id: 22,
         name: "Alaa Mohamed",
         role: "Project Manager",
         email: "jane.smith@example.com",
+<<<<<<< HEAD
         image: "../../../default-profile-img.svg",
+=======
+        image: "/default-profile-img.svg",
+>>>>>>> 06c79d9c9bfaa5e066725191afb141de579b2061
         supervisor: "Michael Johnson",
         phone: "555-987-6543",
         department: "Project Management",
@@ -172,14 +203,18 @@ const mockTasks: Tasks[] = [
         joinDate: "2021-11-05",
         comments: ["Excellent leadership on the website project"],
         createdAt: "2021-11-05T10:15:00Z",
-        updatedAt: "2025-02-10T11:45:00Z"
+        updatedAt: "2025-02-10T11:45:00Z",
       },
       {
         id: 22,
         name: "Alaa Mohamed",
         role: "Project Manager",
         email: "jane.smith@example.com",
+<<<<<<< HEAD
         image: "../../../default-profile-img.svg",
+=======
+        image: "/default-profile-img.svg",
+>>>>>>> 06c79d9c9bfaa5e066725191afb141de579b2061
         supervisor: "Michael Johnson",
         phone: "555-987-6543",
         department: "Project Management",
@@ -189,14 +224,18 @@ const mockTasks: Tasks[] = [
         joinDate: "2021-11-05",
         comments: ["Excellent leadership on the website project"],
         createdAt: "2021-11-05T10:15:00Z",
-        updatedAt: "2025-02-10T11:45:00Z"
+        updatedAt: "2025-02-10T11:45:00Z",
       },
       {
         id: 22,
         name: "Alaa Mohamed",
         role: "Project Manager",
         email: "jane.smith@example.com",
+<<<<<<< HEAD
         image: "../../../default-profile-img.svg",
+=======
+        image: "/default-profile-img.svg",
+>>>>>>> 06c79d9c9bfaa5e066725191afb141de579b2061
         supervisor: "Michael Johnson",
         phone: "555-987-6543",
         department: "Project Management",
@@ -206,14 +245,18 @@ const mockTasks: Tasks[] = [
         joinDate: "2021-11-05",
         comments: ["Excellent leadership on the website project"],
         createdAt: "2021-11-05T10:15:00Z",
-        updatedAt: "2025-02-10T11:45:00Z"
+        updatedAt: "2025-02-10T11:45:00Z",
       },
       {
         id: 22,
         name: "Alaa Mohamed",
         role: "Project Manager",
         email: "jane.smith@example.com",
+<<<<<<< HEAD
         image: "../../../default-profile-img.svg",
+=======
+        image: "/default-profile-img.svg",
+>>>>>>> 06c79d9c9bfaa5e066725191afb141de579b2061
         supervisor: "Michael Johnson",
         phone: "555-987-6543",
         department: "Project Management",
@@ -223,14 +266,18 @@ const mockTasks: Tasks[] = [
         joinDate: "2021-11-05",
         comments: ["Excellent leadership on the website project"],
         createdAt: "2021-11-05T10:15:00Z",
-        updatedAt: "2025-02-10T11:45:00Z"
+        updatedAt: "2025-02-10T11:45:00Z",
       },
       {
         id: 4,
         name: "Raed Ali",
         role: "Project Manager",
         email: "jane.smith@example.com",
+<<<<<<< HEAD
         image: "../../../default-profile-img.svg",
+=======
+        image: "/default-profile-img.svg",
+>>>>>>> 06c79d9c9bfaa5e066725191afb141de579b2061
         supervisor: "Michael Johnson",
         phone: "555-987-6543",
         department: "Project Management",
@@ -240,7 +287,7 @@ const mockTasks: Tasks[] = [
         joinDate: "2021-11-05",
         comments: ["Excellent leadership on the website project"],
         createdAt: "2021-11-05T10:15:00Z",
-        updatedAt: "2025-02-10T11:45:00Z"
+        updatedAt: "2025-02-10T11:45:00Z",
       },
     ],
     dueDate: new Date("2025-04-10"),
@@ -256,7 +303,11 @@ const mockTasks: Tasks[] = [
         name: "Ahmed Alabasy",
         role: "Project Manager",
         email: "jane.smith@example.com",
+<<<<<<< HEAD
         image: "../../../default-profile-img.svg",
+=======
+        image: "/default-profile-img.svg",
+>>>>>>> 06c79d9c9bfaa5e066725191afb141de579b2061
         supervisor: "Michael Johnson",
         phone: "555-987-6543",
         department: "Project Management",
@@ -266,14 +317,18 @@ const mockTasks: Tasks[] = [
         joinDate: "2021-11-05",
         comments: ["Excellent leadership on the website project"],
         createdAt: "2021-11-05T10:15:00Z",
-        updatedAt: "2025-02-10T11:45:00Z"
+        updatedAt: "2025-02-10T11:45:00Z",
       },
       {
         id: 4,
         name: "fares elabasery",
         role: "Project Manager",
         email: "jane.smith@example.com",
+<<<<<<< HEAD
         image: "../../../default-profile-img.svg",
+=======
+        image: "/default-profile-img.svg",
+>>>>>>> 06c79d9c9bfaa5e066725191afb141de579b2061
         supervisor: "Michael Johnson",
         phone: "555-987-6543",
         department: "Project Management",
@@ -283,7 +338,7 @@ const mockTasks: Tasks[] = [
         joinDate: "2021-11-05",
         comments: ["Excellent leadership on the website project"],
         createdAt: "2021-11-05T10:15:00Z",
-        updatedAt: "2025-02-10T11:45:00Z"
+        updatedAt: "2025-02-10T11:45:00Z",
       },
     ],
     dueDate: new Date("2025-03-22"),
@@ -299,7 +354,11 @@ const mockTasks: Tasks[] = [
         name: "Mohamed Elabasy",
         role: "Project Manager",
         email: "jane.smith@example.com",
+<<<<<<< HEAD
         image: "../../../default-profile-img.svg",
+=======
+        image: "/default-profile-img.svg",
+>>>>>>> 06c79d9c9bfaa5e066725191afb141de579b2061
         supervisor: "Michael Johnson",
         phone: "555-987-6543",
         department: "Project Management",
@@ -309,14 +368,18 @@ const mockTasks: Tasks[] = [
         joinDate: "2021-11-05",
         comments: ["Excellent leadership on the website project"],
         createdAt: "2021-11-05T10:15:00Z",
-        updatedAt: "2025-02-10T11:45:00Z"
+        updatedAt: "2025-02-10T11:45:00Z",
       },
       {
         id: 4,
         name: "Ahmed Alabasy",
         role: "Project Manager",
         email: "jane.smith@example.com",
+<<<<<<< HEAD
         image: "../../../default-profile-img.svg",
+=======
+        image: "/default-profile-img.svg",
+>>>>>>> 06c79d9c9bfaa5e066725191afb141de579b2061
         supervisor: "Michael Johnson",
         phone: "555-987-6543",
         department: "Project Management",
@@ -326,18 +389,17 @@ const mockTasks: Tasks[] = [
         joinDate: "2021-11-05",
         comments: ["Excellent leadership on the website project"],
         createdAt: "2021-11-05T10:15:00Z",
-        updatedAt: "2025-02-10T11:45:00Z"
+        updatedAt: "2025-02-10T11:45:00Z",
       },
     ],
     completedDate: new Date("2025-02-15"),
   },
-]
-
+];
 
 export default function Progress() {
-  const totalTasks = 248
-  const inProgressTasks = 45
-  const completedTasks = 182
+  const totalTasks = 248;
+  const inProgressTasks = 45;
+  const completedTasks = 182;
   return (
     <div className={styles.progressPage}>
       <Row className={styles.statsSection}>
@@ -380,5 +442,5 @@ export default function Progress() {
         </Row>
       </div>
     </div>
-  )
+  );
 }

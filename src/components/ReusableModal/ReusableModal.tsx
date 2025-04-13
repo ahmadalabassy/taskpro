@@ -1,4 +1,3 @@
-import React from "react";
 import { Modal } from "react-bootstrap";
 import styles from "./ReusableModal.module.css";
 interface ModalProps {
@@ -17,14 +16,9 @@ interface ModalProps {
  * An optional `onConfirm` function can be passed to confirm the action and an optional `confirmText` string can be passed to customize the confirm button text.
  * An optional `closeText` string can be passed to customize the close button text. An optional `disableConfirm` boolean can be passed to disable the confirm button.
  */
-const ReusableModal = ({
-  show,
-  title,
-  children,
-  onClose,
-}: ModalProps) => {
+const ReusableModal = ({ show, title, children, onClose }: ModalProps) => {
   return (
-    <Modal  show={show} onHide={onClose} centered>
+    <Modal show={show} onHide={onClose} centered>
       <Modal.Header className={styles.container} closeButton>
         <Modal.Title className={styles.title}>{title}</Modal.Title>
       </Modal.Header>

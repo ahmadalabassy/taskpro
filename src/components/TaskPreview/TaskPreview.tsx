@@ -1,4 +1,3 @@
-import React from "react";
 import styles from "./TaskPreview.module.css";
 
 interface TaskPreviewProps {
@@ -11,7 +10,12 @@ interface TaskPreviewProps {
   users: string[]; // Array of user image URLs
 }
 
-const TaskPreview: React.FC<TaskPreviewProps> = ({ title, category, tasks, users }) => {
+const TaskPreview: React.FC<TaskPreviewProps> = ({
+  title,
+  category,
+  tasks,
+  users,
+}) => {
   return (
     <div className={styles.taskPreview}>
       <div className={`d-flex align-items-center mb-3`}>

@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import styles from "./TaskEditModal.module.css";
 
@@ -20,7 +20,7 @@ const EditTaskModal = ({
 }: {
   focusOnComments: boolean;
   focusOnFiles: boolean;
-}) =>{
+}) => {
   const [newComment, setNewComment] = useState<string>("");
   const [task, setTask] = useState<Task>({
     assignee: "",
@@ -36,7 +36,7 @@ const EditTaskModal = ({
 
   const commentsTextareaRef = useRef<HTMLTextAreaElement | null>(null);
   const fileInputRef = useRef<HTMLInputElement | null>(null);
-  
+
   // Focus on the comments textarea when the modal opens and `focusOnComments` is true
   useEffect(() => {
     if (focusOnComments && commentsTextareaRef.current) {
@@ -44,12 +44,12 @@ const EditTaskModal = ({
     }
   }, [focusOnComments]);
 
-    // Focus on the file input when the modal opens and `focusOnFiles` is true
-    useEffect(() => {
-      if (focusOnFiles && fileInputRef.current) {
-        fileInputRef.current.focus();
-      }
-    }, [focusOnFiles]);
+  // Focus on the file input when the modal opens and `focusOnFiles` is true
+  useEffect(() => {
+    if (focusOnFiles && fileInputRef.current) {
+      fileInputRef.current.focus();
+    }
+  }, [focusOnFiles]);
 
   const assignees = ["Insan Kamil", "John Doe", "Jane Smith"];
   const projects = ["Miguel Lorenzo", "Emily Brown", "Michael Lee"];
@@ -63,7 +63,7 @@ const EditTaskModal = ({
   const handleChange = (
     e: React.ChangeEvent<
       HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement
-    >
+    >,
   ) => {
     setTask({ ...task, [e.target.name]: e.target.value });
   };
@@ -268,7 +268,7 @@ const EditTaskModal = ({
           <label className="form-label">Comments</label>
           <div className="input-group mb-2">
             <textarea
-            ref={commentsTextareaRef} // Ref to focus on this textarea
+              ref={commentsTextareaRef} // Ref to focus on this textarea
               className="form-control"
               placeholder="Add a comment"
               value={newComment}
