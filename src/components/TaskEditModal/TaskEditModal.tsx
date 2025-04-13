@@ -152,7 +152,7 @@ const EditTaskModal = ({
   };
 
   return (
-    <div className="container p-4 rounded bg-white">
+    <div className="container p-4 rounded">
       <div className="row g-3">
         <div className="col-md-6">
           <label className="form-label">Assign to</label>
