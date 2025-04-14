@@ -125,7 +125,7 @@ export default function TeamMembers() {
         const maxHeight = 1500; // Maximum height in pixels
         if (image.width > maxWidth || image.height > maxHeight) {
           setAlertMessage(
-            "Image dimensions exceed the maximum allowed size. Please choose an image with dimensions no larger than 1500x1500 pixels.",
+            "Image dimensions exceed the maximum allowed size. Please choose an image with dimensions no larger than 1500x1500 pixels."
           );
           return;
         }
@@ -185,7 +185,7 @@ export default function TeamMembers() {
   });
   return (
     // Add a button to open the modal to add a new team member
-    <div className={styles.TeamMember}>
+    <div className={styles.User}>
       {showAlert && !showModal && (
         <Alert
           key={alertMessage}

@@ -63,7 +63,7 @@ const EditTaskModal = ({
   const handleChange = (
     e: React.ChangeEvent<
       HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement
-    >,
+    >
   ) => {
     setTask({ ...task, [e.target.name]: e.target.value });
   };

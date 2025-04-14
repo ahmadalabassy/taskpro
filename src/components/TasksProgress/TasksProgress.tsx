@@ -6,12 +6,11 @@ import Profile from "./../Profile/Profile";
 import { TaskCardProps } from "../TaskCard/TaskCard";
 
 export default function TasksProgress({ task }: TaskCardProps) {
-  const [selectedMember, setSelectedMember] =
-    useState<TeamMemberCardProps | null>(null);
+  const [selectedMember, setSelectedMember] = useState<User | null>(null);
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
-  const handleShow = (member: TeamMemberCardProps) => {
+  const handleShow = (member: User) => {
     setSelectedMember(member);
     setShow(true);
   };
