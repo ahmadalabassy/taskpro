@@ -18,11 +18,7 @@ const initialTeamMembers = [
     department: "IT",
     address: "123 Main Stsdasdasdsadad",
     supervisor: "Jane Smith",
-<<<<<<< HEAD
-    image: "../../../default-profile-img.svg",
-=======
     image: "/default-profile-img.svg",
->>>>>>> 06c79d9c9bfaa5e066725191afb141de579b2061
     plannedLeavesDate: "2023-12-01",
     joinDate: "2023-01-15",
   },
@@ -36,11 +32,7 @@ const initialTeamMembers = [
     department: "Project Management",
     address: "456 Elm St",
     supervisor: "Jane Smith",
-<<<<<<< HEAD
-    image: "../../../default-profile-img.svg",
-=======
     image: "/default-profile-img.svg",
->>>>>>> 06c79d9c9bfaa5e066725191afb141de579b2061
     plannedLeavesDate: "2023-11-15",
     joinDate: "2023-02-20",
   },
@@ -49,13 +41,8 @@ const initialTeamMembers = [
 export default function TeamMembers() {
   const [showModal, setShowModal] = useState(false);
   const [teamMembers, setTeamMembers] = useState(initialTeamMembers);
-<<<<<<< HEAD
-  const [imageURL, setImageURL] = useState("./../../../default-profile-img.svg");
-  const [alertMessage, setAlertMessage] = useState('');
-=======
   const [imageURL, setImageURL] = useState("/default-profile-img.svg");
   const [alertMessage, setAlertMessage] = useState("");
->>>>>>> 06c79d9c9bfaa5e066725191afb141de579b2061
   const [showAlert, setShowAlert] = useState(false);
 
   useEffect(() => {

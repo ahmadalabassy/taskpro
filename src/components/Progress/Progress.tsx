@@ -15,11 +15,7 @@ const mockTasks: Tasks[] = [
         name: "John Doe",
         role: "Senior Designer",
         email: "john.doe@example.com",
-<<<<<<< HEAD
-        image: "../../../default-profile-img.svg",
-=======
         image: "/default-profile-img.svg",
->>>>>>> 06c79d9c9bfaa5e066725191afb141de579b2061
         supervisor: "Jane Smith",
         phone: "555-123-4567",
         department: "UI/UX",
@@ -36,11 +32,7 @@ const mockTasks: Tasks[] = [
         name: "Aya Khan",
         role: "Project Manager",
         email: "jane.smith@example.com",
-<<<<<<< HEAD
-        image: "../../../default-profile-img.svg",
-=======
         image: "/default-profile-img.svg",
->>>>>>> 06c79d9c9bfaa5e066725191afb141de579b2061
         supervisor: "Michael Johnson",
         phone: "555-987-6543",
         department: "Project Management",
@@ -66,11 +58,7 @@ const mockTasks: Tasks[] = [
         name: "Jane Smith",
         role: "Project Manager",
         email: "jane.smith@example.com",
-<<<<<<< HEAD
-        image: "../../../default-profile-img.svg",
-=======
         image: "/default-profile-img.svg",
->>>>>>> 06c79d9c9bfaa5e066725191afb141de579b2061
         supervisor: "Michael Johnson",
         phone: "555-987-6543",
         department: "Project Management",
@@ -87,11 +75,7 @@ const mockTasks: Tasks[] = [
         name: "doe john",
         role: "Project Manager",
         email: "jane.smith@example.com",
-<<<<<<< HEAD
-        image: "../../../default-profile-img.svg",
-=======
         image: "/default-profile-img.svg",
->>>>>>> 06c79d9c9bfaa5e066725191afb141de579b2061
         supervisor: "Michael Johnson",
         phone: "555-987-6543",
         department: "Project Management",
@@ -117,11 +101,7 @@ const mockTasks: Tasks[] = [
         name: "mohameed ",
         role: "Project Manager",
         email: "jane.smith@example.com",
-<<<<<<< HEAD
-        image: "../../../default-profile-img.svg",
-=======
         image: "/default-profile-img.svg",
->>>>>>> 06c79d9c9bfaa5e066725191afb141de579b2061
         supervisor: "Michael Johnson",
         phone: "555-987-6543",
         department: "Project Management",
@@ -138,11 +118,7 @@ const mockTasks: Tasks[] = [
         name: "Ahmed Ali",
         role: "Project Manager",
         email: "jane.smith@example.com",
-<<<<<<< HEAD
-        image: "../../../default-profile-img.svg",
-=======
         image: "/default-profile-img.svg",
->>>>>>> 06c79d9c9bfaa5e066725191afb141de579b2061
         supervisor: "Michael Johnson",
         phone: "555-987-6543",
         department: "Project Management",
@@ -168,11 +144,7 @@ const mockTasks: Tasks[] = [
         name: "Alaa Mohamed",
         role: "Project Manager",
         email: "jane.smith@example.com",
-<<<<<<< HEAD
-        image: "../../../default-profile-img.svg",
-=======
         image: "/default-profile-img.svg",
->>>>>>> 06c79d9c9bfaa5e066725191afb141de579b2061
         supervisor: "Michael Johnson",
         phone: "555-987-6543",
         department: "Project Management",
@@ -189,11 +161,7 @@ const mockTasks: Tasks[] = [
         name: "Alaa Mohamed",
         role: "Project Manager",
         email: "jane.smith@example.com",
-<<<<<<< HEAD
-        image: "../../../default-profile-img.svg",
-=======
         image: "/default-profile-img.svg",
->>>>>>> 06c79d9c9bfaa5e066725191afb141de579b2061
         supervisor: "Michael Johnson",
         phone: "555-987-6543",
         department: "Project Management",
@@ -210,11 +178,7 @@ const mockTasks: Tasks[] = [
         name: "Alaa Mohamed",
         role: "Project Manager",
         email: "jane.smith@example.com",
-<<<<<<< HEAD
-        image: "../../../default-profile-img.svg",
-=======
         image: "/default-profile-img.svg",
->>>>>>> 06c79d9c9bfaa5e066725191afb141de579b2061
         supervisor: "Michael Johnson",
         phone: "555-987-6543",
         department: "Project Management",
@@ -231,11 +195,7 @@ const mockTasks: Tasks[] = [
         name: "Alaa Mohamed",
         role: "Project Manager",
         email: "jane.smith@example.com",
-<<<<<<< HEAD
-        image: "../../../default-profile-img.svg",
-=======
         image: "/default-profile-img.svg",
->>>>>>> 06c79d9c9bfaa5e066725191afb141de579b2061
         supervisor: "Michael Johnson",
         phone: "555-987-6543",
         department: "Project Management",
@@ -252,11 +212,7 @@ const mockTasks: Tasks[] = [
         name: "Alaa Mohamed",
         role: "Project Manager",
         email: "jane.smith@example.com",
-<<<<<<< HEAD
-        image: "../../../default-profile-img.svg",
-=======
         image: "/default-profile-img.svg",
->>>>>>> 06c79d9c9bfaa5e066725191afb141de579b2061
         supervisor: "Michael Johnson",
         phone: "555-987-6543",
         department: "Project Management",
@@ -273,11 +229,7 @@ const mockTasks: Tasks[] = [
         name: "Raed Ali",
         role: "Project Manager",
         email: "jane.smith@example.com",
-<<<<<<< HEAD
-        image: "../../../default-profile-img.svg",
-=======
         image: "/default-profile-img.svg",
->>>>>>> 06c79d9c9bfaa5e066725191afb141de579b2061
         supervisor: "Michael Johnson",
         phone: "555-987-6543",
         department: "Project Management",
@@ -303,11 +255,7 @@ const mockTasks: Tasks[] = [
         name: "Ahmed Alabasy",
         role: "Project Manager",
         email: "jane.smith@example.com",
-<<<<<<< HEAD
-        image: "../../../default-profile-img.svg",
-=======
         image: "/default-profile-img.svg",
->>>>>>> 06c79d9c9bfaa5e066725191afb141de579b2061
         supervisor: "Michael Johnson",
         phone: "555-987-6543",
         department: "Project Management",
@@ -324,11 +272,7 @@ const mockTasks: Tasks[] = [
         name: "fares elabasery",
         role: "Project Manager",
         email: "jane.smith@example.com",
-<<<<<<< HEAD
-        image: "../../../default-profile-img.svg",
-=======
         image: "/default-profile-img.svg",
->>>>>>> 06c79d9c9bfaa5e066725191afb141de579b2061
         supervisor: "Michael Johnson",
         phone: "555-987-6543",
         department: "Project Management",
@@ -354,11 +298,7 @@ const mockTasks: Tasks[] = [
         name: "Mohamed Elabasy",
         role: "Project Manager",
         email: "jane.smith@example.com",
-<<<<<<< HEAD
-        image: "../../../default-profile-img.svg",
-=======
         image: "/default-profile-img.svg",
->>>>>>> 06c79d9c9bfaa5e066725191afb141de579b2061
         supervisor: "Michael Johnson",
         phone: "555-987-6543",
         department: "Project Management",
@@ -375,11 +315,7 @@ const mockTasks: Tasks[] = [
         name: "Ahmed Alabasy",
         role: "Project Manager",
         email: "jane.smith@example.com",
-<<<<<<< HEAD
-        image: "../../../default-profile-img.svg",
-=======
         image: "/default-profile-img.svg",
->>>>>>> 06c79d9c9bfaa5e066725191afb141de579b2061
         supervisor: "Michael Johnson",
         phone: "555-987-6543",
         department: "Project Management",
