@@ -3,10 +3,11 @@ import { Modal } from "react-bootstrap";
 import styles from "./Profile.module.css";
 import { TeamMemberCardProps } from "../../typings/types";
 
-interface ProfileModalProps extends TeamMemberCardProps {
+type ProfileModalProps = TeamMemberCardProps & {
   Show: boolean;
   onHide: () => void;
-}
+};
+
 const Profile = ({
   Show,
   onHide,

@@ -40,16 +40,20 @@ export default function Timer() {
         <p className={styles.amPm}>{amPm}</p>
       </div>
       <div className={styles.clocking}>
-        <span
-          className={styles.playButton}
-          onClick={handleToggleClick}
-        >{checked ? <i className={`bi bi-play-circle ${styles.playButton}`}></i> : <i className={`bi bi-pause-circle ${styles.pauseButton}`}></i>}
+        <span className={styles.playButton} onClick={handleToggleClick}>
+          {checked ? (
+            <i className={`bi bi-play-circle ${styles.playButton}`}></i>
+          ) : (
+            <i className={`bi bi-pause-circle ${styles.pauseButton}`}></i>
+          )}
         </span>
         <ToggleButton
           id="toggle-check"
           type="checkbox"
           checked={checked}
-          className={`d-none d-lg-flex ${checked ? styles.timeToggle : styles.timeTogglePause}`}
+          className={`d-none d-lg-flex ${
+            checked ? styles.timeToggle : styles.timeTogglePause
+          }`}
           value="1"
           onChange={handleToggle}
         >
