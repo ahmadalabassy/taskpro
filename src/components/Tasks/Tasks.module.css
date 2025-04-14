@@ -7,8 +7,12 @@
 .bgHeight {
   min-height: calc(100vh - 6rem);
 }
+.textColor{
+  color: var(--text-color) !important;
+}
 .tasksBG {
   background-color: var(--bg-color) !important;
+  min-width: 325px;
 }
 /* .main{
     background-color: var(--component-bg);
@@ -20,6 +24,14 @@
 }
 .heightFit {
   height: fit-content;
+}
+.scroll{
+  scrollbar-width: none;
+  overflow-y: scroll;
+}
+.addTask {
+  background-color: var(--task-bg-color) !important;
+  color: var(--add-task) !important;
 }
 .btn:hover{
 cursor: pointer;

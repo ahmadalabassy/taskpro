@@ -1,14 +1,18 @@
 :root {
     --bg-color: white ;
+    --border-color: #efefef;
     --text-color: #212529;
     --bg-secondary: #32363B;
     --page-bg: #efefef;
+    --title-color:#212529;
     --text-asideBtnActive-hover: #000000;
     --text-primary-Aside: #676F77;
     --bg-icon-header-hover:#e4e4e4;
     --bg-icon-header-hover-shadow:#e4e4e4;
     --text-icon-header: #676F77;
     --primary-color :#2A85FF;
+    --task-bg-color:#ffffff;
+    --add-task: #2A85FF;
     --text-header-color :#676f77b3;  
     --secondary-color :#EFEFEF;
     --orange : #FF6B56;
@@ -17,9 +21,13 @@
 
 .dark-theme {
     --bg-color: #32363B;
+    --border-color: #676F77;
     --text-color: #ffffff;
+    --title-color: #A8CCFD;
     --bg-secondary: #32363B;
     --page-bg: #3F4348;
+    --task-bg-color: #3F4348;
+    --add-task: #A8CCFD;
     --text-asideBtnActive-hover: #FFBC99;
     --text-primary-Aside: white;
     --bg-icon-header-hover:#3F4348;

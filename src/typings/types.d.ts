@@ -1,4 +1,5 @@
-export type TaskData = {
+
+type TaskData = {
     id: number;
     title: string;
     description: string;
@@ -14,7 +15,7 @@ export type TaskData = {
     members: TeamMemberCardProps[];
     completedDate : string;
   };
-  export type TeamMemberCardProps = {
+type TeamMemberCardProps = {
     id?: number;
     name?: string;
     role?: string;

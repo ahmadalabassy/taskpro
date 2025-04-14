@@ -104,17 +104,17 @@ const TaskCard: React.FC<TaskCardProps> = ({ task }) => {
       <Card className={`${styles.card} mb-4 border-0`}>
         <Card.Body className="text-start lh-sm px-4 py-2">
           <div className="d-flex flex-row justify-content-between align-items-center">
-            <Card.Title className="mb-0 fw-bold">{task.title}</Card.Title>
+            <Card.Title className={`${styles.titleColor} mb-0 fw-bold`}>{task.title}</Card.Title>
             <Button
-              className="text-black"
+              className={`${styles.primaryText}`}
               variant="link"
               onClick={() => setShowEditTaskModal(true)}
             >
               <i className="bi bi-pencil"></i>
             </Button>
           </div>
-          <Card.Text className="mt-3 text-secondary">
-          {task.description}
+          <Card.Text className={`${styles.primaryText} mt-3`}>
+            {task.description}
           </Card.Text>
           <div
             className={`d-flex flex-row ${styles.primaryText} justify-content-between`}
@@ -167,7 +167,7 @@ const TaskCard: React.FC<TaskCardProps> = ({ task }) => {
               <button
                 className={`${styles.comment} bg-transparent rounded-circle btn-sm p-0 border-0`}
               >
-                <i className="bi bi-chat-dots primary-text"></i>
+                <i className={`${styles.primaryText} bi bi-chat-dots`}></i>
               </button>
               <span className={`${styles.fsSM}`}>
                 {comments.length} comments

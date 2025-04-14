@@ -19,13 +19,9 @@ export default function TeamMemberCard({
   department,
   address,
   active = true,
-  tasks,
   plannedLeavesDate,
   joinDate,
-  comments,
-  files,
   createdAt,
-  updatedAt,
 }: TeamMemberCardProps) {
   const [showModal, setShowModal] = useState(false);
 

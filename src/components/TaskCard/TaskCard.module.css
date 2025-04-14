@@ -2,13 +2,14 @@
     font-size: 0.8rem;
   }
 .card {
-  background-color: var(--bg-color) !important;
+  background-color: var(--task-bg-color) !important;
     padding: 0.5em 1em;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  }
-  
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;  }
+ .titleColor {
+    color: var(--title-color) !important;
+  } 
   .primaryText {
-    color: var(--text-primary);
+    color: var(--text-color) !important;
   }
   .user {
     margin-left: -0.5rem;
@@ -47,3 +48,5 @@
   .file:hover {
     border: 0;
   }
+
+  

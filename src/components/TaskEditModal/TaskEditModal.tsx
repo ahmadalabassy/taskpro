@@ -10,7 +10,7 @@ interface Task {
   endDate: string;
   description: string;
   tags: string[];
-  file: File | null;
+  file: File| null;
   comments: string[];
 }
 

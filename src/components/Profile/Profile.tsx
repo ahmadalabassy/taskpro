@@ -1,7 +1,6 @@
 import React from "react";
 import { Modal } from "react-bootstrap";
 import styles from "./Profile.module.css";
-import { TeamMemberCardProps } from "../../typings/types";
 
 interface ProfileModalProps extends TeamMemberCardProps {
   Show: boolean;
