@@ -1,6 +1,6 @@
 .aside {
   width: 310px;
-  height: 100vh;
+  /* height: 100vh; */
   background-color: var(--bg-color);
 }
 

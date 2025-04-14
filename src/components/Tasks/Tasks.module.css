@@ -8,7 +8,7 @@
   min-height: calc(100vh - 6rem);
 }
 .tasksBG {
-  background-color: var(--page-bg);
+  background-color: var(--bg-color) !important;
 }
 /* .main{
     background-color: var(--component-bg);

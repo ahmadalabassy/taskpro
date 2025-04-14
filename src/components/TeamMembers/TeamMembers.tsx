@@ -134,7 +134,7 @@ export default function TeamMembers() {
         const allowedMimeTypes = ["image/jpeg", "image/png", "image/gif"];
         if (!allowedMimeTypes.includes(file.type)) {
           setAlertMessage(
-            "Invalid image file type. Only JPEG, PNG, and GIF are allowed",
+            "Invalid image file type. Only JPEG, PNG, and GIF are allowed"
           );
 
           return;
