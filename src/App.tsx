@@ -11,9 +11,8 @@ import Tasks from "./components/Tasks/Tasks";
 import Register from "./components/Register/Register.tsx";
 import Login from "./components/Login/Login.tsx";
 import { useSelector } from "react-redux";
-import { RootState } from "./store";
 import { applyTheme } from "./utils/theme.ts";
-
+import { RootState } from "./store";
 export default function App() {
   const theme = useSelector((state: RootState) => state.theme.mode);
 
