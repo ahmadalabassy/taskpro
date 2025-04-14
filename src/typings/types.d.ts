@@ -1,4 +1,4 @@
-type TaskData = {
+type Task = {
   id: number;
   title: string;
   description: string;
@@ -11,11 +11,11 @@ type TaskData = {
   createdAt: string;
   updatedAt: string;
   progress: number;
-  members: TeamMemberCardProps[];
+  members: User[];
   completedDate: string;
 };
 
-type TeamMemberCardProps = {
+type User = {
   id?: number;
   name?: string;
   role?: string;
@@ -26,11 +26,11 @@ type TeamMemberCardProps = {
   department?: string;
   address?: string;
   active?: boolean;
-  tasks?: TaskData[];
+  tasks?: Task[];
   plannedLeavesDate?: string;
   joinDate?: string;
   comments?: string[];
   files?: File[];
   createdAt?: string;
   updatedAt?: string;
-}
+};

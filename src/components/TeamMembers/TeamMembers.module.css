@@ -1,70 +1,67 @@
-.TeamMember {
-    padding: 1rem;
-    background-color: var(--page-bg);
-    scrollbar-width: none;
-    height: calc(100dvh - 86px);
-    overflow-y: auto;
-    transition: all 0.3s ease-in-out;
+.User {
+  padding: 1rem;
+  background-color: var(--page-bg);
+  scrollbar-width: none;
+  height: calc(100dvh - 86px);
+  overflow-y: auto;
+  transition: all 0.3s ease-in-out;
 }
 
-
 .AddBtn:hover i {
-    transform: rotate(90deg) scale(1.2);
-    transition: all 0.5s ease-in-out;
+  transform: rotate(90deg) scale(1.2);
+  transition: all 0.5s ease-in-out;
 }
 
 .AddBtn:hover p {
-    transform: scale(1.05);
-    transition: all 0.5s ease-in-out;
+  transform: scale(1.05);
+  transition: all 0.5s ease-in-out;
 }
-.imgContainer{
-    position: relative;
-    width: 125px;
-    height: 125px;
-    margin: 0 auto;
-    border-radius: 50%;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    background-color: rgb(255, 255, 255) !important;
+.imgContainer {
+  position: relative;
+  width: 125px;
+  height: 125px;
+  margin: 0 auto;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  background-color: rgb(255, 255, 255) !important;
 }
-.form input{
-    background-color: var(--page-bg);
-    color: var(--text-primary-Aside);
-    border: 1px solid var(--bg-icon-header-hover) !important;
+.form input {
+  background-color: var(--page-bg);
+  color: var(--text-primary-Aside);
+  border: 1px solid var(--bg-icon-header-hover) !important;
 }
-.form input:focus{
-    background-color: var( --page-bg);
-    color: var(--text-primary-Aside);
+.form input:focus {
+  background-color: var(--page-bg);
+  color: var(--text-primary-Aside);
 }
-.form label{
-    color: var(--text-primary-Aside) !important;
+.form label {
+  color: var(--text-primary-Aside) !important;
 }
-.form label::after{
-    background-color: var(--page-bg) !important;
+.form label::after {
+  background-color: var(--page-bg) !important;
 }
 
 .modalImg {
-    width: 125px;
-    height: 125px;
-    object-fit: cover;
-    border-radius: 50%;
-    background-color: var(--page-bg);
-    border: 1px solid var(--page-bg);
+  width: 125px;
+  height: 125px;
+  object-fit: cover;
+  border-radius: 50%;
+  background-color: var(--page-bg);
+  border: 1px solid var(--page-bg);
 }
 
 .editImg {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    border: 3px solid white !important;
-
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  border: 3px solid white !important;
 }
 
 @media screen and (max-width: 768px) {
-
-    .TeamMember {
-        padding: 0.4rem;
-        display: flex;
-        justify-content: center;
-        height: calc(100vh - 160px);
-    }
+  .User {
+    padding: 0.4rem;
+    display: flex;
+    justify-content: center;
+    height: calc(100vh - 160px);
+  }
 }

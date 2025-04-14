@@ -1,157 +1,153 @@
 .CustomCard {
-    display: flex;
-    background-color: var(--bg-color) !important;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 8px;
-    border: none !important;
-    cursor: pointer;
-    -webkit-box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.25);
-    -moz-box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.25);
-    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.25);
-    overflow: hidden;
+  display: flex;
+  background-color: var(--bg-color) !important;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 8px;
+  border: none !important;
+  cursor: pointer;
+  -webkit-box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
 }
-
 
 .CustomCard:hover,
 .CustomCard:focus {
-    -webkit-box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.25);
-    -moz-box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.25);
-    box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.25);
 }
 
 .CustomCard:hover .cardBtn,
 .CustomCard:focus .cardBtn {
-    animation-name: spin;
-    animation-duration: 0.5s;
-    animation-timing-function: linear;
-    animation-fill-mode: forwards;
+  animation-name: spin;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
 }
 
 @keyframes spin {
-    0% {
-        transform: translateX(-5px);
-    }
+  0% {
+    transform: translateX(-5px);
+  }
 
-    100% {
-        transform: translateX(10px);
-    }
+  100% {
+    transform: translateX(10px);
+  }
 }
 
 .imgContainer {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 10px;
-    margin-bottom: -10px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: -10px;
 }
 
 .CustomCard img {
-    width: 85px;
-    height: 85px;
-    border-radius: 50%;
-    object-fit: cover;
+  width: 85px;
+  height: 85px;
+  border-radius: 50%;
+  object-fit: cover;
 }
 
 .dotActive {
-    height: 20px;
-    width: 20px;
-    background-color: #4CAF50;
-    border: 2px solid white;
-    border-radius: 50%;
-    position: absolute;
-    bottom: 0px;
-    right: 0px;
+  height: 20px;
+  width: 20px;
+  background-color: #4caf50;
+  border: 2px solid white;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
 }
 
 .dotInActive {
-    height: 20px;
-    width: 20px;
-    background-color: #808080;
-    border: 2px solid white;
-    border-radius: 50%;
-    position: absolute;
-    bottom: 0px;
-    right: 0px;
+  height: 20px;
+  width: 20px;
+  background-color: #808080;
+  border: 2px solid white;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
 }
 
 .title {
-    font-size: 16px;
-    color: var( --text-color) !important;
-    margin: auto;
-    margin-bottom: -2px !important;
-    overflow-x: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    max-width: 170px;
+  font-size: 16px;
+  color: var(--text-color) !important;
+  margin: auto;
+  margin-bottom: -2px !important;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 170px;
 }
 
 .email {
-    color: var(  --text-icon-header);
-    font-size: 16px;
-    margin: auto;
-    margin-top: 2px;
-    overflow-x: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    max-width: 180px;
+  color: var(--text-icon-header);
+  font-size: 12px;
+  margin: auto;
+  padding-top: 4px;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 180px;
 }
 
 .JobTitle {
-    color: var(  --text-icon-header);
-    font-size: 14px;
-    overflow-x: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    max-width: 150px;
-    margin: auto;
-    margin-top: 8px;
+  color: var(--text-icon-header);
+  font-size: 14px;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 150px;
+  margin: auto;
+  margin-top: 8px;
 }
 
 .cardBtn {
-    background-color: #FF6B56 !important;
-    font-size: 14px;
-    margin-top: 12px;
-    margin-bottom: -8px;
-    transition: all 0.3s ease;
+  background-color: #ff6b56 !important;
+  font-size: 14px;
+  margin-top: 12px;
+  margin-bottom: -8px;
+  transition: all 0.3s ease;
 }
 
-
-
 @media screen and (max-width: 768px) {
-    .CustomCard img {
-        width: 74px;
-        height: 74px;
-    }
+  .CustomCard img {
+    width: 74px;
+    height: 74px;
+  }
 
-    .CustomCard .cardBtn {
-        animation-name: spin;
-        animation-duration: 3s;
-        animation-iteration-count: infinite;
-        animation-timing-function: linear;
-        animation-fill-mode: forwards;
-    }
+  .CustomCard .cardBtn {
+    animation-name: spin;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+  }
 
-    .CustomCard:hover .cardBtn,
-    .CustomCard:focus .cardBtn {
-        animation: none;
-    }
+  .CustomCard:hover .cardBtn,
+  .CustomCard:focus .cardBtn {
+    animation: none;
+  }
 
-    .CustomCard {
-        padding: 8px;
+  .CustomCard {
+    padding: 8px;
+  }
 
-    }
+  .email {
+    width: 75%;
+    margin: auto;
+  }
 
-    .email {
-        width: 75%;
-        margin: auto;
-    }
-
-    .JobTitle {
-        font-size: 14px;
-        margin-top: 6px;
-        margin-bottom: -4px;
-    }
+  .JobTitle {
+    font-size: 14px;
+    margin-top: 6px;
+    margin-bottom: -4px;
+  }
 }

@@ -14,14 +14,10 @@ export default function TeamMemberCard({
   department,
   address,
   active = true,
-  tasks,
   plannedLeavesDate,
   joinDate,
-  comments,
-  files,
   createdAt,
-  updatedAt,
-}: TeamMemberCardProps) {
+}: User) {
   const [showModal, setShowModal] = useState(false);
 
   const handleClick = () => setShowModal(true);
@@ -36,10 +32,10 @@ export default function TeamMemberCard({
             className={active ? styles.dotActive : styles.dotInActive}
           ></span>
         </div>
-        <Card.Title className={`fw-semibold ${styles.title}`}>
-          {name}
-        </Card.Title>
         <Card.Body>
+          <Card.Title className={`fw-semibold ${styles.title}`}>
+            {name}
+          </Card.Title>
           <p className={` ${styles.email} `}>{email}</p>
           <p className={`${styles.JobTitle} fw-bolder`}>{role}</p>
           <button

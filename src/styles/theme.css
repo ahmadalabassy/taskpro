@@ -1,32 +1,40 @@
 :root {
-    --bg-color: white ;
-    --text-color: #212529;
-    --bg-secondary: #32363B;
-    --page-bg: #efefef;
-    --text-asideBtnActive-hover: #000000;
-    --text-primary-Aside: #676F77;
-    --bg-icon-header-hover:#e4e4e4;
-    --bg-icon-header-hover-shadow:#e4e4e4;
-    --text-icon-header: #676F77;
-    --primary-color :#2A85FF;
-    --text-header-color :#676f77b3;  
-    --secondary-color :#EFEFEF;
-    --orange : #FF6B56;
-    --btn-bg-color:#F4F4F4;
+  --bg-color: white;
+  --border-color: #efefef;
+  --text-color: #212529;
+  --bg-secondary: #32363b;
+  --page-bg: #efefef;
+  --title-color: #212529;
+  --text-asideBtnActive-hover: #000000;
+  --text-primary-Aside: #676f77;
+  --bg-icon-header-hover: #e4e4e4;
+  --bg-icon-header-hover-shadow: #e4e4e4;
+  --text-icon-header: #676f77;
+  --primary-color: #2a85ff;
+  --task-bg-color: #ffffff;
+  --add-task: #2a85ff;
+  --text-header-color: #676f77b3;
+  --secondary-color: #efefef;
+  --orange: #ff6b56;
+  --btn-bg-color: #f4f4f4;
 }
 
 .dark-theme {
-    --bg-color: #32363B;
-    --text-color: #ffffff;
-    --bg-secondary: #32363B;
-    --page-bg: #3F4348;
-    --text-asideBtnActive-hover: #FFBC99;
-    --text-primary-Aside: white;
-    --bg-icon-header-hover:#3F4348;
-    --bg-icon-header-hover-shadow:rgb(81, 80, 80);
-    --text-icon-header: #D9D9D9;
-    --primary-color: #2A85FF;
-    --text-header-color :#676f77b3;  
-    --orange : #FF6B56;
-    --btn-bg-color:#F4F4F4;
+  --bg-color: #32363b;
+  --border-color: #676f77;
+  --text-color: #ffffff;
+  --title-color: #a8ccfd;
+  --bg-secondary: #32363b;
+  --page-bg: #3f4348;
+  --task-bg-color: #3f4348;
+  --add-task: #a8ccfd;
+  --text-asideBtnActive-hover: #ffbc99;
+  --text-primary-Aside: white;
+  --bg-icon-header-hover: #3f4348;
+  --bg-icon-header-hover-shadow: rgb(81, 80, 80);
+  --text-icon-header: #d9d9d9;
+  --primary-color: #2a85ff;
+  --text-header-color: #676f77b3;
+  --orange: #ff6b56;
+  --btn-bg-color: #f4f4f4;
 }

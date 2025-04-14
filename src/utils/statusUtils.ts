@@ -24,8 +24,8 @@ export const getStatusColor = (status: string): string => {
   }
 };
 
-export const formatDate = (date: Date): string => {
-  return date.toLocaleDateString("en-US", {
+export const formatDate = (date: string): string => {
+  return new Date(date).toLocaleDateString("en-US", {
     month: "short",
     day: "numeric",
     year: "numeric",
