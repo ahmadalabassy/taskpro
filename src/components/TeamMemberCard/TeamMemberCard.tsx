@@ -36,19 +36,17 @@ export default function TeamMemberCard({
             className={active ? styles.dotActive : styles.dotInActive}
           ></span>
         </div>
+        <Card.Title className={`fw-semibold ${styles.title}`}>
+          {name}
+        </Card.Title>
         <Card.Body>
-          <Card.Title className={`fw-semibold ${styles.title}`}>
-            {name}
-          </Card.Title>
-          <Card.Text>
-            <p className={` ${styles.email} `}>{email}</p>
-            <p className={`${styles.JobTitle} fw-bolder`}>{role}</p>
-            <button
-              className={`btn btn-primary border-0 rounded-pill ${styles.cardBtn}`}
-            >
-              <i className="bi bi-arrow-right fs-5"></i>
-            </button>
-          </Card.Text>
+          <p className={` ${styles.email} `}>{email}</p>
+          <p className={`${styles.JobTitle} fw-bolder`}>{role}</p>
+          <button
+            className={`btn btn-primary border-0 rounded-pill ${styles.cardBtn}`}
+          >
+            <i className="bi bi-arrow-right fs-5"></i>
+          </button>
         </Card.Body>
       </Card>
       {/* <Profile Show={showModal} onHide={handleCloseModal} /> */}

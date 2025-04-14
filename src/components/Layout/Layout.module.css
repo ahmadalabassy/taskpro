@@ -1,3 +1,10 @@
 .mainBG{
-    background-color: var(--page-bg);
+    background-color: var(  --page-bg) !important;
+  
+    /* margin-left: 310px; */
 }
+/* @media screen and (max-width: 768px) {
+    .mainContent {
+      margin-left: 0; 
+    }
+  } */

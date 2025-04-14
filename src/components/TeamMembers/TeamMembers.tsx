@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import { useEffect, useState } from "react";
+=======
+import React, { useEffect, useState } from "react";
+>>>>>>> 21402f98dd8e23204c6a33e8bfcb0577627e1d9e
 import TeamMemberCard from "./../TeamMemberCard/TeamMemberCard.tsx";
 import styles from "./TeamMembers.module.css";
 import ReusableModal from "./../ReusableModal/ReusableModal";
@@ -134,7 +138,7 @@ export default function TeamMembers() {
         const allowedMimeTypes = ["image/jpeg", "image/png", "image/gif"];
         if (!allowedMimeTypes.includes(file.type)) {
           setAlertMessage(
-            "Invalid image file type. Only JPEG, PNG, and GIF are allowed",
+            "Invalid image file type. Only JPEG, PNG, and GIF are allowed"
           );
 
           return;
