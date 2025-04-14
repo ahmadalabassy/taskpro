@@ -4,8 +4,7 @@ import ReusableModal from "../ReusableModal/ReusableModal.tsx";
 import { Button, Card } from "react-bootstrap";
 import Profile from "../Profile/Profile.tsx";
 import EditTaskModal from "../TaskEditModal/TaskEditModal.tsx";
-import { TaskData } from "../../typings/types";
-import { faker } from "@faker-js/faker"; // Import faker.js
+import { faker } from "@faker-js/faker";
 
 export interface Task {
   name: string;
@@ -43,9 +42,8 @@ const TaskCard: React.FC<TaskCardProps> = ({ task }) => {
   const [focusOnFiles, setFocusOnFiles] = useState(false); // State for focusing on files
   const [focusOnComments, setFocusOnComments] = useState(false);
   const [showProfileModal, setShowProfileModal] = useState(false); // State for focusing on comments
-  const [comments, setComments] = useState(task.comments);
-  const [files, setFiles] = useState(task.files);
-
+  const [comments] = useState(task.comments);
+  const [files] = useState(task.files);
 
   // Function to generate mock users using faker.js
   const fetchUsers = async () => {
@@ -154,7 +152,7 @@ const TaskCard: React.FC<TaskCardProps> = ({ task }) => {
                   phone={selectedUser.phone}
                   address={selectedUser.address}
                   department={selectedUser.department}
-                  plannedLeavesDate={selectedUser.plannedLeavesDate}
+                  plannedLeavesDate={[selectedUser.plannedLeavesDate]}
                   active={selectedUser.active}
                   joinDate={selectedUser.joinDate}
                 />

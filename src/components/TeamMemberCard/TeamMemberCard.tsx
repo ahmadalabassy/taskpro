@@ -1,8 +1,7 @@
-import React, { useState } from "react";
 import { Card } from "react-bootstrap";
 import Profile from './../Profile/Profile';
 import styles from "./TeamMemberCard.module.css";
-import { TeamMemberCardProps } from "../../typings/types";
+import { useState } from "react";
 
 
 

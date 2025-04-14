@@ -8,7 +8,6 @@ import ButtonGroup from "../ButtonGroup/ButtonGroup";
 import ReusableModal from "../ReusableModal/ReusableModal";
 import EditTaskModal from "../TaskEditModal/TaskEditModal";
 import { faker } from "@faker-js/faker";
-import React from "react";
 
 const generateMockTasks = (count: number): TaskData[] => {
   return Array.from({ length: count }, () => ({
@@ -38,7 +37,7 @@ const generateMockTasks = (count: number): TaskData[] => {
       image: faker.image.avatar(),
       department: faker.commerce.department(),
       address: faker.location.streetAddress(),
-      plannedLeavesDate: faker.date.future().toISOString().split("T")[0],
+      plannedLeavesDate: [faker.date.future().toISOString().split("T")[0]],
       joinDate: faker.date.past().toISOString().split("T")[0],
     })),
     completedDate: faker.helpers.arrayElement([

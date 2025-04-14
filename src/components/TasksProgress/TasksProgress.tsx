@@ -1,9 +1,8 @@
-import React, { useMemo, useState } from "react";
+import { useMemo, useState } from "react";
 import { Card, OverlayTrigger, Tooltip } from "react-bootstrap";
 import { formatDate, getStatusLabel } from "../../utils/statusUtils";
 import styles from "./TasksProgress.module.css";
 import Profile from './../Profile/Profile';
-import { TeamMemberCardProps } from "../../typings/types";
 import { TaskCardProps } from "../TaskCard/TaskCard";
 
 

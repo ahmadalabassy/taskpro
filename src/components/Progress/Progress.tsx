@@ -366,7 +366,9 @@ const generateMockTasks = (count: number): TaskData[] => {
       department: faker.commerce.department(),
       address: faker.location.streetAddress(),
       active: faker.datatype.boolean(),
-      plannedLeavesDate: faker.date.future().toISOString().split("T")[0],
+      plannedLeavesDate: Array.from({ length: faker.number.int({ min: 1, max: 3 }) }, () =>
+        faker.date.future().toISOString().split("T")[0]
+      ),
       joinDate: faker.date.past().toISOString().split("T")[0],
       comments: Array.from({ length: faker.number.int({ min: 1, max: 3 }) }, () =>
         faker.lorem.sentence()

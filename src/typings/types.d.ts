@@ -27,7 +27,7 @@ type TeamMemberCardProps = {
     address: string;
     active?: boolean;
     tasks?: TaskData[];
-    plannedLeavesDate: string;
+    plannedLeavesDate: string[];
     joinDate?: string;
     comments?: string[];
     files?: File[];

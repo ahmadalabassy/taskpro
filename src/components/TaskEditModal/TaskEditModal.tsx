@@ -1,7 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import styles from "./TaskEditModal.module.css";
-
 interface Task {
   assignee: string;
   leadProject: string;
@@ -74,14 +72,21 @@ const EditTaskModal = ({
     }
   };
 
-  const handleDragOver = (e) => {
+  const handleDragOver = (e: React.DragEvent<HTMLDivElement>) => {
     e.preventDefault();
   };
 
-  const handleDrop = (e) => {
+  const handleDrop = (e: React.DragEvent<HTMLDivElement>) => {
     e.preventDefault();
     const file = e.dataTransfer.files[0];
-    setTask({ ...task, file });
+    if (file) {
+      // Validate file type and size (example: max 50MB)
+      if (file.size > 50 * 1024 * 1024) {
+        alert("File size exceeds 50MB. Please upload a smaller file.");
+        return;
+      }
+      setTask({ ...task, file });
+    }
   };
 
   const handleTagToggle = (tag: string) => {

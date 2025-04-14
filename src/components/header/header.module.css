@@ -50,6 +50,12 @@
   -moz-box-shadow: 0px 0px 22px 1px var(--bg-icon-header-hover-shadow);
   box-shadow: 0px 0px 22px 1px var(--bg-icon-header-hover-shadow);
 }
+.userImg{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
 
 @media screen and (max-width: 991px) {
   .header {
