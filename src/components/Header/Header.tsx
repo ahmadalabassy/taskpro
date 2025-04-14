@@ -7,7 +7,7 @@ import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
 import { RootState } from "../../store/index.ts";
 
-import styles from "./Leader.module.css";
+import styles from "./Header.module.css";
 
 export default function Header() {
   const dispatch = useDispatch();
