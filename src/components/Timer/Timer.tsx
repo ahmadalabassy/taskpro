@@ -51,7 +51,9 @@ export default function Timer() {
           id="toggle-check"
           type="checkbox"
           checked={checked}
-          className={`d-none d-lg-flex ${checked ? styles.timeToggle : styles.timeTogglePause}`}
+          className={`d-none d-lg-flex ${
+            checked ? styles.timeToggle : styles.timeTogglePause
+          }`}
           value="1"
           onChange={handleToggle}
         >

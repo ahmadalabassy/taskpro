@@ -41,7 +41,9 @@ export default function Aside() {
         <li className="nav-item d-md-block d-none">
           <Link
             to="/"
-            className={`nav-link d-flex align-items-center ${activeBtn === 1 ? styles.asideBtnActive : styles.asideBtnNormal}`}
+            className={`nav-link d-flex align-items-center ${
+              activeBtn === 1 ? styles.asideBtnActive : styles.asideBtnNormal
+            }`}
             onClick={() => handleClick(1)}
           >
             <i className="bi me-md-2 fs-5 bi-grid"></i>
@@ -50,7 +52,7 @@ export default function Aside() {
         </li>
         <li className="nav-item d-md-none d-flex ">
           <img
-            src="./default-profile-img.svg"
+            src="../../../public/default-profile-img.svg"
             alt="UserProfile"
             onClick={handleShowModal}
           />
@@ -59,7 +61,9 @@ export default function Aside() {
         <li>
           <Link
             to="/tasks"
-            className={`nav-link d-flex align-items-center ${activeBtn === 2 ? styles.asideBtnActive : styles.asideBtnNormal}`}
+            className={`nav-link d-flex align-items-center ${
+              activeBtn === 2 ? styles.asideBtnActive : styles.asideBtnNormal
+            }`}
             onClick={() => handleClick(2)}
           >
             <i className="bi me-md-2 fs-5  bi-clipboard-check"></i>
@@ -69,7 +73,9 @@ export default function Aside() {
         <li>
           <Link
             to="/drive"
-            className={`nav-link d-flex align-items-center ${activeBtn === 3 ? styles.asideBtnActive : styles.asideBtnNormal}`}
+            className={`nav-link d-flex align-items-center ${
+              activeBtn === 3 ? styles.asideBtnActive : styles.asideBtnNormal
+            }`}
             onClick={() => handleClick(3)}
           >
             <i className="bi me-md-2 fs-5 bi-folder"></i>
@@ -79,7 +85,9 @@ export default function Aside() {
         <li>
           <Link
             to="/progress"
-            className={`nav-link d-flex align-items-center ${activeBtn === 4 ? styles.asideBtnActive : styles.asideBtnNormal}`}
+            className={`nav-link d-flex align-items-center ${
+              activeBtn === 4 ? styles.asideBtnActive : styles.asideBtnNormal
+            }`}
             onClick={() => handleClick(4)}
           >
             <i className="bi me-md-2 fs-5 bi-bar-chart"></i>{" "}
@@ -89,7 +97,9 @@ export default function Aside() {
         <li>
           <Link
             to="/team-members"
-            className={`nav-link d-flex align-items-center ${activeBtn === 5 ? styles.asideBtnActive : styles.asideBtnNormal}`}
+            className={`nav-link d-flex align-items-center ${
+              activeBtn === 5 ? styles.asideBtnActive : styles.asideBtnNormal
+            }`}
             onClick={() => handleClick(5)}
           >
             <i className="bi me-md-2 fs-5 bi-people"></i>{" "}
@@ -99,7 +109,9 @@ export default function Aside() {
         <li>
           <Link
             to="/messages"
-            className={`nav-link d-flex align-items-center ${activeBtn === 6 ? styles.asideBtnActive : styles.asideBtnNormal}`}
+            className={`nav-link d-flex align-items-center ${
+              activeBtn === 6 ? styles.asideBtnActive : styles.asideBtnNormal
+            }`}
             onClick={() => handleClick(6)}
           >
             <i className="bi me-md-2 fs-5 bi-chat-left-text"></i>{" "}
@@ -136,7 +148,9 @@ export default function Aside() {
               <li>
                 <a
                   href="#"
-                  className={`${activeDropdownBtn !== 1 ? styles.listCategoryBtn : ""} pt-2 d-inline-flex text-decoration-none `}
+                  className={`${
+                    activeDropdownBtn !== 1 ? styles.listCategoryBtn : ""
+                  } pt-2 d-inline-flex text-decoration-none `}
                   onClick={() => handleClickDropdown(1)}
                 >
                   Product Design
@@ -145,7 +159,9 @@ export default function Aside() {
               <li>
                 <a
                   href="#"
-                  className={`${activeDropdownBtn !== 2 ? styles.listCategoryBtn : ""} pt-2 d-inline-flex text-decoration-none `}
+                  className={`${
+                    activeDropdownBtn !== 2 ? styles.listCategoryBtn : ""
+                  } pt-2 d-inline-flex text-decoration-none `}
                   onClick={() => handleClickDropdown(2)}
                 >
                   UI/UX Design
@@ -154,7 +170,9 @@ export default function Aside() {
               <li>
                 <a
                   href="#"
-                  className={`${activeDropdownBtn !== 3 ? styles.listCategoryBtn : ""} pt-2 d-inline-flex text-decoration-none `}
+                  className={`${
+                    activeDropdownBtn !== 3 ? styles.listCategoryBtn : ""
+                  } pt-2 d-inline-flex text-decoration-none `}
                   onClick={() => handleClickDropdown(3)}
                 >
                   Web App Development
@@ -163,7 +181,9 @@ export default function Aside() {
               <li>
                 <a
                   href="#"
-                  className={`${activeDropdownBtn !== 4 ? styles.listCategoryBtn : ""} pt-2 d-inline-flex text-decoration-none `}
+                  className={`${
+                    activeDropdownBtn !== 4 ? styles.listCategoryBtn : ""
+                  } pt-2 d-inline-flex text-decoration-none `}
                   onClick={() => handleClickDropdown(4)}
                 >
                   Mobile App Development
