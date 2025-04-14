@@ -35,8 +35,8 @@ const TaskCard: React.FC<TaskCardProps> = ({ task }) => {
   const [focusOnFiles, setFocusOnFiles] = useState(false); // State for focusing on files
   const [focusOnComments, setFocusOnComments] = useState(false);
   const [showProfileModal, setShowProfileModal] = useState(false); // State for focusing on comments
-  const [comments, setComments] = useState(task.comments);
-  const [files, setFiles] = useState(task.files);
+  const [comments] = useState(task.comments);
+  const [files] = useState(task.files);
 
   // Function to generate mock users using faker.js
   const fetchUsers = async () => {

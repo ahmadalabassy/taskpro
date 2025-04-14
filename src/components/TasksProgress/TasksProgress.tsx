@@ -3,9 +3,8 @@ import { Card, OverlayTrigger, Tooltip } from "react-bootstrap";
 import { formatDate, getStatusLabel } from "../../utils/statusUtils";
 import styles from "./TasksProgress.module.css";
 import Profile from "./../Profile/Profile";
-import { TaskCardProps } from "../TaskCard/TaskCard";
 
-export default function TasksProgress({ task }: TaskCardProps) {
+export default function TasksProgress({ task }: { task: Task }) {
   const [selectedMember, setSelectedMember] = useState<User | null>(null);
   const [show, setShow] = useState(false);
 

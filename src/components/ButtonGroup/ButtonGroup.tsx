@@ -60,7 +60,7 @@ const ButtonGroup: React.FC<ButtonGroupProps> = ({ data, setData }) => {
       item[filterField]
         .toString()
         .toLowerCase()
-        .includes(filterValue.toLowerCase())
+        .includes(filterValue.toLowerCase()),
     );
     setData(filteredData);
     setIsFilterModalOpen(false); // Close modal after filtering

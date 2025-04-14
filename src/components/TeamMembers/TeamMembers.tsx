@@ -7,7 +7,7 @@ import Alert from "react-bootstrap/Alert";
 import * as Yup from "yup";
 import { useFormik } from "formik";
 
-const initialTeamMembers = [
+const initialTeamMembers: User[] = [
   {
     id: 1,
     name: "John Doe",
@@ -110,7 +110,7 @@ export default function TeamMembers() {
     localStorage.setItem("teamMembers", JSON.stringify(teamMembers));
   }, [teamMembers]);
 
-  const handleFileChange = (e) => {
+  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
     if (!file) return;
 
@@ -151,7 +151,7 @@ export default function TeamMembers() {
 
     reader.readAsDataURL(file);
   };
-  const handleOnSubmit = (values) => {
+  const handleOnSubmit = (values: User) => {
     setTeamMembers([
       ...teamMembers,
       { ...values, id: teamMembers.length + 1, image: imageURL },
@@ -181,7 +181,7 @@ export default function TeamMembers() {
         .join(" "),
     },
     validationSchema: registerSchema,
-    onSubmit: handleOnSubmit,
+    onSubmit: (values: User) => handleOnSubmit(values),
   });
   return (
     // Add a button to open the modal to add a new team member

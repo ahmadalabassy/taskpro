@@ -33,4 +33,4 @@ type User = {
   files?: File[];
   createdAt?: string;
   updatedAt?: string;
-}
+};

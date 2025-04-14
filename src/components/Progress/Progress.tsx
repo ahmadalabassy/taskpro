@@ -35,11 +35,11 @@ const generateMockTasks = (count: number): Task[] => {
         joinDate: faker.date.past().toISOString().split("T")[0],
         comments: Array.from(
           { length: faker.number.int({ min: 1, max: 3 }) },
-          () => faker.lorem.sentence()
+          () => faker.lorem.sentence(),
         ),
         createdAt: faker.date.past().toISOString(),
         updatedAt: faker.date.recent().toISOString(),
-      })
+      }),
     ),
     completedDate: faker.date.future().toISOString().split("T")[0],
   }));

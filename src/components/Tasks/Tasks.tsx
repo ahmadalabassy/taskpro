@@ -43,10 +43,7 @@ const Tasks = () => {
         plannedLeavesDate: faker.date.future().toISOString().split("T")[0],
         joinDate: faker.date.past().toISOString().split("T")[0],
       })),
-      completedDate: faker.helpers.arrayElement([
-        "",
-        faker.date.future().toISOString().split("T")[0],
-      ]),
+      completedDate: faker.date.recent().toISOString(),
     }));
   };
 
@@ -61,7 +58,7 @@ const Tasks = () => {
       acc[task.status].push(task);
       return acc;
     },
-    {} as Record<string, Task[]>
+    {} as Record<string, Task[]>,
   );
 
   // Define colors for each task status

@@ -32,10 +32,10 @@ export default function TeamMemberCard({
             className={active ? styles.dotActive : styles.dotInActive}
           ></span>
         </div>
-        <Card.Title className={`fw-semibold ${styles.title}`}>
-          {name}
-        </Card.Title>
         <Card.Body>
+          <Card.Title className={`fw-semibold ${styles.title}`}>
+            {name}
+          </Card.Title>
           <p className={` ${styles.email} `}>{email}</p>
           <p className={`${styles.JobTitle} fw-bolder`}>{role}</p>
           <button
