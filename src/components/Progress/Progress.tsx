@@ -1,9 +1,9 @@
+import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import ProgressStateCard from "../ProgressStateCard/ProgressStateCard";
 import styles from "./Progress.module.css";
 import TasksProgress from "./../TasksProgress/TasksProgress";
 import { faker } from "@faker-js/faker";
-import React from "react";
 
 // const mockTasks: TaskData[] = [
 //   {
@@ -337,7 +337,23 @@ const generateMockTasks = (count: number): TaskData[] => {
   return Array.from({ length: count }, () => ({
     id: faker.number.int({ min: 1, max: 1000000 }),
     title: faker.lorem.words(3),
-    status: faker.helpers.arrayElement(["in-progress", "on-hold", "completed"]),
+    description: faker.lorem.sentence(),
+    dueDate: faker.date.future().toISOString().split("T")[0],
+    priority: faker.helpers.arrayElement(["Low", "Medium", "High"]),
+    status: faker.helpers.arrayElement([
+      "Planned",
+      "In Progress",
+      "Completed",
+      "On Pause",
+      "Under Review",
+    ]),
+    assignedTo: faker.person.fullName(),
+    comments: Array.from({ length: faker.number.int({ min: 1, max: 3 }) }, () =>
+      faker.lorem.sentence()
+    ),
+    files: [], // Add files (empty array for now)
+    createdAt: faker.date.past().toISOString(),
+    updatedAt: faker.date.recent().toISOString(),
     progress: faker.number.int({ min: 0, max: 100 }),
     members: Array.from({ length: faker.number.int({ min: 1, max: 5 }) }, () => ({
       id: faker.number.int({ min: 1, max: 1000000 }),
@@ -358,7 +374,6 @@ const generateMockTasks = (count: number): TaskData[] => {
       createdAt: faker.date.past().toISOString(),
       updatedAt: faker.date.recent().toISOString(),
     })),
-    dueDate: faker.date.future().toISOString().split("T")[0],
     completedDate: faker.helpers.maybe(() =>
       faker.date.future().toISOString().split("T")[0]
     ),
@@ -367,11 +382,10 @@ const generateMockTasks = (count: number): TaskData[] => {
 
 const mockTasks = generateMockTasks(10); // Generate 10 tasks
 
-
-export default function Progress() {
-  const totalTasks = 248
-  const inProgressTasks = 45
-  const completedTasks = 182
+const Progress: React.FC<TaskData> =  () => {
+  const totalTasks = 248;
+  const inProgressTasks = 45;
+  const completedTasks = 182;
   return (
     <Container className={styles.progressPage}>
       <Row className={styles.statsSection}>
@@ -414,5 +428,6 @@ export default function Progress() {
         </Row>
       </div>
     </Container>
-  )
+  );
 }
+export default Progress;

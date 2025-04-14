@@ -1,4 +1,3 @@
-
 type TaskData = {
     id: number;
     title: string;
@@ -13,7 +12,8 @@ type TaskData = {
     updatedAt: string;
     progress: number;
     members: TeamMemberCardProps[];
-    completedDate : string;
+    completedDate?: string;
+    [key: string] : unknown; // Allow additional fields
   };
 type TeamMemberCardProps = {
     id?: number;

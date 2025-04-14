@@ -1,20 +1,30 @@
 import React, { useEffect, useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import styles from "./ButtonGroup.module.css";
-import { TaskData } from "../../typings/types";
 
 type ButtonGroupProps = {
   data: TaskData[];
   setData: React.Dispatch<React.SetStateAction<TaskData[]>>;
+  onSort: (field: keyof TaskData, direction: "asc" | "desc") => void;
+  onFilter: (field: keyof TaskData, value: string) => void;
+  onSelectAll: () => void;
+  onViewChange: (viewMode: "list" | "grid") => void;
 };
 
-const ButtonGroup: React.FC<ButtonGroupProps> = ({ data, setData }) => {
-  const [filterValue, setFilterValue] = useState<string>("");
-  const [filterField, setFilterField] = useState<"name" | "id">("name"); // State for filter field
+const ButtonGroup: React.FC<ButtonGroupProps> = ({ data,
+  setData,
+  onViewChange, }) => {
+  const [originalData, setOriginalData] = useState<TaskData[]>([]); // Preserve original data
+  const [filterValue, setFilterValue] = useState<string>(""); // Value to filter by
+  const [filterField, setFilterField] = useState<keyof TaskData>("title"); // Field to filter by
   const [isFilterModalOpen, setIsFilterModalOpen] = useState<boolean>(false); // State for modal visibility
-  const [sortDirection, setSortDirection] = useState<"asc" | "desc">("asc");
-  const [selectedItems, setSelectedItems] = useState<number[]>([]);
-  const [viewMode, setViewMode] = useState<"list" | "grid">("list");
+  const [sortDirection, setSortDirection] = useState<"asc" | "desc">("asc"); // Sort direction
+  const [selectedItems, setSelectedItems] = useState<number[]>([]); // Selected items
+
+  // Initialize original data on mount
+  useEffect(() => {
+    setOriginalData(data);
+  }, [data]);
 
   // 1. Select All / Deselect All
   const handleSelectAll = () => {
@@ -30,43 +40,46 @@ const ButtonGroup: React.FC<ButtonGroupProps> = ({ data, setData }) => {
     console.log("Selected Task IDs:", selectedItems);
   }, [selectedItems]);
 
-  // 2. Customize (e.g., open a modal)
-  const handleCustomize = () => {
-    alert("Customize button clicked. Could open a modal here.");
-  };
-
-  // 3. Sort Data (toggle between asc/desc)
+  // 2. Sort Data (toggle between asc/desc)
   const handleSort = () => {
     const newDirection = sortDirection === "asc" ? "desc" : "asc";
     setSortDirection(newDirection);
 
     const sortedData = [...data].sort((a, b) => {
-      if (a[filterField] < b[filterField]) return newDirection === "asc" ? -1 : 1;
-      if (a[filterField] > b[filterField]) return newDirection === "asc" ? 1 : -1;
+      const fieldA = a[filterField]?.toString().toLowerCase() || "";
+      const fieldB = b[filterField]?.toString().toLowerCase() || "";
+
+      if (fieldA < fieldB) return newDirection === "asc" ? -1 : 1;
+      if (fieldA > fieldB) return newDirection === "asc" ? 1 : -1;
       return 0;
     });
 
+    console.log("Sorted Data:", sortedData); // Debugging log
     setData(sortedData);
   };
 
-  // 4. Filter Data (case-insensitive search)
+  // 3. Filter Data (case-insensitive search)
   const handleFilter = () => {
     if (!filterValue.trim()) {
-      setData(data); // Reset to original data if filter is empty
+      setData(originalData); // Reset to original data if filter is empty
       return;
     }
-    const filteredData = data.filter((item) =>
-      item[filterField].toString().toLowerCase().includes(filterValue.toLowerCase())
-    );
+
+    const filteredData = originalData.filter((item) => {
+      const fieldValue = item[filterField]; // Get the value of the filter field
+      return (
+        fieldValue &&
+        fieldValue.toString().toLowerCase().includes(filterValue.toLowerCase())
+      );
+    });
+
     setData(filteredData);
     setIsFilterModalOpen(false); // Close modal after filtering
   };
 
-  // 5. Toggle View Mode (list/grid)
-  const handleView = () => {
-    const newViewMode = viewMode === "list" ? "grid" : "list";
-    setViewMode(newViewMode);
-    alert(`Switched to ${newViewMode} view.`);
+  // 4. Toggle View Mode (list/grid)
+  const handleView = (mode: "list" | "grid") => {
+    onViewChange(mode); // Call the onViewChange prop to update the view mode in Tasks.tsx
   };
 
   return (
@@ -75,13 +88,14 @@ const ButtonGroup: React.FC<ButtonGroupProps> = ({ data, setData }) => {
         <span className={`${styles.viewText} fw-bold`}>View</span>
         <button
           className={`btn ${styles.fw500} ${styles.buttonBG} bg-white fs-5 text-secondary py-2 px-3`}
-          onClick={handleCustomize}
+          onClick={() => handleView("grid")} // Switch to grid view
+
         >
           <i className={`bi bi-grid ${styles.fw500}`}></i>
         </button>
         <button
           className={`btn ${styles.fw500} ${styles.buttonBG} bg-white fs-5 text-secondary py-2 px-3`}
-          onClick={handleCustomize}
+          onClick={() => handleView("list")} // Switch to list view
         >
           <i className={`bi bi-list ${styles.fw500}`}></i>
         </button>
@@ -107,7 +121,7 @@ const ButtonGroup: React.FC<ButtonGroupProps> = ({ data, setData }) => {
         </button>
         <button
           className={`btn ${styles.fw500} ${styles.buttonBG} bg-white fs-5 text-secondary py-2 px-3`}
-          onClick={handleView}
+          
         >
           <i className={`bi bi-three-dots-vertical ${styles.fw500}`}></i>
         </button>
@@ -135,10 +149,15 @@ const ButtonGroup: React.FC<ButtonGroupProps> = ({ data, setData }) => {
                     id="filterField"
                     className="form-select"
                     value={filterField}
-                    onChange={(e) => setFilterField(e.target.value as "name" | "id")}
+                    onChange={(e) =>
+                      setFilterField(e.target.value as keyof TaskData)
+                    }
                   >
-                    <option value="name">Name</option>
-                    <option value="id">ID</option>
+                    <option value="title">Title</option>
+                    <option value="description">Description</option>
+                    <option value="status">Status</option>
+                    <option value="priority">Priority</option>
+                    <option value="assignedTo">Assigned To</option>
                   </select>
                 </div>
                 <div className="mb-3">
