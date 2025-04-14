@@ -56,6 +56,10 @@ export default function Header() {
           <i className="bi bi-chat-right-text"></i>
         </span>
         <i className={`bi bi-question-circle ${styles.iconHeader}`}></i>
+<<<<<<< HEAD
+        <span className={`d-lg-flex d-none  ${styles.profile}`}><Profile Show={showModal} onHide={handleCloseModal} />
+          <img src="./../../../default-profile-img.svg" alt="profile user" onClick={handleClick} /></span>
+=======
         <span className={`d-lg-flex d-none  ${styles.profile}`}>
           <Profile Show={showModal} onHide={handleCloseModal} />
           <img
@@ -64,6 +68,7 @@ export default function Header() {
             onClick={handleClick}
           />
         </span>
+>>>>>>> 06c79d9c9bfaa5e066725191afb141de579b2061
       </div>
     </header>
   );
