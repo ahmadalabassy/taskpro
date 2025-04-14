@@ -14,14 +14,10 @@ export default function TeamMemberCard({
   department,
   address,
   active = true,
-  tasks,
   plannedLeavesDate,
   joinDate,
-  comments,
-  files,
   createdAt,
-  updatedAt,
-}: TeamMemberCardProps) {
+}: User) {
   const [showModal, setShowModal] = useState(false);
 
   const handleClick = () => setShowModal(true);

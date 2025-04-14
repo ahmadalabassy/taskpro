@@ -1,7 +1,5 @@
 import { useEffect, useRef, useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import styles from "./TaskEditModal.module.css";
-
 interface Task {
   assignee: string;
   leadProject: string;
@@ -63,7 +61,7 @@ const EditTaskModal = ({
   const handleChange = (
     e: React.ChangeEvent<
       HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement
-    >,
+    >
   ) => {
     setTask({ ...task, [e.target.name]: e.target.value });
   };
@@ -74,11 +72,11 @@ const EditTaskModal = ({
     }
   };
 
-  const handleDragOver = (e) => {
+  const handleDragOver: React.DragEventHandler<HTMLDivElement> = (e) => {
     e.preventDefault();
   };
 
-  const handleDrop = (e) => {
+  const handleDrop: React.DragEventHandler<HTMLDivElement> = (e) => {
     e.preventDefault();
     const file = e.dataTransfer.files[0];
     setTask({ ...task, file });

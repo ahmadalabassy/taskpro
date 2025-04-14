@@ -2,11 +2,12 @@ import { useState } from "react";
 import Timer from "../Timer/Timer.tsx";
 import Notification from "../Notification/Notifications.tsx";
 import Profile from "../Profile/Profile.tsx";
-import styles from "./Header.module.css";
 import { toggleTheme } from "../../store/themeSlice.ts";
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
 import { RootState } from "../../store/index.ts";
+
+import styles from "./Leader.module.css";
 
 export default function Header() {
   const dispatch = useDispatch();

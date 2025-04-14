@@ -16,7 +16,7 @@ import { faker } from "@faker-js/faker";
 
 const Tasks = () => {
   const [showEditTaskModal, setShowEditTaskModal] = useState(false);
-  const generateMockTasks = (count: number): TaskData[] => {
+  const generateMockTasks = (count: number): Task[] => {
     return Array.from({ length: count }, () => ({
       id: faker.number.int({ min: 1, max: 100000000 }),
       title: faker.lorem.words(3), // Simulate task name
@@ -37,7 +37,7 @@ const Tasks = () => {
             name: faker.system.fileName(),
             type: faker.system.mimeType(),
             size: faker.number.int({ min: 1000, max: 10000 }),
-          } as File)
+          }) as File
       ),
       createdAt: faker.date.past().toISOString(),
       updatedAt: faker.date.recent().toISOString(),
@@ -62,7 +62,7 @@ const Tasks = () => {
 
   // Generate 10 mock tasks
   const tasks = generateMockTasks(10);
-  const [data, setData] = useState<TaskData[]>(generateMockTasks(10));
+  const [data, setData] = useState<Task[]>(generateMockTasks(10));
   // const task: TaskData = {
   //   id: faker.number.int({ min: 1, max: 1000 }),
   //   title: faker.lorem.words(3),

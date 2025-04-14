@@ -1,21 +1,21 @@
-type TaskData = {
+type Task = {
   id: number;
   title: string;
-  description: string;
-  dueDate: string;
-  priority: string;
+  description?: string;
+  dueDate?: string;
+  priority?: string;
   status: string;
-  assignedTo: string;
-  comments: string[];
-  files: File[];
+  assignedTo?: string;
+  comments?: string[];
+  files?: File[];
   createdAt: string;
-  updatedAt: string;
+  updatedAt?: string;
   progress: number;
-  members: TeamMemberCardProps[];
-  completedDate: string;
+  members: User[];
+  completedDate?: string;
 };
 
-type TeamMemberCardProps = {
+type User = {
   id?: number;
   name?: string;
   role?: string;

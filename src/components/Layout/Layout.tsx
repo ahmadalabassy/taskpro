@@ -1,6 +1,6 @@
 import { Outlet } from "react-router-dom";
 import Aside from "../Aside/Aside";
-import Header from "../Header/Header.tsx";
+import Header from "../Leader/Leader.tsx";
 import styles from "./Layout.module.css";
 
 export default function Layout() {

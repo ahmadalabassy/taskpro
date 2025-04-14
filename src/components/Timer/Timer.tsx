@@ -8,10 +8,11 @@ export default function Timer() {
   const [clockIn, setClockIn] = useState("CLOCK IN");
   const [timeNow, setTimeNow] = useState("");
 
-  const handleToggle = (e) => {
+  const handleToggle: React.ChangeEventHandler<HTMLInputElement> = (e) => {
     setChecked(e.target.checked);
     setClockIn(checked ? "CLOCK OUT" : "CLOCK IN");
   };
+  console.log(timeNow);
   const handleToggleClick = () => {
     setChecked(!checked);
     setClockIn(checked ? "CLOCK OUT" : "CLOCK IN");
@@ -28,7 +29,7 @@ export default function Timer() {
   useEffect(() => {
     setInterval(() => {
       setTimeNow(
-        new Date(Date.now()).toLocaleTimeString("en-US", { hour12: true }),
+        new Date(Date.now()).toLocaleTimeString("en-US", { hour12: true })
       );
     }, 1000);
   }, [time, minutes, amPm]);

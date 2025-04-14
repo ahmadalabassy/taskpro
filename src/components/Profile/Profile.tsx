@@ -1,8 +1,7 @@
 import { Modal } from "react-bootstrap";
 import styles from "./Profile.module.css";
-import { TeamMemberCardProps } from "../../typings/types";
 
-type ProfileModalProps = TeamMemberCardProps & {
+type ProfileModalProps = User & {
   Show: boolean;
   onHide: () => void;
 };

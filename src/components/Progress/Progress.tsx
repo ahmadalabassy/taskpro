@@ -1,9 +1,9 @@
-import { Col, Container, Row } from "react-bootstrap";
+import { Col, Row } from "react-bootstrap";
 import ProgressStateCard from "../ProgressStateCard/ProgressStateCard";
 import styles from "./Progress.module.css";
 import TasksProgress from "./../TasksProgress/TasksProgress";
 
-const mockTasks: Tasks[] = [
+const mockTasks: Task[] = [
   {
     id: 1,
     title: "Website Redesign",
@@ -45,7 +45,8 @@ const mockTasks: Tasks[] = [
         updatedAt: "2025-02-10T11:45:00Z",
       },
     ],
-    dueDate: new Date("2025-03-08"),
+    dueDate: "2025-03-08",
+    createdAt: new Date().toISOString(),
   },
   {
     id: 2,
@@ -88,7 +89,8 @@ const mockTasks: Tasks[] = [
         updatedAt: "2025-02-10T11:45:00Z",
       },
     ],
-    dueDate: new Date("2025-03-15"),
+    dueDate: "2024-06-08",
+    createdAt: new Date().toISOString(),
   },
   {
     id: 3,
@@ -131,7 +133,8 @@ const mockTasks: Tasks[] = [
         updatedAt: "2025-02-10T11:45:00Z",
       },
     ],
-    completedDate: new Date("2025-03-01"),
+    dueDate: "2024-06-08",
+    createdAt: new Date().toISOString(),
   },
   {
     id: 4,
@@ -242,7 +245,8 @@ const mockTasks: Tasks[] = [
         updatedAt: "2025-02-10T11:45:00Z",
       },
     ],
-    dueDate: new Date("2025-04-10"),
+    dueDate: "2024-06-08",
+    createdAt: new Date().toISOString(),
   },
   {
     id: 5,
@@ -285,7 +289,8 @@ const mockTasks: Tasks[] = [
         updatedAt: "2025-02-10T11:45:00Z",
       },
     ],
-    dueDate: new Date("2025-03-22"),
+    dueDate: "2024-06-08",
+    createdAt: new Date().toISOString(),
   },
   {
     id: 6,
@@ -328,7 +333,8 @@ const mockTasks: Tasks[] = [
         updatedAt: "2025-02-10T11:45:00Z",
       },
     ],
-    completedDate: new Date("2025-02-15"),
+    dueDate: "2024-06-08",
+    createdAt: new Date().toISOString(),
   },
 ];
 

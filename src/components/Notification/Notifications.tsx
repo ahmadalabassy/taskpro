@@ -1,7 +1,7 @@
 import { Dropdown } from "react-bootstrap";
 
 import styles from "./Notifications.module.css";
-import headerStyles from "../Header/Header.module.css";
+import headerStyles from "../Leader/Leader.module.css";
 
 const Notification = () => {
   return (
