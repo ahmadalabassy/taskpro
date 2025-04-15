@@ -1,22 +1,24 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import styles from "./ButtonGroup.module.css";
 
 type ButtonGroupProps = {
-  data: TaskData[];
-  setData: React.Dispatch<React.SetStateAction<TaskData[]>>;
-  onSort: (field: keyof TaskData, direction: "asc" | "desc") => void;
-  onFilter: (field: keyof TaskData, value: string) => void;
+  data: Task[];
+  setData: React.Dispatch<React.SetStateAction<Task[]>>;
+  onSort: (field: keyof Task, direction: "asc" | "desc") => void;
+  onFilter: (field: keyof Task, value: string) => void;
   onSelectAll: () => void;
   onViewChange: (viewMode: "list" | "grid") => void;
 };
 
-const ButtonGroup: React.FC<ButtonGroupProps> = ({ data,
+const ButtonGroup: React.FC<ButtonGroupProps> = ({
+  data,
   setData,
-  onViewChange, }) => {
-  const [originalData, setOriginalData] = useState<TaskData[]>([]); // Preserve original data
+  onViewChange,
+}) => {
+  const [originalData, setOriginalData] = useState<Task[]>([]); // Preserve original data
   const [filterValue, setFilterValue] = useState<string>(""); // Value to filter by
-  const [filterField, setFilterField] = useState<keyof TaskData>("title"); // Field to filter by
+  const [filterField, setFilterField] = useState<keyof Task>("title"); // Field to filter by
   const [isFilterModalOpen, setIsFilterModalOpen] = useState<boolean>(false); // State for modal visibility
   const [sortDirection, setSortDirection] = useState<"asc" | "desc">("asc"); // Sort direction
   const [selectedItems, setSelectedItems] = useState<number[]>([]); // Selected items
@@ -84,14 +86,13 @@ const ButtonGroup: React.FC<ButtonGroupProps> = ({ data,
 
   return (
     <div>
-      <div className="viewButton d-flex justify-content-end align-items-center mb-3 gap-3">
-        <span className={`${styles.viewText} fw-bold`}>View</span>
+      <div className="viewButtpn d-flex justify-content-end align-items-center mb-3 gap-3">
+        <span>View</span>
         <button
           className={`btn ${styles.fw500} ${styles.buttonBG} bg-white fs-5 text-secondary py-2 px-3`}
           onClick={() => handleView("grid")} // Switch to grid view
-
         >
-          <i className={`bi bi-grid ${styles.fw500}`}></i>
+          <i className={`bi bi-grid ${styles.fw500}`}></i>{" "}
         </button>
         <button
           className={`btn ${styles.fw500} ${styles.buttonBG} bg-white fs-5 text-secondary py-2 px-3`}
@@ -121,7 +122,6 @@ const ButtonGroup: React.FC<ButtonGroupProps> = ({ data,
         </button>
         <button
           className={`btn ${styles.fw500} ${styles.buttonBG} bg-white fs-5 text-secondary py-2 px-3`}
-          
         >
           <i className={`bi bi-three-dots-vertical ${styles.fw500}`}></i>
         </button>
@@ -150,7 +150,7 @@ const ButtonGroup: React.FC<ButtonGroupProps> = ({ data,
                     className="form-select"
                     value={filterField}
                     onChange={(e) =>
-                      setFilterField(e.target.value as keyof TaskData)
+                      setFilterField(e.target.value as keyof Task)
                     }
                   >
                     <option value="title">Title</option>

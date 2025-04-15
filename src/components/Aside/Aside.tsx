@@ -1,11 +1,11 @@
 import { useState } from "react";
 import { Link } from "react-router";
-import { faker } from "@faker-js/faker"; // Import faker
 
 import Profile from "./../Profile/Profile";
 
 import { Badge } from "react-bootstrap";
 import styles from "./Aside.module.css";
+import { faker } from "@faker-js/faker";
 
 export default function Aside() {
   const [activeBtn, setActiveBtn] = useState(1);
@@ -14,7 +14,7 @@ export default function Aside() {
 
   // Generate mock data using faker
   const department = faker.commerce.department();
-  const address = faker.address.streetAddress();
+  const address = faker.location.streetAddress();
   const plannedLeavesDate = [
     faker.date.future().toISOString().split("T")[0],
     faker.date.future().toISOString().split("T")[0],
@@ -38,7 +38,7 @@ export default function Aside() {
 
   return (
     <aside
-      className={`d-flex flex-row flex-md-column flex-lg-shrink-0 flex-md-shrink-1 p-md-3 p-0 bg-body-light ${styles.aside}`}
+      className={`d-flex flex-row flex-md-column flex-lg-shrink-0 flex-md-shrink-1 p-md-3 p-0 bg-body-light  ${styles.aside}`}
     >
       <Link
         to="/"
@@ -151,19 +151,14 @@ export default function Aside() {
               data-bs-target="#dashboard-collapse"
               aria-expanded="true"
             >
-              <i
-                className={`bi bi-chevron-down me-2 ${styles.btnToggle}`}
-              ></i>{" "}
+              <i className={`bi bi-chevron-down me-2 ${styles.btnToggle}`}></i>{" "}
               WorkSpace
             </button>
             <span className="btn-light btn p-0 text-light bg-primary rounded-2 ps-1 pe-1 me-3">
               <i className="bi bi-plus-lg fw-bold"></i>
             </span>
           </div>
-          <div
-            className="collapse show ps-4 ms-4 ms-2"
-            id="dashboard-collapse"
-          >
+          <div className="collapse show ps-4 ms-4 ms-2" id="dashboard-collapse">
             <ul
               className={`btn-toggle-nav fw-normal pt-1 pb-1 small list-group ${styles.listCircle}`}
             >

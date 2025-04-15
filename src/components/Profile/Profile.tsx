@@ -1,10 +1,11 @@
 import { Modal } from "react-bootstrap";
 import styles from "./Profile.module.css";
 
-interface ProfileModalProps extends TeamMemberCardProps {
+type ProfileModalProps = User & {
   Show: boolean;
   onHide: () => void;
-}
+};
+
 const Profile = ({
   Show,
   onHide,

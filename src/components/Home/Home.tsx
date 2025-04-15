@@ -1,6 +1,6 @@
+import { useState } from "react";
 import styles from "./Home.module.css";
 import TaskPreview from "../TaskPreview/TaskPreview";
-import { useState } from "react";
 
 const CustomTasks = () => {
   const tasks = [
@@ -41,20 +41,18 @@ export default function Home() {
       title: "Ongoing tasks",
       content: <CustomTasks />, // Another React component as content
     },
-  
   ];
   const [openItems, setOpenItems] = useState<number[]>([0]);
 
   const toggleItem = (id: number) => {
-    setOpenItems((prevOpenItems) =>
-      prevOpenItems.includes(id)
-        ? prevOpenItems.filter((itemId) => itemId !== id) // Close the item
-        : [...prevOpenItems, id] // Open the item
-        
+    setOpenItems(
+      (prevOpenItems) =>
+        prevOpenItems.includes(id)
+          ? prevOpenItems.filter((itemId) => itemId !== id) // Close the item
+          : [...prevOpenItems, id] // Open the item
     );
   };
 
-  
   return (
     <div className={`${styles.home} ${styles.bgHeight} container pt-5`}>
       <div className="accordion" id="mainTask">
@@ -66,7 +64,8 @@ export default function Home() {
                 type="button"
                 onClick={() => toggleItem(item.id)} // Toggle the item manually
                 aria-expanded={openItems.includes(item.id) ? "true" : "false"}
-                aria-controls={`collapse${item.id}`}>
+                aria-controls={`collapse${item.id}`}
+              >
                 {item.title}
               </button>
             </h2>

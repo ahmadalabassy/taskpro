@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import TeamMemberCard from "./../TeamMemberCard/TeamMemberCard.tsx";
 import styles from "./TeamMembers.module.css";
 import ReusableModal from "./../ReusableModal/ReusableModal";
@@ -7,21 +7,7 @@ import Alert from "react-bootstrap/Alert";
 import * as Yup from "yup";
 import { useFormik } from "formik";
 
-interface TeamMember {
-  id: number;
-  name: string;
-  role: string;
-  active: boolean;
-  email: string;
-  phone: string;
-  department: string;
-  address: string;
-  supervisor: string;
-  image: string;
-  plannedLeavesDate: string[];
-  joinDate: string;
-}
-const initialTeamMembers = [
+const initialTeamMembers: User[] = [
   {
     id: 1,
     name: "John Doe",
@@ -32,7 +18,7 @@ const initialTeamMembers = [
     department: "IT",
     address: "123 Main Stsdasdasdsadad",
     supervisor: "Jane Smith",
-    image: "../../../public/default-profile-img.svg",
+    image: "/default-profile-img.svg",
     plannedLeavesDate: ["2023-12-01"],
     joinDate: "2023-01-15",
   },
@@ -46,7 +32,7 @@ const initialTeamMembers = [
     department: "Project Management",
     address: "456 Elm St",
     supervisor: "Jane Smith",
-    image: "../../../public/default-profile-img.svg",
+    image: "/default-profile-img.svg",
     plannedLeavesDate: ["2023-11-15"],
     joinDate: "2023-02-20",
   },
@@ -54,11 +40,8 @@ const initialTeamMembers = [
 
 export default function TeamMembers() {
   const [showModal, setShowModal] = useState(false);
-  const [teamMembers, setTeamMembers] =
-    useState<TeamMember[]>(initialTeamMembers);
-  const [imageURL, setImageURL] = useState(
-    "./../../../public/default-profile-img.svg"
-  );
+  const [teamMembers, setTeamMembers] = useState(initialTeamMembers);
+  const [imageURL, setImageURL] = useState("/default-profile-img.svg");
   const [alertMessage, setAlertMessage] = useState("");
   const [showAlert, setShowAlert] = useState(false);
 
@@ -167,8 +150,8 @@ export default function TeamMembers() {
 
     reader.readAsDataURL(file);
   };
-  const handleOnSubmit = (values: Omit<TeamMember, "id" | "image">) => {
-    const newMember: TeamMember = {
+  const handleOnSubmit = (values: Omit<User, "id" | "image">) => {
+    const newMember: User = {
       ...values,
       id: teamMembers.length + 1,
       image: imageURL,
@@ -178,7 +161,7 @@ export default function TeamMembers() {
     setAlertMessage("Team member added successfully!");
     setShowAlert(true);
   };
-  const formik = useFormik<Omit<TeamMember, "id" | "image">>({
+  const formik = useFormik<Omit<User, "id" | "image">>({
     initialValues: {
       name: "",
       role: "",
@@ -188,15 +171,17 @@ export default function TeamMembers() {
       department: "",
       address: "",
       supervisor: "",
+      comments: [],
+      files: [],
       plannedLeavesDate: [],
       joinDate: new Date().toISOString().split("T")[0],
     },
     validationSchema: registerSchema,
-    onSubmit: handleOnSubmit,
+    onSubmit: (values: User) => handleOnSubmit(values),
   });
   return (
     // Add a button to open the modal to add a new team member
-    <div className={styles.TeamMember}>
+    <div className={styles.User}>
       {showAlert && !showModal && (
         <Alert
           key={alertMessage}

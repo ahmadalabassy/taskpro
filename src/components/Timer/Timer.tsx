@@ -44,10 +44,7 @@ export default function Timer() {
         <p className={styles.amPm}>{amPm}</p>
       </div>
       <div className={styles.clocking}>
-        <span
-          className={styles.playButton}
-          onClick={handleToggleClick}
-        >
+        <span className={styles.playButton} onClick={handleToggleClick}>
           {checked ? (
             <i className={`bi bi-play-circle ${styles.playButton}`}></i>
           ) : (
@@ -69,5 +66,4 @@ export default function Timer() {
       </div>
     </section>
   );
-
 }

@@ -1,52 +1,51 @@
 .fsSM {
-    font-size: 0.8rem;
-  }
+  font-size: 0.8rem;
+}
 .card {
   background-color: var(--task-bg-color) !important;
-    padding: 0.5em 1em;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;  }
- .titleColor {
-    color: var(--title-color) !important;
-  } 
-  .primaryText {
-    color: var(--text-color) !important;
-  }
-  .user {
-    margin-left: -0.5rem;
-  }
-  .userImage {
-    width: 25px;
-    height: 25px;
-  }
-  .addUser {
-    width: 25px;
-    height: 25px;
-  }
-  .btnPrimary {
-    --bs-btn-bg: #f4f4f4 !important;
-    background-color: var(--bs-btn-bg);
-    padding: 0.3em 0.6em;
-    border: none !important;
-  }
-  .btnPrimary:hover {
-    background-color: var(--bg-hover) !important;
-  }
-  .comments,
-  .attachedFiles {
-    transition: all 0.25s ease-in-out;
-  }
-  .comments:hover,
-  .attachedFiles:hover {
-    cursor: pointer;
-    scale: 0.95;
-  }
-  .comment,
-  .file {
-    font-size: 0.8rem;
-  }
-  .comment:hover,
-  .file:hover {
-    border: 0;
-  }
-
-  
+  padding: 0.5em 1em;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.titleColor {
+  color: var(--title-color) !important;
+}
+.primaryText {
+  color: var(--text-color) !important;
+}
+.user {
+  margin-left: -0.5rem;
+}
+.userImage {
+  width: 25px;
+  height: 25px;
+}
+.addUser {
+  width: 25px;
+  height: 25px;
+}
+.btnPrimary {
+  --bs-btn-bg: #f4f4f4 !important;
+  background-color: var(--bs-btn-bg);
+  padding: 0.3em 0.6em;
+  border: none !important;
+}
+.btnPrimary:hover {
+  background-color: var(--bg-hover) !important;
+}
+.comments,
+.attachedFiles {
+  transition: all 0.25s ease-in-out;
+}
+.comments:hover,
+.attachedFiles:hover {
+  cursor: pointer;
+  scale: 0.95;
+}
+.comment,
+.file {
+  font-size: 0.8rem;
+}
+.comment:hover,
+.file:hover {
+  border: 0;
+}

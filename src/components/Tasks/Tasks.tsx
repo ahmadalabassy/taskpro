@@ -9,7 +9,7 @@ import ReusableModal from "../ReusableModal/ReusableModal";
 import EditTaskModal from "../TaskEditModal/TaskEditModal";
 import { faker } from "@faker-js/faker";
 
-const generateMockTasks = (count: number): TaskData[] => {
+const generateMockTasks = (count: number): Task[] => {
   return Array.from({ length: count }, () => ({
     id: faker.number.int({ min: 1, max: 100000000 }),
     title: faker.lorem.words(3),
@@ -49,18 +49,21 @@ const generateMockTasks = (count: number): TaskData[] => {
 
 const Tasks = () => {
   const [showEditTaskModal, setShowEditTaskModal] = useState(false);
-  const [tasks, setTasks] = useState<TaskData[]>(generateMockTasks(10)); // Store tasks in state
+  const [tasks, setTasks] = useState<Task[]>(generateMockTasks(10)); // Store tasks in state
   const [viewMode, setViewMode] = useState<"list" | "grid">("list"); // View mode
   const [selectedTasks, setSelectedTasks] = useState<number[]>([]); // Selected task IDs
 
   // Group tasks by their status
-  const groupedTasks = tasks.reduce((acc, task) => {
-    if (!acc[task.status]) {
-      acc[task.status] = [];
-    }
-    acc[task.status].push(task);
-    return acc;
-  }, {} as Record<string, TaskData[]>);
+  const groupedTasks = tasks.reduce(
+    (acc, task) => {
+      if (!acc[task.status]) {
+        acc[task.status] = [];
+      }
+      acc[task.status].push(task);
+      return acc;
+    },
+    {} as Record<string, Task[]>
+  );
 
   // Define colors for each task status
   const statusColors: Record<string, string> = {
@@ -82,7 +85,7 @@ const Tasks = () => {
   };
 
   // Handle Sort
-  const handleSort = (field: keyof TaskData, direction: "asc" | "desc") => {
+  const handleSort = (field: keyof Task, direction: "asc" | "desc") => {
     const sortedTasks = [...tasks].sort((a, b) => {
       const fieldA = a[field]?.toString().toLowerCase() || "";
       const fieldB = b[field]?.toString().toLowerCase() || "";
@@ -95,7 +98,7 @@ const Tasks = () => {
   };
 
   // Handle Filter
-  const handleFilter = (field: keyof TaskData, value: string) => {
+  const handleFilter = (field: keyof Task, value: string) => {
     if (!value.trim()) {
       // Reset to original tasks if filter is empty
       setTasks(generateMockTasks(10)); // Regenerate tasks
@@ -125,19 +128,22 @@ const Tasks = () => {
         onSelectAll={handleSelectAll}
         onViewChange={handleViewChange}
       />
-      <main 
-      className={`${
-        viewMode === "list"
-          ? `${styles.scroll} row flex-md-nowrap px-3 px-md-0 flex-column`
-          : `${styles.scroll} row flex-md-nowrap px-3 px-md-0`
-      }`}
+      <main
+        className={`${
+          viewMode === "list"
+            ? `${styles.scroll} row flex-md-nowrap px-3 px-md-0 flex-column`
+            : `${styles.scroll} row flex-md-nowrap px-3 px-md-0`
+        }`}
       >
         {Object.entries(groupedTasks).map(([status, tasks]) => (
-          <div className={`${
-            viewMode === "list"
-              ? "col-12 mb-3"
-              : "col-12 col-md-6 col-xl-4 mb-4"
-          }`} key={status}>
+          <div
+            className={`${
+              viewMode === "list"
+                ? "col-12 mb-3"
+                : "col-12 col-md-6 col-xl-4 mb-4"
+            }`}
+            key={status}
+          >
             <div
               className={`${styles.heightFit} ${styles.tasksBG} p-3 p-lg-4 rounded-3 shadow-sm`}
             >
@@ -146,9 +152,7 @@ const Tasks = () => {
                 <div className="d-flex flex-row justify-content-start align-items-center gap-2">
                   <span
                     className={`${styles.rectangle} rounded-2`}
-                    style={{
-                      backgroundColor: statusColors[status] || "#ccc",
-                    }}
+                    style={{ backgroundColor: statusColors[status] || "#ccc" }}
                   ></span>
                   <h2 className={`fw-bold fs-5 mb-0 ${styles.textColor}`}>
                     {status}
