@@ -49,7 +49,7 @@ export default function Home() {
       (prevOpenItems) =>
         prevOpenItems.includes(id)
           ? prevOpenItems.filter((itemId) => itemId !== id) // Close the item
-          : [...prevOpenItems, id], // Open the item
+          : [...prevOpenItems, id] // Open the item
     );
   };
 

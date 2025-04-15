@@ -55,6 +55,7 @@
     font-size: 0.75rem;
     display: inline-block;
     line-height: 1;
+    color: var(--text-color);
 }
 
 .inProgressBadge {

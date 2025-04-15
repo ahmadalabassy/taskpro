@@ -26,8 +26,8 @@ type User = {
   department?: string;
   address?: string;
   active?: boolean;
-  tasks?: TaskData[];
-  plannedLeavesDate?: string;
+  tasks?: Task[];
+  plannedLeavesDate: string[];
   joinDate?: string;
   comments?: string[];
   files?: File[];

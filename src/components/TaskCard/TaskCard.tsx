@@ -4,22 +4,7 @@ import ReusableModal from "../ReusableModal/ReusableModal.tsx";
 import { Button, Card } from "react-bootstrap";
 import Profile from "../Profile/Profile.tsx";
 import EditTaskModal from "../TaskEditModal/TaskEditModal.tsx";
-import { faker } from "@faker-js/faker"; // Import faker.js
-
-interface User {
-  id: number;
-  name: string;
-  email: string;
-  image: string;
-  role: string;
-  phone: string;
-  address: string;
-  department: string;
-  plannedLeavesDate: string;
-  active: boolean;
-  joinDate: string;
-}
-
+import { faker } from "@faker-js/faker";
 export interface TaskCardProps {
   task: Task;
   focusOnComments?: boolean;
@@ -44,14 +29,14 @@ const TaskCard: React.FC<TaskCardProps> = ({ task }) => {
     try {
       const mockData = Array.from({ length: 10 }, (_, index) => ({
         id: index + 1,
-        name: faker.name.fullName(),
+        name: faker.person.fullName(),
         email: faker.internet.email(),
         image: faker.image.avatar(),
-        role: faker.name.jobTitle(),
+        role: faker.person.jobTitle(),
         phone: faker.phone.number(),
-        address: faker.address.streetAddress(),
+        address: faker.location.streetAddress(),
         department: faker.commerce.department(),
-        plannedLeavesDate: faker.date.future().toISOString().split("T")[0],
+        plannedLeavesDate: [faker.date.future().toISOString().split("T")[0]],
         active: faker.datatype.boolean(),
         joinDate: faker.date.past().toISOString().split("T")[0],
       }));

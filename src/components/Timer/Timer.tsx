@@ -6,33 +6,35 @@ import styles from "./Timer.module.css";
 export default function Timer() {
   const [checked, setChecked] = useState(true);
   const [clockIn, setClockIn] = useState("CLOCK IN");
-  const [timeNow, setTimeNow] = useState("");
 
-  const handleToggle: React.ChangeEventHandler<HTMLInputElement> = (e) => {
+  const handleToggle = (e: React.ChangeEvent<HTMLInputElement>) => {
     setChecked(e.target.checked);
-    setClockIn(checked ? "CLOCK OUT" : "CLOCK IN");
+    setClockIn(e.target.checked ? "CLOCK OUT" : "CLOCK IN");
   };
-  console.log(timeNow);
   const handleToggleClick = () => {
-    setChecked(!checked);
-    setClockIn(checked ? "CLOCK OUT" : "CLOCK IN");
+    setChecked((prevChecked) => {
+      const newChecked = !prevChecked;
+      setClockIn(newChecked ? "CLOCK OUT" : "CLOCK IN");
+      return newChecked;
+    });
   };
-  const dateNow = new Date(Date.now()) as Date;
-  // convert to 24-hour format
+
+  const dateNow = new Date(Date.now());
+  // Convert to 12-hour format
   const hours = dateNow.getHours() % 12 || 12;
   const minutes = dateNow.getMinutes();
   const amPm = dateNow.getHours() >= 12 ? "PM" : "AM";
-  // convert to 12-hour format
   const time = `${hours.toString().padStart(2, "0")}:${minutes
     .toString()
     .padStart(2, "0")}`;
+
   useEffect(() => {
-    setInterval(() => {
-      setTimeNow(
-        new Date(Date.now()).toLocaleTimeString("en-US", { hour12: true })
-      );
+    const interval = setInterval(() => {
+      // Add any logic here if needed
     }, 1000);
-  }, [time, minutes, amPm]);
+
+    return () => clearInterval(interval); // Cleanup the interval on component unmount
+  }, []);
 
   return (
     <section className={styles.ClockSection}>

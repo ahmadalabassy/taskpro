@@ -5,14 +5,25 @@ import Profile from "./../Profile/Profile";
 
 import { Badge } from "react-bootstrap";
 import styles from "./Aside.module.css";
+import { faker } from "@faker-js/faker";
 
 export default function Aside() {
   const [activeBtn, setActiveBtn] = useState(1);
   const [activeDropdownBtn, setActiveDrobpownBtn] = useState(2);
   const [showModal, setShowModal] = useState(false);
+
+  // Generate mock data using faker
+  const department = faker.commerce.department();
+  const address = faker.location.streetAddress();
+  const plannedLeavesDate = [
+    faker.date.future().toISOString().split("T")[0],
+    faker.date.future().toISOString().split("T")[0],
+  ];
+
   const handleClick = (index: number) => {
     setActiveBtn(index);
   };
+
   const handleClickDropdown = (index: number) => {
     setActiveDrobpownBtn(index);
   };
@@ -27,11 +38,11 @@ export default function Aside() {
 
   return (
     <aside
-      className={` d-flex flex-row flex-md-column flex-lg-shrink-0 flex-md-shrink-1 p-md-3 p-0 bg-body-light  ${styles.aside}`}
+      className={`d-flex flex-row flex-md-column flex-lg-shrink-0 flex-md-shrink-1 p-md-3 p-0 bg-body-light  ${styles.aside}`}
     >
       <Link
         to="/"
-        className={`d-flex align-items-end justify-content-center mb-4 me-5 gap-2 link-body-emphasis d-md-flex d-none text-decoration-none `}
+        className={`d-flex align-items-end justify-content-center mb-4 me-5 gap-2 link-body-emphasis d-md-flex d-none text-decoration-none`}
       >
         <img src={`/logo-no-text.svg`} alt="Logo" />
         <span className="fs-4 fw-bold">TASKPRO</span>
@@ -56,7 +67,13 @@ export default function Aside() {
             alt="UserProfile"
             onClick={handleShowModal}
           />
-          <Profile Show={showModal} onHide={handleCloseModal} />
+          <Profile
+            Show={showModal}
+            onHide={handleCloseModal}
+            department={department} // Use faker-generated department
+            address={address} // Use faker-generated address
+            plannedLeavesDate={plannedLeavesDate} // Use faker-generated plannedLeavesDate
+          />
         </li>
         <li>
           <Link

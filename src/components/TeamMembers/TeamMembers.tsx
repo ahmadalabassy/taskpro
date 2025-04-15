@@ -19,7 +19,7 @@ const initialTeamMembers: User[] = [
     address: "123 Main Stsdasdasdsadad",
     supervisor: "Jane Smith",
     image: "/default-profile-img.svg",
-    plannedLeavesDate: "2023-12-01",
+    plannedLeavesDate: ["2023-12-01"],
     joinDate: "2023-01-15",
   },
   {
@@ -33,7 +33,7 @@ const initialTeamMembers: User[] = [
     address: "456 Elm St",
     supervisor: "Jane Smith",
     image: "/default-profile-img.svg",
-    plannedLeavesDate: "2023-11-15",
+    plannedLeavesDate: ["2023-11-15"],
     joinDate: "2023-02-20",
   },
 ];
@@ -120,47 +120,48 @@ export default function TeamMembers() {
       image.src = reader.result as string;
 
       image.onload = () => {
-        // Check image dimensions
-        const maxWidth = 1500; // Maximum width in pixels
-        const maxHeight = 1500; // Maximum height in pixels
+        const maxWidth = 1500;
+        const maxHeight = 1500;
         if (image.width > maxWidth || image.height > maxHeight) {
           setAlertMessage(
             "Image dimensions exceed the maximum allowed size. Please choose an image with dimensions no larger than 1500x1500 pixels."
           );
+          e.target.value = ""; // Reset file input
           return;
         }
 
-        // Check image file type
         const allowedMimeTypes = ["image/jpeg", "image/png", "image/gif"];
         if (!allowedMimeTypes.includes(file.type)) {
           setAlertMessage(
-            "Invalid image file type. Only JPEG, PNG, and GIF are allowed"
+            "Invalid image file type. Only JPEG, PNG, and GIF are allowed."
           );
-
+          e.target.value = ""; // Reset file input
           return;
         }
 
-        // Image is valid, set the image URL
         setImageURL(reader.result as string);
       };
 
       image.onerror = () => {
-        setAlertMessage("error on upload image !");
+        setAlertMessage("Error uploading image!");
+        e.target.value = ""; // Reset file input
       };
     };
 
     reader.readAsDataURL(file);
   };
-  const handleOnSubmit = (values: User) => {
-    setTeamMembers([
-      ...teamMembers,
-      { ...values, id: teamMembers.length + 1, image: imageURL },
-    ]);
+  const handleOnSubmit = (values: Omit<User, "id" | "image">) => {
+    const newMember: User = {
+      ...values,
+      id: teamMembers.length + 1,
+      image: imageURL,
+    };
+    setTeamMembers([...teamMembers, newMember]);
     setShowModal(false);
     setAlertMessage("Team member added successfully!");
     setShowAlert(true);
   };
-  const formik = useFormik({
+  const formik = useFormik<Omit<User, "id" | "image">>({
     initialValues: {
       name: "",
       role: "",
@@ -170,15 +171,10 @@ export default function TeamMembers() {
       department: "",
       address: "",
       supervisor: "",
-      image: "",
-      plannedLeavesDate: "",
       comments: [],
       files: [],
-      joinDate: new Date()
-        .toISOString()
-        .split(" ")
-        .map((date) => date.split("T")[0])
-        .join(" "),
+      plannedLeavesDate: [],
+      joinDate: new Date().toISOString().split("T")[0],
     },
     validationSchema: registerSchema,
     onSubmit: handleOnSubmit,

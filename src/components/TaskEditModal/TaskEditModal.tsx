@@ -72,14 +72,21 @@ const EditTaskModal = ({
     }
   };
 
-  const handleDragOver: React.DragEventHandler<HTMLDivElement> = (e) => {
+  const handleDragOver = (e: React.DragEvent<HTMLDivElement>) => {
     e.preventDefault();
   };
 
-  const handleDrop: React.DragEventHandler<HTMLDivElement> = (e) => {
+  const handleDrop = (e: React.DragEvent<HTMLDivElement>) => {
     e.preventDefault();
     const file = e.dataTransfer.files[0];
-    setTask({ ...task, file });
+    if (file) {
+      // Validate file type and size (example: max 50MB)
+      if (file.size > 50 * 1024 * 1024) {
+        alert("File size exceeds 50MB. Please upload a smaller file.");
+        return;
+      }
+      setTask({ ...task, file });
+    }
   };
 
   const handleTagToggle = (tag: string) => {
